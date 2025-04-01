@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -30,7 +29,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <NavLink to="/" className="flex items-center" onClick={closeMenu}>
-              <Logo size="md" />
+              <Logo size="md" variant="default" />
             </NavLink>
           </div>
           
