@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
@@ -20,7 +21,7 @@ const Footer = () => {
             <p className="text-mtechGray-600 mb-6 mt-4">
               Providing cutting-edge web development, reliable hosting solutions, and comprehensive software testing services.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               <a 
                 href="#" 
                 className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
