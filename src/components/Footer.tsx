@@ -21,27 +21,27 @@ const Footer = () => {
             <p className="text-mtechGray-600 mb-6 mt-4">
               Providing cutting-edge web development, reliable hosting solutions, and comprehensive software testing services.
             </p>
-            <div className="flex justify-center space-x-4">
+            <div className="flex space-x-4">
               <a 
                 href="#" 
                 className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook size={20} />
+                <Facebook size={24} />
               </a>
               <a 
                 href="#" 
                 className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter size={20} />
+                <Twitter size={24} />
               </a>
               <a 
                 href="#" 
                 className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram size={20} />
+                <Instagram size={24} />
               </a>
             </div>
           </div>

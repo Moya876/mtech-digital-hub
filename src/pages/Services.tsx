@@ -70,17 +70,17 @@ const Services = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <Monitor className="h-12 w-12 text-mtechAccent mx-auto mb-4" />
+              <Monitor className="h-12 w-12 text-mtechOrange mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Web Development</h3>
               <p className="text-mtechGray-100">Custom websites tailored to your business needs</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <Server className="h-12 w-12 text-mtechAccent mx-auto mb-4" />
+              <Server className="h-12 w-12 text-mtechOrange mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Web Hosting</h3>
               <p className="text-mtechGray-100">Reliable and secure hosting solutions</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <FileSearch className="h-12 w-12 text-mtechAccent mx-auto mb-4" />
+              <FileSearch className="h-12 w-12 text-mtechOrange mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Software Testing</h3>
               <p className="text-mtechGray-100">Comprehensive testing for quality assurance</p>
             </div>
