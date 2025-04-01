@@ -49,8 +49,10 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
-            <Button className="bg-mtechOrange hover:bg-mtechOrange-dark">
-              Get a Quote
+            <Button className="bg-mtechOrange hover:bg-mtechOrange-dark" asChild>
+              <NavLink to="/quote">
+                Get a Quote
+              </NavLink>
             </Button>
           </nav>
 
@@ -96,8 +98,10 @@ const Navbar = () => {
             </NavLink>
           ))}
           <div className="pt-4">
-            <Button className="w-full bg-mtechOrange hover:bg-mtechOrange-dark">
-              Get a Quote
+            <Button className="w-full bg-mtechOrange hover:bg-mtechOrange-dark" asChild>
+              <NavLink to="/quote" onClick={closeMenu}>
+                Get a Quote
+              </NavLink>
             </Button>
           </div>
         </div>
