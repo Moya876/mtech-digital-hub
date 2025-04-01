@@ -24,21 +24,21 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
+                className="text-mtechOrange hover:text-mtechOrange-dark transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={24} />
               </a>
               <a 
                 href="#" 
-                className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
+                className="text-mtechOrange hover:text-mtechOrange-dark transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={24} />
               </a>
               <a 
                 href="#" 
-                className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
+                className="text-mtechOrange hover:text-mtechOrange-dark transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
