@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
@@ -12,7 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <Logo className="text-black" size="md" variant="default" />
+              <Logo className="text-black" size="lg" variant="default" asLink={true} />
             </div>
             <p className="mt-2 text-sm text-mtechGray-600 italic">
               "You Think, We Design"

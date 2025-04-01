@@ -1,18 +1,21 @@
 
 import React from 'react';
 import { Code, Terminal, Braces, GitBranch } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface LogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'code' | 'terminal' | 'brackets' | 'git';
+  asLink?: boolean;
 }
 
-const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) => {
+const Logo = ({ className = '', size = 'md', variant = 'default', asLink = false }: LogoProps) => {
   const sizeClasses = {
     sm: 'h-8',
     md: 'h-10',
-    lg: 'h-16'
+    lg: 'h-16',
+    xl: 'h-20'
   };
 
   const renderLogo = () => {
@@ -20,12 +23,12 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
       case 'code':
         return (
           <div className="flex items-center gap-1.5">
-            <Code className="text-mtechOrange h-5 w-5" />
-            <div className="font-bold text-mtechNavy text-2xl flex items-center">
+            <Code className="text-mtechOrange h-6 w-6" />
+            <div className="font-bold text-mtechNavy text-3xl flex items-center">
               <span className="text-mtechOrange">M</span>
               <span>Tech</span>
             </div>
-            <Code className="text-mtechNavy h-5 w-5" />
+            <Code className="text-mtechNavy h-6 w-6" />
             <div className="text-xs uppercase tracking-widest absolute -bottom-1 right-0 text-mtechGray-700">
               Corp
             </div>
@@ -34,8 +37,8 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
       case 'terminal':
         return (
           <div className="flex items-center gap-1.5">
-            <Terminal className="text-mtechOrange h-5 w-5" />
-            <div className="font-bold text-mtechNavy text-2xl flex items-center">
+            <Terminal className="text-mtechOrange h-6 w-6" />
+            <div className="font-bold text-mtechNavy text-3xl flex items-center">
               <span className="text-mtechOrange">M</span>
               <span>Tech</span>
             </div>
@@ -47,8 +50,8 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
       case 'brackets':
         return (
           <div className="flex items-center">
-            <Braces className="text-mtechOrange h-5 w-5 mr-1" />
-            <div className="font-bold text-mtechNavy text-2xl flex items-center">
+            <Braces className="text-mtechOrange h-6 w-6 mr-1.5" />
+            <div className="font-bold text-mtechNavy text-3xl flex items-center">
               <span className="text-mtechOrange">M</span>
               <span>Tech</span>
             </div>
@@ -60,8 +63,8 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
       case 'git':
         return (
           <div className="flex items-center">
-            <GitBranch className="text-mtechOrange h-5 w-5 mr-1" />
-            <div className="font-bold text-mtechNavy text-2xl flex items-center">
+            <GitBranch className="text-mtechOrange h-6 w-6 mr-1.5" />
+            <div className="font-bold text-mtechNavy text-3xl flex items-center">
               <span className="text-mtechOrange">M</span>
               <span>Tech</span>
             </div>
@@ -73,7 +76,7 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
       default:
         return (
           <div className="flex items-center">
-            <div className="font-mono font-bold text-mtechNavy text-2xl flex items-center">
+            <div className="font-mono font-bold text-mtechNavy text-3xl flex items-center">
               <span className="text-mtechOrange">&lt;</span>
               <span className="text-mtechOrange">M</span>
               <span>Tech</span>
@@ -87,7 +90,7 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
     }
   };
 
-  return (
+  const logoContent = (
     <div className={`flex items-center ${className}`}>
       <div className="flex items-center">
         <div className="relative">
@@ -96,6 +99,12 @@ const Logo = ({ className = '', size = 'md', variant = 'default' }: LogoProps) =
       </div>
     </div>
   );
+
+  if (asLink) {
+    return <Link to="/">{logoContent}</Link>;
+  }
+
+  return logoContent;
 };
 
 export default Logo;
