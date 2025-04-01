@@ -3,6 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,11 +30,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <NavLink to="/" className="flex items-center" onClick={closeMenu}>
-              <img 
-                src="/lovable-uploads/ac2b3787-cac9-4ba9-a382-7c7503576ef7.png" 
-                alt="M Tech Corp Logo" 
-                className="h-10 w-auto mr-2"
-              />
+              <Logo size="md" />
             </NavLink>
           </div>
           

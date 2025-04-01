@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,11 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/ac2b3787-cac9-4ba9-a382-7c7503576ef7.png" 
-                alt="M Tech Corp Logo" 
-                className="h-12 w-auto"
-              />
+              <Logo className="text-white" size="lg" />
             </div>
             <p className="mt-2 text-sm text-mtechGray-100 italic">
               "You Think, We Design"

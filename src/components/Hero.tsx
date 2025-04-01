@@ -35,9 +35,9 @@ const Hero = () => {
           <div className="md:w-1/2 md:pl-10">
             <div className="rounded-lg bg-white/10 backdrop-blur-sm p-2 border border-white/20 shadow-2xl animate-fade-in animation-delay-300">
               <img 
-                src="/lovable-uploads/ac2b3787-cac9-4ba9-a382-7c7503576ef7.png" 
-                alt="M Tech Corp Logo" 
-                className="w-full h-auto rounded-md object-contain bg-white/90 p-8"
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                alt="Tech illustration" 
+                className="w-full h-auto rounded-md object-cover"
               />
             </div>
           </div>
