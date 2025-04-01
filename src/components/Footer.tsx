@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
 
 const Footer = () => {
@@ -42,13 +41,6 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
               </a>
             </div>
           </div>
