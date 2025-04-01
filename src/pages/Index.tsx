@@ -15,7 +15,7 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-4">
               Our Services
             </h2>
             <p className="text-xl text-mtechGray-600 max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" className="border-mtechBlue-600 text-mtechBlue-600 hover:bg-mtechBlue-50" asChild>
+            <Button variant="outline" className="border-mtechOrange text-mtechOrange hover:bg-mtechOrange/10" asChild>
               <Link to="/services">
                 View All Services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -66,7 +66,7 @@ const Index = () => {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-6">
                 About M Tech Corp
               </h2>
               <p className="text-mtechGray-700 mb-6">
@@ -75,7 +75,7 @@ const Index = () => {
               <p className="text-mtechGray-700 mb-8">
                 With our comprehensive range of services including web development, hosting, and software testing, we ensure that your digital presence is professional, reliable, and effective.
               </p>
-              <Button className="bg-mtechBlue-600 hover:bg-mtechBlue-700" asChild>
+              <Button className="bg-mtechOrange hover:bg-mtechOrange-dark" asChild>
                 <Link to="/about">
                   Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -89,7 +89,7 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-4">
               What Our Clients Say
             </h2>
             <p className="text-xl text-mtechGray-600 max-w-3xl mx-auto">
@@ -118,7 +118,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-mtechBlue-600 to-mtechBlue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-mtechNavy to-mtechNavy-dark text-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Take Your Business to the Next Level?
@@ -127,7 +127,7 @@ const Index = () => {
             Contact us today to discuss how our web development, hosting, and software testing services can benefit your business.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-white text-mtechBlue-700 hover:bg-mtechGray-100" size="lg" asChild>
+            <Button className="bg-mtechOrange text-white hover:bg-mtechOrange-dark" size="lg" asChild>
               <Link to="/contact">
                 Contact Us
               </Link>

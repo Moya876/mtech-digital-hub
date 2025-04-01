@@ -95,6 +95,16 @@ export default {
 					light: '#4ae3ca',
 					dark: '#00a38b',
 				},
+				mtechOrange: {
+					DEFAULT: '#F05A28',
+					light: '#FF7A4D',
+					dark: '#D64116',
+				},
+				mtechNavy: {
+					DEFAULT: '#1E407C',
+					light: '#2A5BA7',
+					dark: '#153159',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

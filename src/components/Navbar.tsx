@@ -28,9 +28,12 @@ const Navbar = () => {
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <NavLink to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-              <span className="text-2xl font-bold text-mtechBlue-700">M Tech</span>
-              <span className="text-2xl font-bold text-mtechGray-800">Corp</span>
+            <NavLink to="/" className="flex items-center" onClick={closeMenu}>
+              <img 
+                src="/lovable-uploads/ac2b3787-cac9-4ba9-a382-7c7503576ef7.png" 
+                alt="M Tech Corp Logo" 
+                className="h-10 w-auto mr-2"
+              />
             </NavLink>
           </div>
           
@@ -43,15 +46,15 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `font-medium transition-colors ${
                     isActive
-                      ? "text-mtechBlue-700"
-                      : "text-mtechGray-700 hover:text-mtechBlue-600"
+                      ? "text-mtechNavy"
+                      : "text-mtechGray-700 hover:text-mtechOrange"
                   }`
                 }
               >
                 {link.name}
               </NavLink>
             ))}
-            <Button className="bg-mtechBlue-600 hover:bg-mtechBlue-700">
+            <Button className="bg-mtechOrange hover:bg-mtechOrange-dark">
               Get a Quote
             </Button>
           </nav>
@@ -60,7 +63,7 @@ const Navbar = () => {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="text-mtechGray-500 hover:text-mtechBlue-600 focus:outline-none"
+              className="text-mtechGray-500 hover:text-mtechOrange focus:outline-none"
               aria-label="Toggle menu"
               onClick={toggleMenu}
             >
@@ -88,8 +91,8 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `block px-3 py-2 rounded-md font-medium ${
                   isActive
-                    ? "text-mtechBlue-700 bg-mtechBlue-50"
-                    : "text-mtechGray-700 hover:bg-mtechGray-50 hover:text-mtechBlue-600"
+                    ? "text-mtechNavy bg-mtechGray-50"
+                    : "text-mtechGray-700 hover:bg-mtechGray-50 hover:text-mtechOrange"
                 }`
               }
               onClick={closeMenu}
@@ -98,7 +101,7 @@ const Navbar = () => {
             </NavLink>
           ))}
           <div className="pt-4">
-            <Button className="w-full bg-mtechBlue-600 hover:bg-mtechBlue-700">
+            <Button className="w-full bg-mtechOrange hover:bg-mtechOrange-dark">
               Get a Quote
             </Button>
           </div>
