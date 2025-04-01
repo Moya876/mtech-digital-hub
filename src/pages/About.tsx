@@ -1,0 +1,241 @@
+
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Target, Award, Users, Clipboard } from "lucide-react";
+
+const About = () => {
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-20">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About M Tech Corp</h1>
+            <p className="text-xl opacity-90">
+              We're a team of passionate tech professionals dedicated to helping businesses succeed in the digital landscape.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-white">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-mtechGray-50 rounded-xl p-8">
+              <div className="h-14 w-14 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mb-6">
+                <Target className="h-7 w-7" />
+              </div>
+              <h2 className="text-2xl font-bold text-mtechGray-900 mb-4">Our Mission</h2>
+              <p className="text-mtechGray-700">
+                To empower businesses with innovative digital solutions that drive growth, efficiency, and competitive advantage. We strive to deliver exceptional value through technology services that exceed client expectations.
+              </p>
+            </div>
+            <div className="bg-mtechGray-50 rounded-xl p-8">
+              <div className="h-14 w-14 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mb-6">
+                <Award className="h-7 w-7" />
+              </div>
+              <h2 className="text-2xl font-bold text-mtechGray-900 mb-4">Our Vision</h2>
+              <p className="text-mtechGray-700">
+                To be the leading technology partner for businesses in Jamaica and the Caribbean, recognized for our technical excellence, client-focused approach, and commitment to delivering solutions that make a measurable difference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company History */}
+      <section className="py-20 bg-mtechGray-50">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-4">
+                Our Story
+              </h2>
+              <p className="text-xl text-mtechGray-600">
+                The journey of M Tech Corp from inception to industry leadership
+              </p>
+            </div>
+
+            <div className="relative border-l-2 border-mtechBlue-300 pl-8 ml-4 space-y-12">
+              <div className="relative">
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2018: The Beginning</h3>
+                <p className="text-mtechGray-700 mb-4">
+                  Founded in Ocho Rios with a mission to provide quality web development services to local businesses. Started with a small team of passionate developers.
+                </p>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2019: Expanding Services</h3>
+                <p className="text-mtechGray-700 mb-4">
+                  Added web hosting services to our portfolio, providing clients with end-to-end web solutions. Doubled our client base and expanded our team.
+                </p>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2021: Software Testing</h3>
+                <p className="text-mtechGray-700 mb-4">
+                  Introduced software testing services to ensure quality and reliability for our clients' applications. Partnered with major businesses across Jamaica.
+                </p>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">Today: Growing Success</h3>
+                <p className="text-mtechGray-700 mb-4">
+                  Now a full-service digital solutions provider with a reputation for excellence. Continuing to innovate and expand our services to meet the evolving needs of our clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-white">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-4">
+              Our Core Values
+            </h2>
+            <p className="text-xl text-mtechGray-600 max-w-3xl mx-auto">
+              These principles guide everything we do and every decision we make.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Client-Centric</h3>
+              <p className="text-mtechGray-700">
+                We put our clients' needs first and tailor our solutions to address their unique challenges.
+              </p>
+            </div>
+            
+            <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Excellence</h3>
+              <p className="text-mtechGray-700">
+                We strive for the highest quality in everything we do, from code to customer service.
+              </p>
+            </div>
+            
+            <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clipboard className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Innovation</h3>
+              <p className="text-mtechGray-700">
+                We embrace new technologies and ideas to deliver cutting-edge solutions.
+              </p>
+            </div>
+            
+            <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Integrity</h3>
+              <p className="text-mtechGray-700">
+                We conduct business with honesty, transparency, and strong ethical principles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section (Optional) */}
+      <section className="py-20 bg-mtechGray-50">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-4">
+              Meet Our Leadership
+            </h2>
+            <p className="text-xl text-mtechGray-600 max-w-3xl mx-auto">
+              The experienced professionals guiding our company's success
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                alt="CEO" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Michael Johnson</h3>
+                <p className="text-mtechBlue-600 font-medium mb-4">Founder & CEO</p>
+                <p className="text-mtechGray-700">
+                  With over 15 years of experience in technology, Michael leads our company's vision and strategy.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                alt="CTO" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Lisa Brown</h3>
+                <p className="text-mtechBlue-600 font-medium mb-4">Chief Technology Officer</p>
+                <p className="text-mtechGray-700">
+                  Lisa oversees our technical operations, ensuring we deliver cutting-edge solutions to our clients.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+              <img 
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                alt="COO" 
+                className="w-full h-64 object-cover object-center"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">David Thompson</h3>
+                <p className="text-mtechBlue-600 font-medium mb-4">Chief Operating Officer</p>
+                <p className="text-mtechGray-700">
+                  David manages our day-to-day operations, ensuring project excellence and client satisfaction.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gradient-to-r from-mtechBlue-600 to-mtechBlue-800 text-white">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Want to Work with Us?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Discover how M Tech Corp can help your business thrive in the digital world.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button className="bg-white text-mtechBlue-700 hover:bg-mtechGray-100" size="lg" asChild>
+              <Link to="/contact">
+                Contact Us
+              </Link>
+            </Button>
+            <Button variant="outline" className="border-white bg-transparent hover:bg-white/20" size="lg" asChild>
+              <Link to="/services">
+                Our Services
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default About;
