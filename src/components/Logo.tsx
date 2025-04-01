@@ -17,7 +17,7 @@ const Logo = ({ className = '', size = 'md' }: LogoProps) => {
     <div className={`flex items-center ${className}`}>
       <div className="flex items-center">
         <div className="relative">
-          <div className="font-bold text-mtechNavy text-2xl">
+          <div className="font-bold text-mtechNavy text-2xl flex items-center">
             <span className="text-mtechOrange">M</span>
             <span>Tech</span>
           </div>
