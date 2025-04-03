@@ -29,7 +29,7 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex">
-                  <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Phone className="h-6 w-6" />
                   </div>
                   <div>
@@ -39,7 +39,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex">
-                  <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
@@ -49,7 +49,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex">
-                  <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
@@ -59,7 +59,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex">
-                  <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Clock className="h-6 w-6" />
                   </div>
                   <div>
