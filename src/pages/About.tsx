@@ -167,7 +167,7 @@ const About = () => {
               <img 
                 src="/lovable-uploads/dbe71c58-0ea3-4d1d-97be-343df0232183.png" 
                 alt="CEO" 
-                className="w-full h-64 object-cover object-center"
+                className="w-full h-64 object-cover object-center object-top"
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Vanessa Russell</h3>
