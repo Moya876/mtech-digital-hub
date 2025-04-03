@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,12 +37,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "Healthcare App Testing",
-    description: "Comprehensive testing of a patient management system, ensuring HIPAA compliance and data security.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    technologies: ["Selenium", "Jest", "Cypress", "Postman"],
-    category: "Software Testing",
-    codeSnippet: `// API Test for Patient Data\ndescribe('Patient API Tests', () => {\n  it('should retrieve patient records', async () => {\n    const response = await request(app)\n      .get('/api/patients')\n      .set('Authorization', 'Bearer ' + token);\n    expect(response.status).toBe(200);\n    expect(response.body.length).toBeGreaterThan(0);\n  });\n});`
+    title: "WeShip Express Jamaica",
+    description: "A shipping service website for Jamaica with tracking features, shipping calculator, and customer account management system.",
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    projectUrl: "https://weshipexpressja.com/",
+    technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
+    category: "Web Development",
+    codeSnippet: `// Shipping rate calculator\nconst calculateShipping = (weight, destination) => {\n  const baseRate = 10.50;\n  const weightFactor = weight * 0.75;\n  const destinationFee = destinationRates[destination] || 5;\n  \n  return baseRate + weightFactor + destinationFee;\n};`
   },
   {
     id: 4,
