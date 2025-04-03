@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+import Portfolio from "./pages/Portfolio";
 import Quote from "./pages/Quote";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
@@ -30,7 +30,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/quote" element={<Quote />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
