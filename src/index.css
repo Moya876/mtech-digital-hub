@@ -111,4 +111,9 @@
   .animation-delay-500 {
     animation-delay: 0.5s;
   }
+  
+  .text-stroke-white {
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+  }
 }
