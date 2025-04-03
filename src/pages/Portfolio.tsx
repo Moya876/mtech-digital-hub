@@ -26,13 +26,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Banking Dashboard",
-    description: "Secure banking dashboard with transaction history, account management, and financial analytics.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    projectUrl: "https://example.com/banking",
-    technologies: ["Angular", "Express.js", "PostgreSQL", "Chart.js"],
+    title: "OVB Hotel Website",
+    description: "A modern hotel website featuring room booking capabilities, amenities showcase, and responsive design for optimal user experience.",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    projectUrl: "https://ovbhotel.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"],
     category: "Web Development",
-    codeSnippet: `// Transaction data visualization\nconst renderChart = (data) => {\n  const ctx = document.getElementById('transactionsChart');\n  new Chart(ctx, {\n    type: 'line',\n    data: data,\n    options: {responsive: true}\n  });\n};`
+    codeSnippet: `// Room availability checker\nfunction checkAvailability(roomType, startDate, endDate) {\n  return fetch('/api/availability', {\n    method: 'POST',\n    body: JSON.stringify({ roomType, startDate, endDate }),\n    headers: {\n      'Content-Type': 'application/json'\n    }\n  })\n  .then(response => response.json());\n}`
   },
   {
     id: 3,
