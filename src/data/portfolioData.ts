@@ -63,7 +63,7 @@ export const projects: Project[] = [
     id: 7,
     title: "Cool Cash Jamaica",
     description: "Security and regulatory compliance testing for a financial services platform operating across multiple countries.",
-    image: "https://images.unsplash.com/photo-1565514020179-026b92b2d80b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/lovable-uploads/64e0150e-c83f-42c2-a422-24040dede508.png",
     projectUrl: "https://www.coolcash.com/",
     technologies: ["Postman", "SonarQube", "Burp Suite", "Selenium"],
     category: "Software Testing"
