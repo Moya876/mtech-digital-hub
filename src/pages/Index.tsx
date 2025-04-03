@@ -132,7 +132,7 @@ const Index = () => {
                 Contact Us
               </Link>
             </Button>
-            <Button variant="outline" className="border-white bg-transparent hover:bg-white/20" size="lg" asChild>
+            <Button variant="outline" className="border-white bg-transparent hover:bg-mtechOrange hover:border-mtechOrange" size="lg" asChild>
               <Link to="/services">
                 Explore Services
               </Link>
