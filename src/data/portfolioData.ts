@@ -81,7 +81,7 @@ export const projects: Project[] = [
     id: 9,
     title: "Cool Cash Canada",
     description: "Automated regression testing for a Canadian financial services platform with focus on bilingual support and compliance with Canadian regulations.",
-    image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/lovable-uploads/bce7577a-38b5-43c4-89b4-a4cff9d08449.png",
     projectUrl: "https://www.coolcash.ca/",
     technologies: ["Robot Framework", "Docker", "AWS Device Farm", "TestRail"],
     category: "Software Testing"
