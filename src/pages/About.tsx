@@ -23,7 +23,7 @@ const About = () => {
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-mtechGray-50 rounded-xl p-8">
-              <div className="h-14 w-14 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mb-6">
+              <div className="h-14 w-14 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mb-6">
                 <Target className="h-7 w-7" />
               </div>
               <h2 className="text-2xl font-bold text-mtechGray-900 mb-4">Our Mission</h2>
@@ -32,7 +32,7 @@ const About = () => {
               </p>
             </div>
             <div className="bg-mtechGray-50 rounded-xl p-8">
-              <div className="h-14 w-14 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mb-6">
+              <div className="h-14 w-14 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mb-6">
                 <Award className="h-7 w-7" />
               </div>
               <h2 className="text-2xl font-bold text-mtechGray-900 mb-4">Our Vision</h2>
@@ -57,9 +57,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="relative border-l-2 border-mtechBlue-300 pl-8 ml-4 space-y-12">
+            <div className="relative border-l-2 border-mtechOrange pl-8 ml-4 space-y-12">
               <div className="relative">
-                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2018: The Beginning</h3>
                 <p className="text-mtechGray-700 mb-4">
                   Founded in Ocho Rios with a mission to provide quality web development services to local businesses. Started with a small team of passionate developers.
@@ -67,7 +67,7 @@ const About = () => {
               </div>
               
               <div className="relative">
-                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2019: Expanding Services</h3>
                 <p className="text-mtechGray-700 mb-4">
                   Added web hosting services to our portfolio, providing clients with end-to-end web solutions. Doubled our client base and expanded our team.
@@ -75,7 +75,7 @@ const About = () => {
               </div>
               
               <div className="relative">
-                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2021: Software Testing</h3>
                 <p className="text-mtechGray-700 mb-4">
                   Introduced software testing services to ensure quality and reliability for our clients' applications. Partnered with major businesses across Jamaica.
@@ -83,7 +83,7 @@ const About = () => {
               </div>
               
               <div className="relative">
-                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechBlue-300 bg-white"></div>
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-2">Today: Growing Success</h3>
                 <p className="text-mtechGray-700 mb-4">
                   Now a full-service digital solutions provider with a reputation for excellence. Continuing to innovate and expand our services to meet the evolving needs of our clients.
@@ -108,7 +108,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Client-Centric</h3>
@@ -118,7 +118,7 @@ const About = () => {
             </div>
             
             <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Excellence</h3>
@@ -128,7 +128,7 @@ const About = () => {
             </div>
             
             <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clipboard className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Innovation</h3>
@@ -138,7 +138,7 @@ const About = () => {
             </div>
             
             <div className="border border-mtechGray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
-              <div className="h-16 w-16 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Integrity</h3>
@@ -171,7 +171,7 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Michael Johnson</h3>
-                <p className="text-mtechBlue-600 font-medium mb-4">Founder & CEO</p>
+                <p className="text-mtechOrange font-medium mb-4">Founder & CEO</p>
                 <p className="text-mtechGray-700">
                   With over 15 years of experience in technology, Michael leads our company's vision and strategy.
                 </p>
@@ -186,7 +186,7 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Lisa Brown</h3>
-                <p className="text-mtechBlue-600 font-medium mb-4">Chief Technology Officer</p>
+                <p className="text-mtechOrange font-medium mb-4">Chief Technology Officer</p>
                 <p className="text-mtechGray-700">
                   Lisa oversees our technical operations, ensuring we deliver cutting-edge solutions to our clients.
                 </p>
@@ -201,7 +201,7 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-1">David Thompson</h3>
-                <p className="text-mtechBlue-600 font-medium mb-4">Chief Operating Officer</p>
+                <p className="text-mtechOrange font-medium mb-4">Chief Operating Officer</p>
                 <p className="text-mtechGray-700">
                   David manages our day-to-day operations, ensuring project excellence and client satisfaction.
                 </p>
@@ -221,12 +221,12 @@ const About = () => {
             Discover how M Tech Corp can help your business thrive in the digital world.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-white text-mtechBlue-700 hover:bg-mtechGray-100" size="lg" asChild>
+            <Button className="bg-white text-mtechBlue-700 hover:bg-mtechOrange hover:text-white" size="lg" asChild>
               <Link to="/contact">
                 Contact Us
               </Link>
             </Button>
-            <Button variant="outline" className="border-white bg-transparent hover:bg-white/20" size="lg" asChild>
+            <Button variant="outline" className="border-white bg-transparent hover:bg-mtechOrange hover:border-mtechOrange" size="lg" asChild>
               <Link to="/services">
                 Our Services
               </Link>
