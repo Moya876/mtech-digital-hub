@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,13 +16,13 @@ import {
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A fully responsive e-commerce platform with product listings, cart functionality, and secure checkout.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    projectUrl: "https://example.com/ecommerce",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "Moya Russell Portfolio",
+    description: "A professional portfolio website showcasing web development projects, skills, and services with a clean, modern design.",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    projectUrl: "https://moyarussell.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     category: "Web Development",
-    codeSnippet: `// Product filtering function\nconst filterProducts = (products, filters) => {\n  return products.filter(product => {\n    return filters.every(filter => product[filter.key] === filter.value);\n  });\n};`
+    codeSnippet: `// Responsive navigation toggle\nconst navToggle = document.querySelector('.nav-toggle');\nconst navLinks = document.querySelector('.nav-links');\n\nnavToggle.addEventListener('click', () => {\n  navLinks.classList.toggle('show-links');\n});`
   },
   {
     id: 2,
