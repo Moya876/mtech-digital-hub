@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -59,7 +58,7 @@ const projects = [
     id: 5,
     title: "Headshots by AI",
     description: "Quality assurance testing for an AI-powered headshot generation platform, ensuring image quality, processing speed, and user experience.",
-    image: "https://images.unsplash.com/photo-1525770041010-2a1233dd8152?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/lovable-uploads/8f1ba9cb-1ce3-4561-b6fc-45fc106b02f6.png",
     projectUrl: "https://headshotsbyai.com/",
     technologies: ["Cypress", "Mocha", "Chai", "API Testing"],
     category: "Software Testing",
