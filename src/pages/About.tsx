@@ -182,7 +182,7 @@ const About = () => {
               <img 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
                 alt="CTO" 
-                className="w-full h-64 object-cover object-center"
+                className="w-full h-64 object-cover object-center object-top"
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Lisa Brown</h3>
@@ -197,7 +197,7 @@ const About = () => {
               <img 
                 src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
                 alt="COO" 
-                className="w-full h-64 object-cover object-center"
+                className="w-full h-64 object-cover object-center object-top"
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-1">David Thompson</h3>
