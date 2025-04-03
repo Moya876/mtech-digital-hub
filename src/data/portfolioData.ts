@@ -72,7 +72,7 @@ export const projects: Project[] = [
     id: 8,
     title: "Cool Cash DR",
     description: "Localization and integration testing for a financial platform adapted for the Dominican Republic market.",
-    image: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/lovable-uploads/d8a9eaf8-e668-413f-8a76-b4b51da85437.png",
     projectUrl: "https://www.coolcashdr.com/",
     technologies: ["TestComplete", "Jenkins", "RestAssured", "Applitools"],
     category: "Software Testing"
