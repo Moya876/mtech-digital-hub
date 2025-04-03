@@ -25,7 +25,7 @@ const Hero = () => {
                   Our Services <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-mtechOrange/20 px-8 py-6 text-lg" asChild>
+              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-mtechOrange hover:border-mtechOrange px-8 py-6 text-lg" asChild>
                 <Link to="/contact">
                   Contact Us
                 </Link>
