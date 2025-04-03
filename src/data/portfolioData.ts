@@ -90,7 +90,7 @@ export const projects: Project[] = [
     id: 10,
     title: "Cool Loans",
     description: "Performance and security testing for a loan application processing system, with focus on data encryption and application response time.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/lovable-uploads/b45f36b8-3bc5-40d0-8a12-78c624dc177f.png",
     projectUrl: "https://coolloans.com/",
     technologies: ["k6", "Gatling", "Charles Proxy", "Playwright"],
     category: "Software Testing"
