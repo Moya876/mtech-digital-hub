@@ -165,15 +165,15 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl overflow-hidden shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                src="/lovable-uploads/dbe71c58-0ea3-4d1d-97be-343df0232183.png" 
                 alt="CEO" 
                 className="w-full h-64 object-cover object-center"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Michael Johnson</h3>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Vanessa Russell</h3>
                 <p className="text-mtechOrange font-medium mb-4">Founder & CEO</p>
                 <p className="text-mtechGray-700">
-                  With over 15 years of experience in technology, Michael leads our company's vision and strategy.
+                  With over 8 years of experience in technology, Vanessa leads our company's vision and strategy.
                 </p>
               </div>
             </div>
