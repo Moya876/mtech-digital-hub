@@ -49,7 +49,7 @@ const projects = [
     id: 4,
     title: "Cool Market",
     description: "End-to-end testing of an e-commerce platform, focusing on user journeys, payment processing, and inventory management.",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/lovable-uploads/56514a50-ca63-4804-8a85-dbebacde1da4.png",
     projectUrl: "https://coolmarket.com/",
     technologies: ["TestNG", "Selenium", "JUnit", "Appium"],
     category: "Software Testing",
