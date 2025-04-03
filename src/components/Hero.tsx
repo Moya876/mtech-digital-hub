@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in">
-              Building Digital <span className="text-mtechAccent">Solutions</span> for Your Business
+              Building Digital <span className="text-mtechOrange">Solutions</span> for Your Business
             </h1>
             <p className="mt-6 text-xl text-mtechGray-100 max-w-lg animate-fade-in animation-delay-100">
               Professional web development, reliable hosting services, and comprehensive software testing solutions to help your business thrive online.
