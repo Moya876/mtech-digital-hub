@@ -29,7 +29,7 @@ const ServiceSection = ({
       </div>
       <div className={`order-1 ${reversed ? 'md:order-2' : 'md:order-1'}`}>
         <div className="flex items-center mb-4">
-          <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-full flex items-center justify-center mr-4">
+          <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mr-4">
             {icon}
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-mtechGray-900">{title}</h3>
@@ -42,7 +42,7 @@ const ServiceSection = ({
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
-              <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
               <span className="text-mtechGray-700">{feature}</span>
             </li>
           ))}
@@ -94,7 +94,7 @@ const Services = () => {
           <ServiceSection 
             title="Web Development"
             description="We create custom, responsive websites and web applications tailored to your business needs. Our development team uses the latest technologies to deliver high-quality solutions that drive results."
-            icon={<Monitor className="h-6 w-6" />}
+            icon={<Monitor className="h-6 w-6 text-mtechOrange" />}
             features={[
               "Custom website design and development",
               "Responsive design for all devices",
@@ -109,7 +109,7 @@ const Services = () => {
           <ServiceSection 
             title="Web Hosting"
             description="Our reliable hosting services provide the foundation for your online presence. With top-tier security, excellent performance, and 24/7 technical support, we ensure your website is always available to your customers."
-            icon={<Server className="h-6 w-6" />}
+            icon={<Server className="h-6 w-6 text-mtechOrange" />}
             features={[
               "High-performance servers for optimal speed",
               "99.9% uptime guarantee",
@@ -125,7 +125,7 @@ const Services = () => {
           <ServiceSection 
             title="Software Testing"
             description="Our comprehensive software testing services help ensure your applications are bug-free, secure, and perform optimally. We identify and address issues before they impact your users, saving you time and resources."
-            icon={<FileSearch className="h-6 w-6" />}
+            icon={<FileSearch className="h-6 w-6 text-mtechOrange" />}
             features={[
               "Functional and regression testing",
               "Performance and load testing",
@@ -153,7 +153,7 @@ const Services = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-mtechGray-900">Proven Results</h3>
@@ -163,7 +163,7 @@ const Services = () => {
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mb-4">
                 <Shield className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-mtechGray-900">Security Focus</h3>
@@ -173,7 +173,7 @@ const Services = () => {
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mb-4">
                 <Clock className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-mtechGray-900">Timely Delivery</h3>
@@ -183,7 +183,7 @@ const Services = () => {
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="h-12 w-12 bg-mtechBlue-50 text-mtechBlue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-lg flex items-center justify-center mb-4">
                 <LineChart className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-mtechGray-900">Ongoing Support</h3>
