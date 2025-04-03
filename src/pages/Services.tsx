@@ -1,4 +1,3 @@
-
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Code, Database, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -48,7 +47,7 @@ const ServiceSection = ({
           ))}
         </ul>
         
-        <Button className="bg-mtechBlue-600 hover:bg-mtechBlue-700" asChild>
+        <Button className="bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
           <Link to="/contact">
             Get Started
           </Link>
@@ -237,7 +236,7 @@ const Services = () => {
                     <span className="text-mtechGray-700">Basic SEO setup</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechBlue-700" asChild>
+                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
                     Get Started
                   </Link>
@@ -281,7 +280,7 @@ const Services = () => {
                     <span className="text-mtechGray-700">3 months free hosting</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechBlue-700" asChild>
+                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
                     Get Started
                   </Link>
@@ -321,7 +320,7 @@ const Services = () => {
                     <span className="text-mtechGray-700">Dedicated account manager</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechBlue-700" asChild>
+                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
                     Contact Us
                   </Link>
