@@ -94,6 +94,15 @@ export const projects: Project[] = [
     projectUrl: "https://coolloans.com/",
     technologies: ["k6", "Gatling", "Charles Proxy", "Playwright"],
     category: "Software Testing"
+  },
+  {
+    id: 11,
+    title: "GoCool Jamaica",
+    description: "End-to-end functionality testing for a courier and logistics service platform with island-wide delivery tracking and booking systems.",
+    image: "/lovable-uploads/db2319ca-a5e6-4713-851e-cfbf46a2f7e7.png",
+    projectUrl: "https://portal.gocooljm.com/",
+    technologies: ["Cypress", "TestCafe", "Postman", "LoadRunner"],
+    category: "Software Testing"
   }
 ];
 
