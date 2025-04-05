@@ -1,4 +1,3 @@
-
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Code, Database, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,7 @@ const ServiceSection = ({
   id?: string;
 }) => {
   return (
-    <div id={id} className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'md:flex-row-reverse' : ''}`}>
+    <div id={id} className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'md:flex-row-reverse' : ''} pt-16`}>
       <div className={`order-2 ${reversed ? 'md:order-1' : 'md:order-2'}`}>
         <img
           src={image}
