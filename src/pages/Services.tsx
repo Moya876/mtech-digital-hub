@@ -1,3 +1,4 @@
+
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Code, Database, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,8 @@ const ServiceSection = ({
   icon,
   features,
   image,
-  reversed = false
+  reversed = false,
+  id
 }: { 
   title: string; 
   description: string;
@@ -16,9 +18,10 @@ const ServiceSection = ({
   features: string[];
   image: string;
   reversed?: boolean;
+  id?: string;
 }) => {
   return (
-    <div className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'md:flex-row-reverse' : ''}`}>
+    <div id={id} className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'md:flex-row-reverse' : ''}`}>
       <div className={`order-2 ${reversed ? 'md:order-1' : 'md:order-2'}`}>
         <img
           src={image}
@@ -91,6 +94,7 @@ const Services = () => {
       <section className="py-20 bg-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto space-y-24">
           <ServiceSection 
+            id="web-development"
             title="Web Development"
             description="We create custom, responsive websites and web applications tailored to your business needs. Our development team uses the latest technologies to deliver high-quality solutions that drive results."
             icon={<Monitor className="h-6 w-6 text-mtechOrange" />}
@@ -106,6 +110,7 @@ const Services = () => {
           />
           
           <ServiceSection 
+            id="web-hosting"
             title="Web Hosting"
             description="Our reliable hosting services provide the foundation for your online presence. With top-tier security, excellent performance, and 24/7 technical support, we ensure your website is always available to your customers."
             icon={<Server className="h-6 w-6 text-mtechOrange" />}
@@ -122,6 +127,7 @@ const Services = () => {
           />
           
           <ServiceSection 
+            id="software-testing"
             title="Software Testing"
             description="Our comprehensive software testing services help ensure your applications are bug-free, secure, and perform optimally. We identify and address issues before they impact your users, saving you time and resources."
             icon={<FileSearch className="h-6 w-6 text-mtechOrange" />}
