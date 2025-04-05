@@ -13,6 +13,7 @@ import Quote from "./pages/Quote";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
+          <ScrollToTop />
           <Navbar />
           <main className="flex-grow">
             <Routes>
