@@ -254,11 +254,48 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Web Hosting Plan */}
+            {/* Web Development Plan - Moved here from last position */}
             <div className="border-2 border-mtechBlue-500 rounded-xl shadow-lg overflow-hidden relative">
               <div className="absolute top-0 right-0 bg-mtechBlue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                 POPULAR
               </div>
+              <div className="p-6 border-b border-mtechGray-100">
+                <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
+                <div className="mt-4 flex items-baseline">
+                  <span className="text-3xl font-bold text-mtechGray-900">$300</span>
+                  <span className="ml-1 text-mtechGray-500">/ starter</span>
+                </div>
+                <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
+              </div>
+              <div className="p-6 space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Basic website (up to 5 pages)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Mobile responsive design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Contact form</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Basic SEO setup</span>
+                  </li>
+                </ul>
+                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
+                  <Link to="/contact">
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Web Hosting Plan - Moved here from middle position */}
+            <div className="border border-mtechGray-100 rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Web Hosting</h3>
                 <div className="mt-4 flex items-baseline">
@@ -288,43 +325,6 @@ const Services = () => {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">24/7 support</span>
-                  </li>
-                </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
-                  <Link to="/contact">
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
-            {/* Web Development Plan */}
-            <div className="border border-mtechGray-100 rounded-xl shadow-sm overflow-hidden">
-              <div className="p-6 border-b border-mtechGray-100">
-                <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
-                <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">$300</span>
-                  <span className="ml-1 text-mtechGray-500">/ starter</span>
-                </div>
-                <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
-              </div>
-              <div className="p-6 space-y-4">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Basic website (up to 5 pages)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Mobile responsive design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Contact form</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Basic SEO setup</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
