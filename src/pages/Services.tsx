@@ -226,23 +226,23 @@ const Services = () => {
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Functional testing</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Regression testing</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Performance testing</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Detailed reporting</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Bug tracking</span>
                   </li>
                 </ul>
@@ -270,23 +270,23 @@ const Services = () => {
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">High-performance hosting</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Free SSL certificate</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">99.9% uptime guarantee</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Daily backups</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">24/7 support</span>
                   </li>
                 </ul>
@@ -311,19 +311,19 @@ const Services = () => {
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Basic website (up to 5 pages)</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Mobile responsive design</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Contact form</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Basic SEO setup</span>
                   </li>
                 </ul>
