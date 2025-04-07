@@ -1,3 +1,4 @@
+
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Code, Database, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -212,38 +213,42 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Web Development Plan */}
+            {/* Software Testing Plan */}
             <div className="border border-mtechGray-100 rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-mtechGray-100">
-                <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
+                <h3 className="text-lg font-semibold text-mtechGray-900">Software Testing</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">$300</span>
-                  <span className="ml-1 text-mtechGray-500">/ starter</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">$15</span>
+                  <span className="ml-1 text-mtechGray-500">/ hour</span>
                 </div>
-                <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
+                <p className="mt-2 text-sm text-mtechGray-500">Professional QA services</p>
               </div>
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Basic website (up to 5 pages)</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Functional testing</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Mobile responsive design</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Regression testing</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Contact form</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Performance testing</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Basic SEO setup</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Detailed reporting</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Bug tracking</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
-                    Get Started
+                    Contact Us
                   </Link>
                 </Button>
               </div>
@@ -265,23 +270,23 @@ const Services = () => {
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">High-performance hosting</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Free SSL certificate</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">99.9% uptime guarantee</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Daily backups</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">24/7 support</span>
                   </li>
                 </ul>
@@ -293,42 +298,38 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Software Testing Plan */}
+            {/* Web Development Plan */}
             <div className="border border-mtechGray-100 rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-mtechGray-100">
-                <h3 className="text-lg font-semibold text-mtechGray-900">Software Testing</h3>
+                <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">$15</span>
-                  <span className="ml-1 text-mtechGray-500">/ hour</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">$300</span>
+                  <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
-                <p className="mt-2 text-sm text-mtechGray-500">Professional QA services</p>
+                <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
               </div>
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Functional testing</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Basic website (up to 5 pages)</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Regression testing</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Mobile responsive design</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Performance testing</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Contact form</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Detailed reporting</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Bug tracking</span>
+                    <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Basic SEO setup</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
-                    Contact Us
+                    Get Started
                   </Link>
                 </Button>
               </div>
