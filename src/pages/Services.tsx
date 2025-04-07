@@ -1,3 +1,4 @@
+
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Code, Database, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -212,13 +213,13 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Starter Plan */}
+            {/* Web Development Plan */}
             <div className="border border-mtechGray-100 rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-mtechGray-100">
-                <h3 className="text-lg font-semibold text-mtechGray-900">Starter</h3>
+                <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">$499</span>
-                  <span className="ml-1 text-mtechGray-500">/ project</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">$300</span>
+                  <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
               </div>
@@ -249,40 +250,40 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Professional Plan */}
+            {/* Web Hosting Plan */}
             <div className="border-2 border-mtechBlue-500 rounded-xl shadow-lg overflow-hidden relative">
               <div className="absolute top-0 right-0 bg-mtechBlue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                 POPULAR
               </div>
               <div className="p-6 border-b border-mtechGray-100">
-                <h3 className="text-lg font-semibold text-mtechGray-900">Professional</h3>
+                <h3 className="text-lg font-semibold text-mtechGray-900">Web Hosting</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">$999</span>
-                  <span className="ml-1 text-mtechGray-500">/ project</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">$5</span>
+                  <span className="ml-1 text-mtechGray-500">/ month</span>
                 </div>
-                <p className="mt-2 text-sm text-mtechGray-500">For growing businesses</p>
+                <p className="mt-2 text-sm text-mtechGray-500">or $60/year</p>
               </div>
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Custom website (up to 10 pages)</span>
+                    <span className="text-mtechGray-700">High-performance hosting</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">CMS integration</span>
+                    <span className="text-mtechGray-700">Free SSL certificate</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Advanced SEO optimization</span>
+                    <span className="text-mtechGray-700">99.9% uptime guarantee</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">E-commerce features (basic)</span>
+                    <span className="text-mtechGray-700">Daily backups</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">3 months free hosting</span>
+                    <span className="text-mtechGray-700">24/7 support</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
@@ -293,36 +294,37 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Enterprise Plan */}
+            {/* Software Testing Plan */}
             <div className="border border-mtechGray-100 rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-mtechGray-100">
-                <h3 className="text-lg font-semibold text-mtechGray-900">Enterprise</h3>
+                <h3 className="text-lg font-semibold text-mtechGray-900">Software Testing</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">Custom</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">$15</span>
+                  <span className="ml-1 text-mtechGray-500">/ hour</span>
                 </div>
-                <p className="mt-2 text-sm text-mtechGray-500">For large organizations</p>
+                <p className="mt-2 text-sm text-mtechGray-500">Professional QA services</p>
               </div>
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Full-scale custom solutions</span>
+                    <span className="text-mtechGray-700">Functional testing</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Advanced e-commerce functionality</span>
+                    <span className="text-mtechGray-700">Regression testing</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Custom integrations</span>
+                    <span className="text-mtechGray-700">Performance testing</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Priority support</span>
+                    <span className="text-mtechGray-700">Detailed reporting</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechAccent mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Dedicated account manager</span>
+                    <span className="text-mtechGray-700">Bug tracking</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
