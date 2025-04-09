@@ -110,8 +110,8 @@ const Index = () => {
             />
             <Testimonial
               quote="Their software testing service helped us identify and fix critical bugs before launch. The team's thoroughness and expertise saved us from potential customer dissatisfaction."
-              author="Dimitri Harding"
-              company="Headshots by AI"
+              author="Adam Toyloy"
+              company="AutoLuv"
             />
           </div>
         </div>
