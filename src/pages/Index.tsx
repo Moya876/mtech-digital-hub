@@ -105,8 +105,8 @@ const Index = () => {
             />
             <Testimonial
               quote="The hosting service provided by M Tech Corp has been reliable and secure. Their technical support team is always available and resolves issues promptly."
-              author="Marcus Brown"
-              company="Island Cafe"
+              author="Adam Toyloy"
+              company="AutoLuv"
             />
             <Testimonial
               quote="Their software testing service helped us identify and fix critical bugs before launch. The team's thoroughness and expertise saved us from potential customer dissatisfaction."
