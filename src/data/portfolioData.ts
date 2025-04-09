@@ -1,3 +1,4 @@
+
 import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
@@ -7,7 +8,7 @@ export const projects: Project[] = [
     description: "A professional portfolio website showcasing web development projects, skills, and services with a clean, modern design.",
     image: "/lovable-uploads/3f601281-4f55-443e-acfc-c4c7e94c7a19.png",
     projectUrl: "https://moyarussell.com/",
-    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
     category: "Web Development",
     codeSnippet: `// Responsive navigation toggle\nconst navToggle = document.querySelector('.nav-toggle');\nconst navLinks = document.querySelector('.nav-links');\n\nnavToggle.addEventListener('click', () => {\n  navLinks.classList.toggle('show-links');\n});`
   },
