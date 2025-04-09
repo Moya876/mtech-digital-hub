@@ -20,7 +20,7 @@ import { z } from "zod";
 import emailjs from 'emailjs-com';
 
 const EMAILJS_SERVICE_ID = "service_7bdry77"; // Your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = "template_v54qvg9"; // Your EmailJS template ID
+const EMAILJS_TEMPLATE_ID = "template_quote_request"; // Your Quote-specific EmailJS template ID
 const EMAILJS_USER_ID = "ug9V9cuZF2sIN3Otp"; // Your EmailJS user ID
 
 const quoteSchema = z.object({
@@ -60,7 +60,9 @@ const Quote = () => {
         from_name: data.name,
         reply_to: data.email,
         phone_number: data.phone,
-        message: `Project Type: ${data.projectType}\n\nCompany: ${data.company || 'Not provided'}\n\n${data.message}`,
+        company_name: data.company || 'Not provided',
+        project_type: data.projectType,
+        message: data.message,
         name: data.name,
         time: new Date().toLocaleString()
       };
