@@ -39,9 +39,11 @@ const Footer = () => {
                 <Twitter size={24} />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/mtechcorp/" 
                 className="text-mtechOrange hover:text-mtechBlue transition-colors"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram size={24} />
               </a>
