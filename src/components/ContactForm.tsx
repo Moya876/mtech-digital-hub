@@ -16,9 +16,9 @@ interface ContactFormValues {
   message: string;
 }
 
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
-const EMAILJS_USER_ID = "YOUR_USER_ID"; // Replace with your EmailJS user ID
+const EMAILJS_SERVICE_ID = "service_7bdry77"; // Your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = "template_v54qvg9"; // Your EmailJS template ID
+const EMAILJS_USER_ID = "ug9V9cuZF2sIN3Otp"; // Your EmailJS user ID
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
