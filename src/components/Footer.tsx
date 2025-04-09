@@ -21,7 +21,7 @@ const Footer = () => {
             <p className="text-mtechGray-600 mb-6 mt-4">
               Providing cutting-edge web development, reliable hosting solutions, and comprehensive software testing services.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               <a 
                 href="https://www.facebook.com/Moyatechcorp" 
                 className="text-mtechOrange hover:text-mtechBlue transition-colors"
