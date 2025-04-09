@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
@@ -38,7 +39,7 @@ const ContactForm = () => {
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
-        phone_number: data.phone, // Changed from "phone" to "phone_number"
+        phone_number: data.phone || "Not provided", // Ensure phone is never empty
         message: data.message
       };
       
