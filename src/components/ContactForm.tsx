@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 interface ContactFormValues {
   name: string;
@@ -14,6 +15,10 @@ interface ContactFormValues {
   phone: string;
   message: string;
 }
+
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
+const EMAILJS_USER_ID = "YOUR_USER_ID"; // Replace with your EmailJS user ID
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,18 +34,44 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    console.log("Form submitted:", data);
-    
-    toast({
-      title: "Message Sent",
-      description: "Thank you for contacting us. We'll get back to you soon!",
-    });
-    
-    reset();
-    setIsSubmitting(false);
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: data.name,
+        reply_to: data.email,
+        phone: data.phone || "Not provided",
+        message: data.message
+      };
+      
+      console.log("Sending email with params:", templateParams);
+      
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+      
+      console.log("Email sent successfully:", response);
+      
+      toast({
+        title: "Message Sent",
+        description: "Thank you for contacting us. We'll get back to you soon!",
+      });
+      
+      reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
