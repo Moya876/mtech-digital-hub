@@ -35,12 +35,14 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Prepare template parameters - make sure the key names match your EmailJS template variables
+      // Ensure all template parameter keys exactly match what's in the EmailJS template
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
-        phone_number: data.phone,
-        message: data.message
+        phone_number: data.phone, // This must match the template's {{phone_number}}
+        message: data.message,
+        name: data.name, // Adding this since it's used in the template
+        time: new Date().toLocaleString() // Adding time since it appears in the template
       };
       
       console.log("Sending email with params:", templateParams);
