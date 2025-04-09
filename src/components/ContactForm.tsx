@@ -38,7 +38,7 @@ const ContactForm = () => {
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
-        phone_number: data.phone || "Not provided", // Changed from "phone" to "phone_number"
+        phone_number: data.phone, // Changed from "phone" to "phone_number"
         message: data.message
       };
       
