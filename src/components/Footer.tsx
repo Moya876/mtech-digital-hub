@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin, Clock } from "lucide-react";
 import Logo from "@/components/Logo";
 
 const Footer = () => {
@@ -30,13 +30,6 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <Facebook size={24} />
-              </a>
-              <a 
-                href="#" 
-                className="text-mtechOrange hover:text-mtechBlue transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={24} />
               </a>
               <a 
                 href="https://www.instagram.com/mtechcorp/" 
@@ -105,6 +98,14 @@ const Footer = () => {
                 <a href="mailto:mtechcorpja@gmail.com" className="text-mtechGray-600 hover:text-mtechOrange transition-colors">
                   mtechcorpja@gmail.com
                 </a>
+              </li>
+              <li className="flex items-start">
+                <Clock className="w-5 h-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                <div className="text-mtechGray-600">
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p>Saturday: 10:00 AM - 5:00 PM</p>
+                  <p>Sunday: Closed</p>
+                </div>
               </li>
             </ul>
           </div>
