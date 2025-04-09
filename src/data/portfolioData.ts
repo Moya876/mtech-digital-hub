@@ -1,4 +1,3 @@
-
 import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
@@ -15,12 +14,12 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "OVB Hotel Website",
-    description: "A modern hotel website featuring room booking capabilities, amenities showcase, and responsive design for optimal user experience.",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    description: "A modern hotel website featuring room booking capabilities, amenities showcase, and responsive design built with WordPress for optimal user experience.",
+    image: "/lovable-uploads/9dc113e3-a1db-467a-adb2-c32e53bd7677.png",
     projectUrl: "https://ovbhotel.com/",
-    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"],
+    technologies: ["WordPress", "Custom Theme", "PHP", "CSS", "JavaScript"],
     category: "Web Development",
-    codeSnippet: `// Room availability checker\nfunction checkAvailability(roomType, startDate, endDate) {\n  return fetch('/api/availability', {\n    method: 'POST',\n    body: JSON.stringify({ roomType, startDate, endDate }),\n    headers: {\n      'Content-Type': 'application/json'\n    }\n  })\n  .then(response => response.json());\n}`
+    codeSnippet: `// Room availability checker in theme functions.php\nfunction check_room_availability($room_type, $start_date, $end_date) {\n  global $wpdb;\n  $table_name = $wpdb->prefix . 'bookings';\n  \n  $query = $wpdb->prepare(\n    "SELECT COUNT(*) FROM $table_name \n     WHERE room_type = %s \n     AND ((start_date <= %s AND end_date >= %s) \n     OR (start_date <= %s AND end_date >= %s) \n     OR (start_date >= %s AND end_date <= %s))",\n    $room_type, $end_date, $start_date, $start_date, $start_date, $start_date, $end_date\n  );\n  \n  return $wpdb->get_var($query) == 0;\n}`
   },
   {
     id: 3,
