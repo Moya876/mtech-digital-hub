@@ -20,7 +20,7 @@ import { z } from "zod";
 import emailjs from 'emailjs-com';
 
 const EMAILJS_SERVICE_ID = "service_7bdry77"; // Your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = "template_quote_request"; // Your Quote-specific EmailJS template ID
+const EMAILJS_TEMPLATE_ID = "template_hdauac9"; // Your Quote-specific EmailJS template ID
 const EMAILJS_USER_ID = "ug9V9cuZF2sIN3Otp"; // Your EmailJS user ID
 
 const quoteSchema = z.object({
