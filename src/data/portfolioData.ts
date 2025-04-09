@@ -1,3 +1,4 @@
+
 import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
@@ -13,7 +14,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "OVB Hotel Website",
+    title: "OVB Hotel",
     description: "A modern hotel website featuring room booking capabilities, amenities showcase, and responsive design built with WordPress for optimal user experience.",
     image: "/lovable-uploads/9dc113e3-a1db-467a-adb2-c32e53bd7677.png",
     projectUrl: "https://ovbhotel.com/",
