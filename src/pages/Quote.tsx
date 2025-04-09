@@ -55,15 +55,14 @@ const Quote = () => {
     setIsSubmitting(true);
     
     try {
-      // Ensure all template parameter keys exactly match what's in the EmailJS template
+      // Updated to ensure parameter names match exactly what's in the template
       const templateParams = {
-        from_name: data.name,
-        reply_to: data.email,
-        phone_number: data.phone,
-        company_name: data.company || 'Not provided',
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        company: data.company || 'Not provided',
         project_type: data.projectType,
         message: data.message,
-        name: data.name,
         time: new Date().toLocaleString()
       };
       
@@ -308,3 +307,4 @@ const Quote = () => {
 };
 
 export default Quote;
+
