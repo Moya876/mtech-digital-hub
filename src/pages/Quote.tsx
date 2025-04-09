@@ -5,7 +5,7 @@ import { Check, ArrowLeft, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import {
   Form,
   FormControl,
@@ -17,6 +17,11 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import emailjs from 'emailjs-com';
+
+const EMAILJS_SERVICE_ID = "service_7bdry77"; // Your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = "template_v54qvg9"; // Your EmailJS template ID
+const EMAILJS_USER_ID = "ug9V9cuZF2sIN3Otp"; // Your EmailJS user ID
 
 const quoteSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -46,20 +51,50 @@ const Quote = () => {
     },
   });
 
-  const onSubmit = (data: QuoteFormValues) => {
+  const onSubmit = async (data: QuoteFormValues) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      console.log("Quote form submitted:", data);
+    try {
+      // Ensure all template parameter keys exactly match what's in the EmailJS template
+      const templateParams = {
+        from_name: data.name,
+        reply_to: data.email,
+        phone_number: data.phone,
+        message: `Project Type: ${data.projectType}\n\nCompany: ${data.company || 'Not provided'}\n\n${data.message}`,
+        name: data.name,
+        time: new Date().toLocaleString()
+      };
+      
+      console.log("Sending quote request via email:", templateParams);
+      
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+      
+      console.log("Quote request email sent successfully:", response);
+      
       toast({
         title: "Quote Request Submitted",
-        description: "We'll get back to you within 24 hours.",
+        description: "Thank you! We'll get back to you within 24 hours.",
         duration: 5000,
       });
-      setIsSubmitting(false);
+      
       form.reset();
-    }, 1500);
+    } catch (error) {
+      console.error("Error sending quote request:", error);
+      
+      toast({
+        title: "Error",
+        description: "There was a problem sending your quote request. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
