@@ -1,14 +1,43 @@
+
+# MTech Corp Robots.txt
+# Updated: 2025-04-09
+
+# Allow specific bots we want to index our site
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
+# Social media bots for link previews
 User-agent: Twitterbot
 Allow: /
+Disallow: /admin/
 
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /admin/
 
+# Block all other bots
 User-agent: *
-Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /cgi-bin/
+Disallow: /*?*
+
+# Crawl delay to prevent server overload
+Crawl-delay: 10
+
+# Block access to these file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.md$
+
+# Sitemap location
+Sitemap: https://mtechcorp.com/sitemap.xml

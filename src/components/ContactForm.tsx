@@ -14,6 +14,7 @@ interface ContactFormValues {
   email: string;
   phone: string;
   message: string;
+  website?: string; // Honeypot field
 }
 
 const EMAILJS_SERVICE_ID = "service_7bdry77"; // Your EmailJS service ID
@@ -32,9 +33,36 @@ const ContactForm = () => {
   } = useForm<ContactFormValues>();
 
   const onSubmit = async (data: ContactFormValues) => {
+    // Bot detection - if honeypot field is filled, silently reject the submission
+    if (data.website) {
+      console.log("Bot submission detected and blocked");
+      // Simulate success but don't actually send the email
+      setTimeout(() => {
+        toast({
+          title: "Message Sent",
+          description: "Thank you for contacting us. We'll get back to you soon!",
+        });
+        reset();
+        setIsSubmitting(false);
+      }, 1000);
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
+      // Add a timestamp to track when the form was submitted
+      const submissionTime = new Date().getTime();
+      const pageLoadTime = window.performance ? 
+        window.performance.timing.navigationStart : 
+        Date.now() - 60000; // Fallback if performance API not available
+      
+      // If form was submitted too quickly (less than 3 seconds), likely a bot
+      if (submissionTime - pageLoadTime < 3000) {
+        console.log("Suspiciously fast submission detected - potential bot");
+        throw new Error("Submission rejected");
+      }
+      
       // Ensure all template parameter keys exactly match what's in the EmailJS template
       const templateParams = {
         from_name: data.name,
@@ -87,6 +115,7 @@ const ContactForm = () => {
           placeholder="John Doe"
           {...register("name", { required: "Name is required" })}
           className={errors.name ? "border-red-500" : ""}
+          autoComplete="name"
         />
         {errors.name && (
           <p className="text-sm text-red-500">{errors.name.message}</p>
@@ -109,6 +138,7 @@ const ContactForm = () => {
             },
           })}
           className={errors.email ? "border-red-500" : ""}
+          autoComplete="email"
         />
         {errors.email && (
           <p className="text-sm text-red-500">{errors.email.message}</p>
@@ -124,10 +154,25 @@ const ContactForm = () => {
           placeholder="876-123-4567"
           {...register("phone", { required: "Phone number is required" })}
           className={errors.phone ? "border-red-500" : ""}
+          autoComplete="tel"
         />
         {errors.phone && (
           <p className="text-sm text-red-500">{errors.phone.message}</p>
         )}
+      </div>
+
+      {/* Honeypot field - hidden from users but bots will fill it out */}
+      <div className="hidden" aria-hidden="true">
+        <Label htmlFor="website" className="text-mtechGray-800">
+          Website
+        </Label>
+        <Input
+          id="website"
+          placeholder="Please leave this blank"
+          {...register("website")}
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
 
       <div className="space-y-2">
@@ -150,6 +195,7 @@ const ContactForm = () => {
         type="submit" 
         className="w-full bg-mtechBlue-600 hover:bg-mtechOrange"
         disabled={isSubmitting}
+        data-action="submit-contact-form"
       >
         {isSubmitting ? (
           <>
