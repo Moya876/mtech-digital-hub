@@ -23,9 +23,11 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/Moyatechcorp" 
                 className="text-mtechOrange hover:text-mtechBlue transition-colors"
                 aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Facebook size={24} />
               </a>
