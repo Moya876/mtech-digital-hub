@@ -39,7 +39,7 @@ const ContactForm = () => {
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
-        phone_number: data.phone || "Not provided", // Ensure phone is never empty
+        phone_number: data.phone,
         message: data.message
       };
       
@@ -115,13 +115,17 @@ const ContactForm = () => {
 
       <div className="space-y-2">
         <Label htmlFor="phone" className="text-mtechGray-800">
-          Phone Number
+          Phone Number <span className="text-red-500">*</span>
         </Label>
         <Input
           id="phone"
           placeholder="876-123-4567"
-          {...register("phone")}
+          {...register("phone", { required: "Phone number is required" })}
+          className={errors.phone ? "border-red-500" : ""}
         />
+        {errors.phone && (
+          <p className="text-sm text-red-500">{errors.phone.message}</p>
+        )}
       </div>
 
       <div className="space-y-2">
