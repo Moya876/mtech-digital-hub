@@ -1,4 +1,3 @@
-
 import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
@@ -110,5 +109,4 @@ export const categories = [
   "All",
   "Web Development",
   "Software Testing",
-  "Web Hosting",
 ];
