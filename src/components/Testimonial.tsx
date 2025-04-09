@@ -7,9 +7,10 @@ interface TestimonialProps {
   author: string;
   company: string;
   className?: string;
+  avatarUrl?: string;
 }
 
-const Testimonial = ({ quote, author, company, className }: TestimonialProps) => {
+const Testimonial = ({ quote, author, company, className, avatarUrl }: TestimonialProps) => {
   return (
     <div className={cn(
       "rounded-xl border border-mtechGray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md h-full flex flex-col",
