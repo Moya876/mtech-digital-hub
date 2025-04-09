@@ -8,4 +8,10 @@ export type Project = {
   codeSnippet?: string;
   technologies: string[];
   category: string;
+  seo?: {
+    metaTitle?: string;
+    metaDescription?: string;
+    keywords?: string[];
+    ogImage?: string;
+  };
 };

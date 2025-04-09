@@ -1,5 +1,6 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { projects, categories } from "@/data/portfolioData";
 import PortfolioHero from "@/components/portfolio/PortfolioHero";
 import PortfolioSearch from "@/components/portfolio/PortfolioSearch";
@@ -43,32 +44,65 @@ const Portfolio = () => {
     }
   };
 
+  // Generate JSON-LD structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": displayedProjects.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": project.title,
+        "description": project.description,
+        "image": project.image,
+        "applicationCategory": project.category,
+        "operatingSystem": "Web"
+      }
+    }))
+  };
+
   return (
-    <div>
-      <PortfolioHero />
+    <>
+      <Helmet>
+        <title>Our Portfolio | MTech Digital - Web Development & Testing Projects</title>
+        <meta name="description" content="Explore MTech Digital's portfolio of web development and software testing projects. Custom solutions for businesses of all sizes." />
+        <meta name="keywords" content="portfolio, web projects, software testing, case studies, Jamaica, development portfolio" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+        <meta property="og:title" content="MTech Digital Portfolio - Web Development & Testing Projects" />
+        <meta property="og:description" content="Discover our featured web development and software testing projects. See how we've helped businesses transform their digital presence." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mtechcorp.com/portfolio" />
+      </Helmet>
       
-      <PortfolioSearch 
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
-        selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
-        categories={categories}
-      />
-      
-      <PortfolioGrid projects={displayedProjects} />
-      
-      {filteredProjects.length > PROJECTS_PER_PAGE && (
-        <PortfolioPagination 
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-          showAll={showAll}
-          onToggleShowAll={toggleShowAll}
+      <div>
+        <PortfolioHero />
+        
+        <PortfolioSearch 
+          searchTerm={searchTerm}
+          onSearchChange={setSearchTerm}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          categories={categories}
         />
-      )}
-      
-      <PortfolioCallToAction />
-    </div>
+        
+        <PortfolioGrid projects={displayedProjects} />
+        
+        {filteredProjects.length > PROJECTS_PER_PAGE && (
+          <PortfolioPagination 
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+            showAll={showAll}
+            onToggleShowAll={toggleShowAll}
+          />
+        )}
+        
+        <PortfolioCallToAction />
+      </div>
+    </>
   );
 };
 
