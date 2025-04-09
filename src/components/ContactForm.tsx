@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
@@ -35,11 +34,11 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Prepare template parameters
+      // Prepare template parameters - make sure the key names match your EmailJS template variables
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
-        phone: data.phone || "Not provided",
+        phone_number: data.phone || "Not provided", // Changed from "phone" to "phone_number"
         message: data.message
       };
       
