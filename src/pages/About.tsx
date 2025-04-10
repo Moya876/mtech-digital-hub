@@ -60,33 +60,33 @@ const About = () => {
             <div className="relative border-l-2 border-mtechOrange pl-8 ml-4 space-y-12">
               <div className="relative">
                 <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2018: The Beginning</h3>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2021: The Beginning</h3>
                 <p className="text-mtechGray-700 mb-4">
-                  Founded in Ocho Rios with a mission to provide quality web development services to local businesses. Started with a small team of passionate developers.
+                 Founded in Ocho Rios, M Tech Corp started its journey with an initial focus on building professional WordPress websites for small businesses.
                 </p>
               </div>
               
               <div className="relative">
                 <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2019: Expanding Services</h3>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2022: Adding Quality Assurance</h3>
                 <p className="text-mtechGray-700 mb-4">
-                  Added web hosting services to our portfolio, providing clients with end-to-end web solutions. Doubled our client base and expanded our team.
+                  We expanded our technical capabilities by introducing Test Automation services, utilizing powerful tools like Cypress and WebdriverIO to ensure application quality and reliability for our clients.
                 </p>
               </div>
               
               <div className="relative">
                 <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2021: Software Testing</h3>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2023: Expanding Infrastructure Services</h3>
                 <p className="text-mtechGray-700 mb-4">
-                  Introduced software testing services to ensure quality and reliability for our clients' applications. Partnered with major businesses across Jamaica.
+                 To provide more comprehensive solutions, we began offering Web Hosting services, allowing clients to manage their online presence seamlessly with us.
                 </p>
               </div>
               
               <div className="relative">
                 <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">Today: Growing Success</h3>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">Today: Comprehensive Digital Solutions</h3>
                 <p className="text-mtechGray-700 mb-4">
-                  Now a full-service digital solutions provider with a reputation for excellence. Continuing to innovate and expand our services to meet the evolving needs of our clients.
+                  Today, M Tech Corp offers a focused suite of essential digital services, including custom Web Development, reliable Web Hosting, and specialized Software Testing (with expertise in Test Automation), supporting businesses in Jamaica and beyond.
                 </p>
               </div>
             </div>
