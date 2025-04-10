@@ -70,7 +70,7 @@ const Index = () => {
                 About M Tech Corp
               </h2>
               <p className="text-mtechGray-700 mb-6">
-                Located in beautiful Ocho Rios, Jamaica, M Tech Corp is dedicated to providing top-tier technology solutions for businesses of all sizes. Our team of experienced professionals is passionate about helping businesses thrive in the digital age.
+M Tech Corp, founded in Jamaica in 2021, provides cutting-edge technology solutions for small businesses aiming to excel online. Based originally in Ocho Rios, we now serve clients across the region. Our core services include AI-assisted Web Development, reliable Web Hosting, and expert Software Testing Services, all designed to ensure your digital presence is professional, efficient, and impactful.
               </p>
               <p className="text-mtechGray-700 mb-8">
                 With our comprehensive range of services including web development, hosting, and software testing, we ensure that your digital presence is professional, reliable, and effective.
