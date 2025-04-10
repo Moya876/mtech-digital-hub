@@ -36,7 +36,7 @@ We empower businesses through innovative and evolving digital solutions. By harn
               </div>
               <h2 className="text-2xl font-bold text-mtechGray-900 mb-4">Our Vision</h2>
               <p className="text-mtechGray-700">
-                To be the leading technology partner for businesses in Jamaica and the Caribbean, recognized for our technical excellence, client-focused approach, and commitment to delivering solutions that make a measurable difference.
+                To be the leading technology partner for small businesses, recognized for our technical excellence that evolves with technological advancements, including the strategic use of AI. We remain client-focused, committed to delivering solutions that adapt, innovate, and make a measurable difference.
               </p>
             </div>
           </div>
