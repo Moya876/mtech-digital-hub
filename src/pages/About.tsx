@@ -28,7 +28,7 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-mtechGray-900 mb-4">Our Mission</h2>
               <p className="text-mtechGray-700">
-                To empower businesses with innovative digital solutions that drive growth, efficiency, and competitive advantage. We strive to deliver exceptional value through technology services that exceed client expectations.
+We empower businesses through innovative and evolving digital solutions. By harnessing modern web development aided by AI tools, secure hosting, and progressive test automation capabilities, our mission is to fuel client growth, optimize efficiency, and sharpen their competitive edge, delivering technological value that consistently surpasses expectations.
               </p>
             </div>
             <div className="bg-mtechGray-50 rounded-xl p-8">
@@ -53,7 +53,7 @@ const About = () => {
                 Our Story
               </h2>
               <p className="text-xl text-mtechGray-600">
-                The Journey of M Tech Corp: From Inception to Comprehensive Digital Solutions
+                The journey of M Tech Corp from inception to industry leadership
               </p>
             </div>
 
