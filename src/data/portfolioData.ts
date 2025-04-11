@@ -10,7 +10,6 @@ export const projects: Project[] = [
     projectUrl: "https://moyarussell.com/",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
     category: "Web Development",
-    codeSnippet: `// Responsive navigation toggle\nconst navToggle = document.querySelector('.nav-toggle');\nconst navLinks = document.querySelector('.nav-links');\n\nnavToggle.addEventListener('click', () => {\n  navLinks.classList.toggle('show-links');\n});`
   },
   {
     id: 2,
@@ -29,6 +28,7 @@ export const projects: Project[] = [
     projectUrl: "https://weshipexpressja.com/",
     technologies: ["Bootstrap", "CSS", "HTML", "JavaScript", "MySQL"],
     category: "Web Development",
+    //codeSnippet: `// Shipping rate calculator\nconst calculateShipping = (weight, destination) => {\n  const baseRate = 10.50;\n  const weightFactor = weight * 0.75;\n  const destinationFee = destinationRates[destination] || 5;\n  \n  return baseRate + weightFactor + destinationFee;\n};`
   },
   {
     id: 4,
