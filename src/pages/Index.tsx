@@ -100,8 +100,8 @@ M Tech Corp, founded in Jamaica in 2021, provides cutting-edge technology soluti
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Testimonial
               quote="M Tech Corp transformed our outdated website into a modern, responsive platform that truly represents our brand. Their attention to detail and customer service was exceptional."
-              author="Sarah Johnson"
-              company="Tropical Ventures Ltd."
+              author="Fadil Perrin"
+              company="Kem Max Sales "
             />
             <Testimonial
               quote="The hosting service provided by M Tech Corp has been reliable and secure. Their technical support team is always available and resolves issues promptly."
