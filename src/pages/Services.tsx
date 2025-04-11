@@ -231,10 +231,6 @@ const Services = () => {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Performance testing</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Detailed reporting</span>
                   </li>
                   <li className="flex items-start">
@@ -267,7 +263,7 @@ const Services = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Basic website (up to 5 pages)</span>
+                    <span className="text-mtechGray-700">Basic website (up to 3 pages)</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
@@ -298,7 +294,7 @@ const Services = () => {
                   <span className="text-3xl font-bold text-mtechGray-900">$5</span>
                   <span className="ml-1 text-mtechGray-500">/ month</span>
                 </div>
-                <p className="mt-2 text-sm text-mtechGray-500">or $60/year</p>
+                <p className="mt-2 text-sm text-mtechGray-500"></p>
               </div>
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
