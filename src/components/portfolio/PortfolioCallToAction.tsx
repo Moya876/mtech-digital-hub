@@ -11,7 +11,7 @@ const PortfolioCallToAction = () => {
             Let's discuss your project requirements and how our web development and software testing expertise can help bring your vision to life.
           </p>
           <Button className="bg-white text-mtechBlue-700 hover:bg-mtechGray-100" asChild>
-            <a href="/quote">Get a Free Quote</a>
+            <a href="/quote">Get a Quote</a>
           </Button>
         </div>
       </div>
