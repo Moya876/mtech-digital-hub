@@ -10,7 +10,6 @@ export const projects: Project[] = [
     projectUrl: "https://moyarussell.com/",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
     category: "Web Development",
-    codeSnippet: `// Responsive navigation toggle\nconst navToggle = document.querySelector('.nav-toggle');\nconst navLinks = document.querySelector('.nav-links');\n\nnavToggle.addEventListener('click', () => {\n  navLinks.classList.toggle('show-links');\n});`
   },
   {
     id: 2,
