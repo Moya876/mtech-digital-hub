@@ -36,7 +36,7 @@ export const projects: Project[] = [
     description: "End-to-end testing of an e-commerce platform, focusing on user journeys, payment processing, and inventory management.",
     image: "/lovable-uploads/56514a50-ca63-4804-8a85-dbebacde1da4.png",
     projectUrl: "https://coolmarket.com/",
-    technologies: ["TestNG", "Selenium", "JUnit", "Appium"],
+    technologies: ["Test Complete", "Web Driver IO", "Cypress", "Playwright"],
     category: "Software Testing"
   },
   {
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     description: "Performance and usability testing for a resort booking website, focusing on mobile responsiveness and payment processing security.",
     image: "/lovable-uploads/e4a79ef3-4d64-4f9b-a018-34fd03f10889.png",
     projectUrl: "https://bambooblujamaica.com/",
-    technologies: ["JMeter", "Lighthouse", "BrowserStack", "OWASP ZAP"],
+    technologies: ["Test Complete", "Cypress", "Playwright"],
     category: "Software Testing"
   },
   {
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     description: "Security and regulatory compliance testing for a financial services platform operating across multiple countries.",
     image: "/lovable-uploads/64e0150e-c83f-42c2-a422-24040dede508.png",
     projectUrl: "https://www.coolcash.com/",
-    technologies: ["Postman", "SonarQube", "Burp Suite", "Selenium"],
+    technologies: ["Test Complete", "Cypress", "Playwright"],
     category: "Software Testing"
   },
   {
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     description: "Localization and integration testing for a financial platform adapted for the Dominican Republic market.",
     image: "/lovable-uploads/d8a9eaf8-e668-413f-8a76-b4b51da85437.png",
     projectUrl: "https://www.coolcashdr.com/",
-    technologies: ["TestComplete", "Jenkins", "RestAssured", "Applitools"],
+    technologies: ["Test Complete", "Cypress", "Playwright"],
     category: "Software Testing"
   },
   {
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     description: "Automated regression testing for a Canadian financial services platform with focus on bilingual support and compliance with Canadian regulations.",
     image: "/lovable-uploads/bce7577a-38b5-43c4-89b4-a4cff9d08449.png",
     projectUrl: "https://www.coolcash.ca/",
-    technologies: ["Robot Framework", "Docker", "AWS Device Farm", "TestRail"],
+    technologies: ["Test Complete", "Cypress", "Playwright"],
     category: "Software Testing"
   },
   {
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     description: "Performance and security testing for a loan application processing system, with focus on data encryption and application response time.",
     image: "/lovable-uploads/b45f36b8-3bc5-40d0-8a12-78c624dc177f.png",
     projectUrl: "https://coolloans.com/",
-    technologies: ["k6", "Gatling", "Charles Proxy", "Playwright"],
+    technologies: ["Test Complete", "Web Driver IO", "Cypress", "Playwright"],
     category: "Software Testing"
   },
   {
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     description: "End-to-end functionality testing for a courier and logistics service platform with island-wide delivery tracking and booking systems.",
     image: "/lovable-uploads/db2319ca-a5e6-4713-851e-cfbf46a2f7e7.png",
     projectUrl: "https://portal.gocooljm.com/",
-    technologies: ["Cypress", "TestCafe", "Postman", "LoadRunner"],
+    technologies: ["Test Complete", "Web Driver IO", "Cypress", "Playwright"],
     category: "Software Testing"
   }
 ];
