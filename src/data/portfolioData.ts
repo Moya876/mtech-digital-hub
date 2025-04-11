@@ -10,6 +10,7 @@ export const projects: Project[] = [
     projectUrl: "https://moyarussell.com/",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
     category: "Web Development",
+    codeSnippet: `// Responsive navigation toggle\nconst navToggle = document.querySelector('.nav-toggle');\nconst navLinks = document.querySelector('.nav-links');\n\nnavToggle.addEventListener('click', () => {\n  navLinks.classList.toggle('show-links');\n});`
   },
   {
     id: 2,
@@ -19,7 +20,6 @@ export const projects: Project[] = [
     projectUrl: "https://ovbhotel.com/",
     technologies: ["WordPress", "Custom Theme", "PHP", "CSS", "JavaScript"],
     category: "Web Development",
-    codeSnippet: `// Room availability checker in theme functions.php\nfunction check_room_availability($room_type, $start_date, $end_date) {\n  global $wpdb;\n  $table_name = $wpdb->prefix . 'bookings';\n  \n  $query = $wpdb->prepare(\n    "SELECT COUNT(*) FROM $table_name \n     WHERE room_type = %s \n     AND ((start_date <= %s AND end_date >= %s) \n     OR (start_date <= %s AND end_date >= %s) \n     OR (start_date >= %s AND end_date <= %s))",\n    $room_type, $end_date, $start_date, $start_date, $start_date, $start_date, $end_date\n  );\n  \n  return $wpdb->get_var($query) == 0;\n}`
   },
   {
     id: 3,
@@ -29,7 +29,6 @@ export const projects: Project[] = [
     projectUrl: "https://weshipexpressja.com/",
     technologies: ["Bootstrap", "CSS", "HTML", "JavaScript", "MySQL"],
     category: "Web Development",
-    codeSnippet: `// Shipping rate calculator\nconst calculateShipping = (weight, destination) => {\n  const baseRate = 10.50;\n  const weightFactor = weight * 0.75;\n  const destinationFee = destinationRates[destination] || 5;\n  \n  return baseRate + weightFactor + destinationFee;\n};`
   },
   {
     id: 4,
