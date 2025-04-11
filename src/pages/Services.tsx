@@ -101,7 +101,6 @@ const Services = () => {
             features={[
               "Custom website design and development",
               "Responsive design for all devices",
-              "E-commerce solutions",
               "Website maintenance and updates",
               "CMS integration for easy content management",
               "Performance optimization for faster loading"
@@ -132,7 +131,6 @@ const Services = () => {
             icon={<FileSearch className="h-6 w-6 text-mtechOrange" />}
             features={[
               "Functional and regression testing",
-              "Performance and load testing",
               "Mobile application testing",
               "User experience testing",
               "Automated and manual testing approaches"
