@@ -133,7 +133,6 @@ const Services = () => {
             icon={<FileSearch className="h-6 w-6 text-mtechOrange" />}
             features={[
               "Functional and regression testing",
-              "Performance and load testing",
               "Security vulnerability assessment",
               "Mobile application testing",
               "User experience testing",
@@ -232,6 +231,10 @@ const Services = () => {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
                     <span className="text-mtechGray-700">Regression testing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+                    <span className="text-mtechGray-700">Performance testing</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
