@@ -111,7 +111,7 @@ const Quote = () => {
             >
               <ArrowLeft className="mr-2 h-4 w-4" /> Back
             </Button>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Get a Free Quote</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Get a Quote</h1>
             <p className="text-xl opacity-90">
               Tell us about your project and we'll provide you with a competitive quote
             </p>
