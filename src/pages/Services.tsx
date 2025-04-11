@@ -308,15 +308,11 @@ const Services = () => {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">99.9% uptime guarantee</span>
+                    <span className="text-mtechGray-700">Site backups</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Daily backups</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">24/7 support</span>
+                    <span className="text-mtechGray-700">Tech support</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
