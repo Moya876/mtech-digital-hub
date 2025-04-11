@@ -333,7 +333,7 @@ const Services = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Contact us today for a free consultation. Let's discuss how we can help your business succeed online.
+            Contact us today for a consultation. Let's discuss how we can help your business succeed online.
           </p>
           <Button className="bg-white text-mtechBlue-700 hover:bg-mtechGray-100" size="lg" asChild>
             <Link to="/contact">
