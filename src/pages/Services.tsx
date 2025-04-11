@@ -115,12 +115,11 @@ const Services = () => {
             description="Our reliable hosting services provide the foundation for your online presence. With top-tier security, excellent performance, and 24/7 technical support, we ensure your website is always available to your customers."
             icon={<Server className="h-6 w-6 text-mtechOrange" />}
             features={[
-              "High-performance servers for optimal speed",
-              "99.9% uptime guarantee",
-              "Regular backups for data security",
+              "High-performance servers for optimal speed",,
+              "Backups for data security",
               "SSL certificates for secure browsing",
               "Scalable solutions as your business grows",
-              "24/7 technical support"
+              "Technical support"
             ]}
             image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
             reversed
@@ -133,7 +132,7 @@ const Services = () => {
             icon={<FileSearch className="h-6 w-6 text-mtechOrange" />}
             features={[
               "Functional and regression testing",
-              "Security vulnerability assessment",
+              "Performance and load testing",
               "Mobile application testing",
               "User experience testing",
               "Automated and manual testing approaches"
