@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Target, Award, Users, Clipboard } from "lucide-react";
+import { Target, Award, Users, Clipboard, Phone, Mail } from "lucide-react";
 
 const About = () => {
   return (
