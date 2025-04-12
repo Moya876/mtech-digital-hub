@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Target, Award, Users, Clipboard } from "lucide-react";
@@ -205,6 +204,28 @@ We empower businesses through innovative and evolving digital solutions. By harn
                   David manages our day-to-day operations, ensuring project excellence and client satisfaction.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info Section - Phone and Email Modifications */}
+      <section className="py-20 bg-mtechGray-50">
+        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center items-center space-x-4 mt-8">
+              <a 
+                href="tel:876-833-1524" 
+                className="text-mtechBlue-600 hover:text-mtechOrange transition-colors flex items-center"
+              >
+                <Phone className="mr-2" /> 876-833-1524
+              </a>
+              <a 
+                href="mailto:mtechcorpja@gmail.com" 
+                className="text-mtechBlue-600 hover:text-mtechOrange transition-colors flex items-center"
+              >
+                <Mail className="mr-2" /> mtechcorpja@gmail.com
+              </a>
             </div>
           </div>
         </div>

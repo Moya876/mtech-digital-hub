@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, Phone, MapPin, Clock } from "lucide-react";
 import Logo from "@/components/Logo";
@@ -91,11 +90,19 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-mtechOrange mr-2 flex-shrink-0" />
-                <span className="text-mtechGray-600">876-833-1524</span>
+                <a 
+                  href="tel:876-833-1524" 
+                  className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
+                >
+                  876-833-1524
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-mtechOrange mr-2 flex-shrink-0" />
-                <a href="mailto:mtechcorpja@gmail.com" className="text-mtechGray-600 hover:text-mtechOrange transition-colors">
+                <a 
+                  href="mailto:mtechcorpja@gmail.com" 
+                  className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
+                >
                   mtechcorpja@gmail.com
                 </a>
               </li>
