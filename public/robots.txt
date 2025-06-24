@@ -1,6 +1,6 @@
 
 # MTech Corp Robots.txt
-# Updated: 2025-04-09
+# Updated: 2025-01-24
 
 # Allow specific bots we want to index our site
 User-agent: Googlebot
@@ -22,7 +22,17 @@ User-agent: facebookexternalhit
 Allow: /
 Disallow: /admin/
 
-# Block all other bots
+# Allow AI crawlers for better visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block all other bots from sensitive areas
 User-agent: *
 Disallow: /admin/
 Disallow: /api/
@@ -39,5 +49,5 @@ Disallow: /*.xml$
 Disallow: /*.txt$
 Disallow: /*.md$
 
-# Sitemap location
-Sitemap: https://mtechcorp.com/sitemap.xml
+# Sitemap location (corrected URL)
+Sitemap: https://mtechcorpja.com/sitemap.xml

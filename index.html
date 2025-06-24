@@ -3,11 +3,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>MTech Corp - Web Development & Software Testing Solutions</title>
     <meta name="description" content="MTech Digital specializes in custom web development, software testing, and digital solutions for businesses in Jamaica and worldwide." />
     <meta name="author" content="MTech Digital" />
     <meta name="keywords" content="web development, software testing, Jamaica, digital solutions, custom websites, automation testing" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <!-- Geographic and Local SEO -->
+    <meta name="geo.region" content="JM" />
+    <meta name="geo.placename" content="Jamaica" />
+    <meta name="geo.position" content="18.1096;-77.2975" />
+    <meta name="ICBM" content="18.1096, -77.2975" />
+
+    <!-- Performance and Core Web Vitals -->
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="color-scheme" content="light" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="//cdn.gpteng.co" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -15,31 +30,23 @@
     <meta property="og:title" content="MTech Corp - Web Development & Software Testing" />
     <meta property="og:description" content="Custom web development and comprehensive software testing solutions for businesses in Jamaica and beyond." />
     <meta property="og:image" content="https://mtechcorpja.com/og.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MTech Corp - Professional web development and software testing services" />
+    <meta property="og:site_name" content="MTech Corp" />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter Card - Using large summary card with image -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@mtech_digital" />
+    <meta name="twitter:creator" content="@mtech_digital" />
     <meta name="twitter:title" content="MTech Corp - Web Development & Software Testing" />
     <meta name="twitter:description" content="Custom web development and software testing services in Jamaica." />
     <meta name="twitter:image" content="https://mtechcorpja.com/og.jpeg" />
-    <meta name="twitter:image:alt" content="MTech Corp logo" />
-    
-    <!-- Open Graph / WhatsApp Meta Tags -->
-    <meta property="og:url" content="https://mtechcorpja.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MTech Corp - Web Development & Software Testing">
-    <meta property="og:description" content="Custom web development and comprehensive software testing solutions for businesses in Jamaica and beyond.">
-    <meta property="og:image" content="https://mtechcorpja.com/og.jpeg">
-
-    <!-- Open Graph / iMessage Meta Tags -->
-    <meta property="og:url" content="https://mtechcorpja.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MTech Corp - Web Development & Software Testing">
-    <meta property="og:description" content="Custom web development and comprehensive software testing solutions for businesses in Jamaica and beyond.">
-    <meta property="og:image" content="https://mtechcorpja.com/og.jpeg">
+    <meta name="twitter:image:alt" content="MTech Corp - Professional web development and software testing services" />
 
     <!-- Canonical URL -->
-    <meta rel="canonical" href="https://mtechcorpja.com/" />
+    <link rel="canonical" href="https://mtechcorpja.com/" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -51,7 +58,112 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MTech Corp",
+      "alternateName": "MTech Digital",
+      "description": "Custom web development, software testing, and digital solutions for businesses in Jamaica and worldwide",
+      "url": "https://mtechcorpja.com",
+      "logo": "https://mtechcorpja.com/og.jpeg",
+      "image": "https://mtechcorpja.com/og.jpeg",
+      "telephone": "+1-876-833-1524",
+      "email": "mtechcorpja@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JM",
+        "addressRegion": "Saint Ann",
+        "addressLocality": "Ocho Rios"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.1096",
+        "longitude": "-77.2975"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Jamaica"
+        },
+        {
+          "@type": "Place",
+          "name": "Caribbean"
+        }
+      ],
+      "serviceType": [
+        "Web Development",
+        "Software Testing",
+        "Web Hosting",
+        "Digital Solutions"
+      ],
+      "foundingDate": "2021",
+      "sameAs": [
+        "https://twitter.com/mtech_digital"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "MTech Corp Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Development",
+              "description": "Custom website solutions tailored to your business needs"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software Testing",
+              "description": "Comprehensive testing solutions ensuring your software applications are bug-free"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Hosting",
+              "description": "Reliable hosting services with top-tier security and performance"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MTech Corp",
+      "url": "https://mtechcorpja.com",
+      "logo": "https://mtechcorpja.com/og.jpeg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-876-833-1524",
+        "contactType": "Customer Service",
+        "email": "mtechcorpja@gmail.com",
+        "availableLanguage": "English"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Vanessa Russell"
+      },
+      "foundingDate": "2021",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JM",
+        "addressRegion": "Saint Ann",
+        "addressLocality": "Ocho Rios"
+      }
+    }
+    </script>
   </head>
 
   <body>
