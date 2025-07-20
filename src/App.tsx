@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Quote from "./pages/Quote";
+import LogoDownload from "./pages/LogoDownload";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -36,6 +37,7 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/quote" element={<Quote />} />
+                <Route path="/logo-download" element={<LogoDownload />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
