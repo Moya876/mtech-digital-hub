@@ -254,7 +254,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900"> USD $300</span>
+                  <span className="text-3xl font-bold text-mtechGray-900"> USD $350</span>
                   <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
@@ -263,7 +263,7 @@ const Services = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Basic website (up to 3 pages)</span>
+                    <span className="text-mtechGray-700">Basic website (up to 4 pages)</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
@@ -291,7 +291,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Web Hosting</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900"> USD $5</span>
+                  <span className="text-3xl font-bold text-mtechGray-900"> USD $6</span>
                   <span className="ml-1 text-mtechGray-500">/ month</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500"></p>
