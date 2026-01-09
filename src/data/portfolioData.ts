@@ -21,16 +21,6 @@ export const projects: Project[] = [
     category: "Web Development",
   },
   {
-    id: 3,
-    title: "WeShip Express Jamaica",
-    description: "A shipping service website for Jamaica with tracking features, shipping calculator, and customer account management system.",
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    projectUrl: "https://weshipexpressja.com/",
-    technologies: ["Bootstrap", "CSS", "HTML", "JavaScript", "MySQL"],
-    category: "Web Development",
-    //codeSnippet: `// Shipping rate calculator\nconst calculateShipping = (weight, destination) => {\n  const baseRate = 10.50;\n  const weightFactor = weight * 0.75;\n  const destinationFee = destinationRates[destination] || 5;\n  \n  return baseRate + weightFactor + destinationFee;\n};`
-  },
-  {
     id: 4,
     title: "Cool Market",
     description: "End-to-end testing of an e-commerce platform, focusing on user journeys, payment processing, and inventory management.",
