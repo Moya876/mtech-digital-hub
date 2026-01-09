@@ -101,9 +101,17 @@ export const projects: Project[] = [
     projectUrl: "https://portal.gocooljm.com/",
     technologies: ["Test Complete", "Web Driver IO", "Cypress", "Playwright"],
     category: "Software Testing"
+  },
+  {
+    id: 12,
+    title: "Marjita Watches",
+    description: "A luxury watch e-commerce website featuring an elegant design with Shopify backend integration for seamless product management and checkout experience.",
+    image: "/lovable-uploads/marjita-watches.png",
+    projectUrl: "https://marjitawatches.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design", "Shopify"],
+    category: "Web Development"
   }
 ];
-
 export const categories = [
   "All",
   "Web Development",
