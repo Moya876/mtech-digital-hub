@@ -100,10 +100,10 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-mtechOrange mr-2 flex-shrink-0" />
                 <a 
-                  href="mailto:info@mtechcoprja.com" 
+                  href="mailto:info@mtechcorpja.com" 
                   className="text-mtechGray-600 hover:text-mtechOrange transition-colors"
                 >
-                  info@mtechcoprja.com
+                  info@mtechcorpja.com
                 </a>
               </li>
               <li className="flex items-start">
