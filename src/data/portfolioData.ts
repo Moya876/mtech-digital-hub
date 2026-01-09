@@ -110,6 +110,15 @@ export const projects: Project[] = [
     projectUrl: "https://marjitawatches.com/",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design", "Shopify"],
     category: "Web Development"
+  },
+  {
+    id: 13,
+    title: "Kemmax Sales & Distribution",
+    description: "A B2B supplies distribution platform for electrical, plumbing, and food & beverage industries with Supabase-powered inventory management system.",
+    image: "/lovable-uploads/kemmax-sales.png",
+    projectUrl: "https://kemmaxsales.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design", "Supabase"],
+    category: "Web Development"
   }
 ];
 export const categories = [
