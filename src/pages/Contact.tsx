@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
@@ -35,6 +35,15 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-mtechGray-900 mb-1">Phone</h3>
                     <p className="text-mtechGray-700">876-833-1524</p>
+                    <a 
+                      href="https://wa.me/18768331524" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-lg transition-colors"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      Chat on WhatsApp
+                    </a>
                   </div>
                 </div>
                 
