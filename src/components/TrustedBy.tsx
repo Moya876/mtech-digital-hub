@@ -13,7 +13,7 @@ const clients: Client[] = [
   { name: "Event Planit", logo: "/lovable-uploads/event-planit.png" },
   { name: "Geovani PT", logo: "/lovable-uploads/geovani-pt.png" },
   { name: "M2S Infrastructure", logo: "/lovable-uploads/m2s-infrastructure.png" },
-  { name: "Kemmax Sales", logo: "/lovable-uploads/kemmax-sales.png" },
+  { name: "Kemmax Sales", logo: "/lovable-uploads/kemmax-sales.jpeg" },
 ];
 
 const TrustedBy = () => {
