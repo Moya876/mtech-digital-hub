@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
+import TrustedBy from "@/components/TrustedBy";
 import ServiceCard from "@/components/ServiceCard";
 import Testimonial from "@/components/Testimonial";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,9 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
+
+      {/* Trusted By Section */}
+      <TrustedBy />
 
       {/* Services Section */}
       <section className="py-20 bg-white">
