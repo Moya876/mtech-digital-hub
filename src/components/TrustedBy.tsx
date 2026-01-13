@@ -6,11 +6,14 @@ interface Client {
 }
 
 const clients: Client[] = [
-  { name: "Ocean View Beach Hotel" },
-  { name: "AutoLuv" },
-  { name: "Headshots by AI" },
-  { name: "Kemmax Sales", logo: "/lovable-uploads/kemmax-sales.png" },
+  { name: "Ocean View Beach Hotel", logo: "/lovable-uploads/ocean-view.png" },
+  { name: "Caribbean Mega Bounce", logo: "/lovable-uploads/mega-bounce.png" },
   { name: "Marjita Watches", logo: "/lovable-uploads/marjita-watches.png" },
+  { name: "Streets Entertainment", logo: "/lovable-uploads/streets-entertainment.png" },
+  { name: "Event Planit", logo: "/lovable-uploads/event-planit.png" },
+  { name: "Geovani PT", logo: "/lovable-uploads/geovani-pt.png" },
+  { name: "M2S Infrastructure", logo: "/lovable-uploads/m2s-infrastructure.png" },
+  { name: "Kemmax Sales", logo: "/lovable-uploads/kemmax-sales.png" },
 ];
 
 const TrustedBy = () => {
