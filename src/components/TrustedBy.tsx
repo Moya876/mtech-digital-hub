@@ -33,7 +33,7 @@ const TrustedBy = () => {
                 <img
                   src={client.logo}
                   alt={`${client.name} logo`}
-                  className="h-10 md:h-12 w-auto object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  className="h-14 md:h-16 w-24 md:w-32 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                 />
               ) : (
                 <span className="text-lg md:text-xl font-semibold text-mtechGray-400 group-hover:text-mtechNavy transition-colors duration-300">
