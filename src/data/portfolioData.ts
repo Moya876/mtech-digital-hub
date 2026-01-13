@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: 12,
     title: "Marjita Watches",
     description: "A luxury watch e-commerce website featuring an elegant design with Shopify backend integration for seamless product management and checkout experience.",
-    image: "/lovable-uploads/marjita-watches.png",
+    image: "/lovable-uploads/marjita-website.png",
     projectUrl: "https://marjitawatches.com/",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design", "Shopify"],
     category: "Web Development"
