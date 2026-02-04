@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "How much does a website cost?",
     answer:
-      "Website costs vary based on complexity and requirements. A simple landing page starts around $500, while custom web applications can range from $2,000 to $10,000+. We provide free quotes tailored to your specific needs—just reach out!",
+      "Website costs vary based on complexity and requirements. A standard website starts at $350 USD, while custom web applications range from $600 to $2,000. We provide free quotes tailored to your specific needs—just reach out!",
   },
   {
     question: "How long does it take to build a website?",
