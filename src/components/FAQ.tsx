@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What services does M Tech Corp offer?",
     answer:
-      "We specialize in three core areas: Web Development (custom websites and web applications), Web Hosting (reliable and secure hosting solutions), and Software Testing (comprehensive QA services to ensure your applications are bug-free and performant).",
+      "We offer Web Development (custom websites and web applications), Web Hosting (reliable and secure hosting solutions), Software Testing (comprehensive QA services), Graphic Design (logos, branding, marketing materials), and Social Media Content (Instagram posts and visual content for your business).",
   },
   {
     question: "How much does a website cost?",
