@@ -163,6 +163,10 @@ export default {
 					'50%': {
 						boxShadow: '0 0 20px 10px rgba(37, 211, 102, 0.2)'
 					}
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
@@ -171,7 +175,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out',
 				'fade-out': 'fade-out 0.5s ease-out',
 				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'marquee': 'marquee 25s linear infinite'
 			}
 		}
 	},
