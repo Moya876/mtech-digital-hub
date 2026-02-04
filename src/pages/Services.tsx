@@ -1,5 +1,5 @@
 
-import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Code, Database, LineChart } from "lucide-react";
+import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, LineChart, Palette, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -70,21 +70,31 @@ const Services = () => {
           <p className="text-xl max-w-3xl mx-auto opacity-90 mb-8">
             We offer comprehensive technology solutions to help your business thrive in the digital landscape.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <Monitor className="h-12 w-12 text-mtechOrange mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Web Development</h3>
-              <p className="text-mtechGray-100">Custom websites tailored to your business needs</p>
+              <Monitor className="h-10 w-10 text-mtechOrange mx-auto mb-3" />
+              <h3 className="text-lg font-semibold mb-1">Web Development</h3>
+              <p className="text-sm text-mtechGray-100">Custom websites for your business</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <Server className="h-12 w-12 text-mtechOrange mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Web Hosting</h3>
-              <p className="text-mtechGray-100">Reliable and secure hosting solutions</p>
+              <Server className="h-10 w-10 text-mtechOrange mx-auto mb-3" />
+              <h3 className="text-lg font-semibold mb-1">Web Hosting</h3>
+              <p className="text-sm text-mtechGray-100">Reliable hosting solutions</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
-              <FileSearch className="h-12 w-12 text-mtechOrange mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Software Testing</h3>
-              <p className="text-mtechGray-100">Comprehensive testing for quality assurance</p>
+              <FileSearch className="h-10 w-10 text-mtechOrange mx-auto mb-3" />
+              <h3 className="text-lg font-semibold mb-1">Software Testing</h3>
+              <p className="text-sm text-mtechGray-100">Quality assurance services</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <Palette className="h-10 w-10 text-mtechOrange mx-auto mb-3" />
+              <h3 className="text-lg font-semibold mb-1">Graphic Design</h3>
+              <p className="text-sm text-mtechGray-100">Logos & branding materials</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <Instagram className="h-10 w-10 text-mtechOrange mx-auto mb-3" />
+              <h3 className="text-lg font-semibold mb-1">Social Media</h3>
+              <p className="text-sm text-mtechGray-100">Instagram posts & content</p>
             </div>
           </div>
         </div>
@@ -136,6 +146,37 @@ const Services = () => {
               "Automated and manual testing approaches"
             ]}
             image="https://images.unsplash.com/photo-1573164574511-73c773193279?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+          />
+
+          <ServiceSection 
+            id="graphic-design"
+            title="Graphic Design"
+            description="Make a lasting impression with professional graphic design services. From logos and branding to marketing materials, we create visuals that capture your brand's essence and resonate with your audience."
+            icon={<Palette className="h-6 w-6 text-mtechOrange" />}
+            features={[
+              "Logo design and brand identity",
+              "Business cards and stationery",
+              "Marketing materials and flyers",
+              "Banner ads and digital graphics",
+              "Brand style guides"
+            ]}
+            image="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            reversed
+          />
+
+          <ServiceSection 
+            id="social-media"
+            title="Social Media Content"
+            description="Elevate your social media presence with eye-catching content designed for engagement. We create custom Instagram posts, stories, and visual content that helps your brand stand out and connect with your audience."
+            icon={<Instagram className="h-6 w-6 text-mtechOrange" />}
+            features={[
+              "Custom Instagram post designs",
+              "Story templates and highlights",
+              "Promotional graphics and announcements",
+              "Consistent brand aesthetic across posts",
+              "Content calendars and scheduling support"
+            ]}
+            image="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
           />
         </div>
       </section>
