@@ -26,8 +26,8 @@ const TrustedBy = () => {
         <p className="text-center text-sm font-medium text-mtechGray-500 uppercase tracking-wider mb-8">
           Trusted By Leading Businesses
         </p>
-        <div className="relative">
-          <div className="flex animate-marquee whitespace-nowrap">
+        <div className="relative group/marquee">
+          <div className="flex animate-marquee whitespace-nowrap group-hover/marquee:[animation-play-state:paused]">
             {duplicatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
