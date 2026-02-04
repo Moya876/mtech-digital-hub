@@ -1,9 +1,9 @@
-
 import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
 import ServiceCard from "@/components/ServiceCard";
 import Testimonial from "@/components/Testimonial";
+import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { Monitor, Server, FileSearch, ArrowRight } from "lucide-react";
 
@@ -120,6 +120,9 @@ M Tech Corp, founded in Jamaica in 2021, provides cutting-edge technology soluti
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-mtechNavy to-mtechNavy-dark text-white">
