@@ -14,6 +14,7 @@ const clients: Client[] = [
   { name: "Geovani PT", logo: "/lovable-uploads/geovani-pt.png" },
   { name: "M2S Infrastructure", logo: "/lovable-uploads/m2s-infrastructure.png" },
   { name: "Kemmax Sales", logo: "/lovable-uploads/kemmax-sales.jpeg" },
+  { name: "IBS", logo: "/lovable-uploads/ibs-logo.png" },
 ];
 
 const TrustedBy = () => {
