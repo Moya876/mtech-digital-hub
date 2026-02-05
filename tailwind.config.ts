@@ -158,10 +158,10 @@ export default {
 				},
 				'pulse-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.4)'
+						boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.15)'
 					},
 					'50%': {
-						boxShadow: '0 0 20px 10px rgba(37, 211, 102, 0.2)'
+						boxShadow: '0 0 12px 4px rgba(37, 211, 102, 0.25)'
 					}
 				},
 				'marquee': {
@@ -175,7 +175,7 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out',
 				'fade-out': 'fade-out 0.5s ease-out',
 				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
 				'marquee': 'marquee 25s linear infinite'
 			}
 		}
