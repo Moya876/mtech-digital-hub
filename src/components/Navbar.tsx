@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
+    { name: "Blog", path: "https://blog.mtechcorpja.com", external: true },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -34,21 +35,33 @@ const Navbar = () => {
           
           {/* Desktop menu */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `font-medium transition-colors ${
-                    isActive
-                      ? "text-mtechNavy"
-                      : "text-mtechGray-700 hover:text-mtechOrange"
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium transition-colors text-mtechGray-700 hover:text-mtechOrange"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <NavLink
+                  key={link.name}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `font-medium transition-colors ${
+                      isActive
+                        ? "text-mtechNavy"
+                        : "text-mtechGray-700 hover:text-mtechOrange"
+                    }`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              )
+            )}
             <Button className="bg-mtechOrange hover:bg-mtechOrange-dark" asChild>
               <NavLink to="/quote">
                 Get a Quote
@@ -81,22 +94,35 @@ const Navbar = () => {
         }`}
       >
         <div className="space-y-1 px-4 pt-2 pb-4">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className={({ isActive }) =>
-                `block px-3 py-2 rounded-md font-medium ${
-                  isActive
-                    ? "text-mtechNavy bg-mtechGray-50"
-                    : "text-mtechGray-700 hover:bg-mtechGray-50 hover:text-mtechOrange"
-                }`
-              }
-              onClick={closeMenu}
-            >
-              {link.name}
-            </NavLink>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.name}
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 rounded-md font-medium text-mtechGray-700 hover:bg-mtechGray-50 hover:text-mtechOrange"
+                onClick={closeMenu}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) =>
+                  `block px-3 py-2 rounded-md font-medium ${
+                    isActive
+                      ? "text-mtechNavy bg-mtechGray-50"
+                      : "text-mtechGray-700 hover:bg-mtechGray-50 hover:text-mtechOrange"
+                  }`
+                }
+                onClick={closeMenu}
+              >
+                {link.name}
+              </NavLink>
+            )
+          )}
           <div className="pt-4">
             <Button className="w-full bg-mtechOrange hover:bg-mtechOrange-dark" asChild>
               <NavLink to="/quote" onClick={closeMenu}>
