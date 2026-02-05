@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
  import StatsCounter from "@/components/StatsCounter";
 import ServiceCard from "@/components/ServiceCard";
+ import FeaturedProjects from "@/components/FeaturedProjects";
 import Testimonial from "@/components/Testimonial";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
@@ -62,6 +63,9 @@ const Index = () => {
         </div>
       </section>
 
+       {/* Featured Projects Section */}
+       <FeaturedProjects />
+ 
       {/* About Section */}
       <section className="py-20 bg-mtechGray-50">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
