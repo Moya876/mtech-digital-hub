@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
+ import StatsCounter from "@/components/StatsCounter";
 import ServiceCard from "@/components/ServiceCard";
 import Testimonial from "@/components/Testimonial";
 import FAQ from "@/components/FAQ";
@@ -14,6 +15,9 @@ const Index = () => {
 
       {/* Trusted By Section */}
       <TrustedBy />
+ 
+       {/* Stats Counter Section */}
+       <StatsCounter />
 
       {/* Services Section */}
       <section className="py-20 bg-white">
