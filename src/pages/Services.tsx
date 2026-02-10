@@ -339,27 +339,27 @@ const Services = () => {
                 <h3 className="text-lg font-semibold text-mtechGray-900">Graphic Design</h3>
                 <div className="mt-4 flex items-baseline">
                   <span className="text-3xl font-bold text-mtechGray-900">USD $30</span>
-                  <span className="ml-1 text-mtechGray-500">/ starter</span>
+                  <span className="ml-1 text-mtechGray-500">/ starting price</span>
                 </div>
-                <p className="mt-2 text-sm text-mtechGray-500">Professional design services</p>
+                <p className="mt-2 text-sm text-mtechGray-500">Creative designs for social media & marketing</p>
               </div>
               <div className="p-6 space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Logo design</span>
+                    <span className="text-mtechGray-700">Social media posts & stories</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Brand identity</span>
+                    <span className="text-mtechGray-700">Digital flyers & promos</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Marketing materials</span>
+                    <span className="text-mtechGray-700">Marketing graphics</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-mtechGray-700">Digital graphics</span>
+                    <span className="text-mtechGray-700">Web-ready visual assets</span>
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
