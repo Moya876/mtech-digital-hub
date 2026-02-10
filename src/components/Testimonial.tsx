@@ -13,7 +13,7 @@ interface TestimonialProps {
 const Testimonial = ({ quote, author, company, className, avatarUrl }: TestimonialProps) => {
   return (
     <div className={cn(
-      "rounded-xl border border-mtechGray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md h-full flex flex-col",
+      "rounded-xl border border-mtechGray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col",
       className
     )}>
       <Quote className="h-8 w-8 text-mtechOrange mb-4" />
