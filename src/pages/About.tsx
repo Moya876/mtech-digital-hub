@@ -156,62 +156,47 @@ We empower businesses through innovative and evolving digital solutions. By harn
         </div>
       </section>
 
-      {/* Team Section (Optional) */}
+      {/* Why M Tech Corp */}
       <section className="py-20 bg-mtechGray-50">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-mtechGray-900 mb-4">
-              Meet Our Leadership
+              Why M Tech Corp
             </h2>
             <p className="text-xl text-mtechGray-600 max-w-3xl mx-auto">
-              The experienced professionals guiding our company's success
+              Built on expertise, driven by purpose, and focused on delivering real results
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src="/lovable-uploads/dbe71c58-0ea3-4d1d-97be-343df0232183.png" 
-                alt="CEO" 
-                className="w-full h-64 object-cover object-center object-top"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Vanessa Russell</h3>
-                <p className="text-mtechOrange font-medium mb-4">Founder & CEO</p>
-                <p className="text-mtechGray-700">
-                  With over 8 years of experience in technology, Vanessa leads our company's vision and strategy.
-                </p>
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm p-8 text-center">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="h-8 w-8" />
               </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Strategic Vision</h3>
+              <p className="text-mtechGray-700">
+                Every project is guided by a clear strategy rooted in understanding our clients' goals, ensuring technology serves as a catalyst for growth.
+              </p>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                alt="CTO" 
-                className="w-full h-64 object-cover object-center object-top"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">Lisa Brown</h3>
-                <p className="text-mtechOrange font-medium mb-4">Chief Technology Officer</p>
-                <p className="text-mtechGray-700">
-                  Lisa oversees our technical operations, ensuring we deliver cutting-edge solutions to our clients.
-                </p>
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm p-8 text-center">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="h-8 w-8" />
               </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Technical Excellence</h3>
+              <p className="text-mtechGray-700">
+                Our team brings deep expertise in web development, quality assurance, and digital design — delivering solutions built to perform and scale.
+              </p>
             </div>
             
-            <div className="bg-white rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                alt="COO" 
-                className="w-full h-64 object-cover object-center object-top"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-mtechGray-900 mb-1">David Thompson</h3>
-                <p className="text-mtechOrange font-medium mb-4">Chief Operating Officer</p>
-                <p className="text-mtechGray-700">
-                  David manages our day-to-day operations, ensuring project excellence and client satisfaction.
-                </p>
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm p-8 text-center">
+              <div className="h-16 w-16 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="h-8 w-8" />
               </div>
+              <h3 className="text-xl font-bold text-mtechGray-900 mb-3">Partnership Approach</h3>
+              <p className="text-mtechGray-700">
+                We don't just build — we partner with you. From concept to launch and beyond, we're invested in your long-term digital success.
+              </p>
             </div>
           </div>
         </div>
