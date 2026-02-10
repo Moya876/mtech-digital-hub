@@ -82,6 +82,14 @@ We empower businesses through innovative and evolving digital solutions. By harn
               
               <div className="relative">
                 <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
+                <h3 className="text-xl font-bold text-mtechGray-900 mb-2">2025: Registered Business</h3>
+                <p className="text-mtechGray-700 mb-4">
+                  MtechCorp JA was officially registered, embracing the vision "You think, We design." We broadened our scope to deliver custom web development, software quality assurance, UI/UX design, and digital solutions, helping clients bring their ideas to life with creativity and precision.
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-4 border-mtechOrange bg-white"></div>
                 <h3 className="text-xl font-bold text-mtechGray-900 mb-2">Today: Comprehensive Digital Solutions</h3>
                 <p className="text-mtechGray-700 mb-4">
                   Today, M Tech Corp offers a focused suite of essential digital services, including custom Web Development, reliable Web Hosting, and specialized Software Testing (with expertise in Test Automation), supporting businesses in Jamaica and beyond.
