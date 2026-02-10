@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Quote from "./pages/Quote";
 import LogoDownload from "./pages/LogoDownload";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -39,6 +41,8 @@ const App = () => (
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/quote" element={<Quote />} />
                 <Route path="/logo-download" element={<LogoDownload />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

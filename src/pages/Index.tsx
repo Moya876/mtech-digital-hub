@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import teamImg from "@/assets/team-collaboration.jpg";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
  import StatsCounter from "@/components/StatsCounter";
@@ -79,7 +80,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
               <img
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src={teamImg}
                 alt="M Tech Corp Team"
                 className="rounded-lg shadow-lg object-cover w-full h-auto"
               />

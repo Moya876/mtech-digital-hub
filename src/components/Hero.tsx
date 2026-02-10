@@ -2,6 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import heroTechImg from "@/assets/hero-tech.jpg";
 
 const Hero = () => {
   return (
@@ -35,9 +36,10 @@ const Hero = () => {
           <div className="md:w-1/2 md:pl-10">
             <div className="rounded-lg bg-white/10 backdrop-blur-sm p-2 border border-white/20 shadow-2xl animate-fade-in animation-delay-300">
               <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                src={heroTechImg} 
                 alt="Tech illustration" 
                 className="w-full h-auto rounded-md object-cover"
+                loading="eager"
               />
             </div>
           </div>

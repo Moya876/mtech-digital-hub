@@ -3,6 +3,10 @@ import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Li
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import socialMediaImg from "@/assets/social-media-content.jpg";
+import serviceWebDevImg from "@/assets/service-web-dev.jpg";
+import serviceHostingImg from "@/assets/service-hosting.jpg";
+import serviceTestingImg from "@/assets/service-testing.jpg";
+import serviceGraphicDesignImg from "@/assets/service-graphic-design.jpg";
 
 const ServiceSection = ({ 
   title, 
@@ -27,7 +31,8 @@ const ServiceSection = ({
         <img
           src={image}
           alt={title}
-          className="rounded-lg shadow-lg h-auto w-full object-cover"
+           className="rounded-lg shadow-lg h-auto w-full object-cover"
+           loading="lazy"
         />
       </div>
       <div className={`order-1 ${reversed ? 'md:order-2' : 'md:order-1'}`}>
@@ -116,7 +121,7 @@ const Services = () => {
               "CMS integration for easy content management",
               "Performance optimization for faster loading"
             ]}
-            image="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            image={serviceWebDevImg}
           />
           
           <ServiceSection 
@@ -131,7 +136,7 @@ const Services = () => {
               "Scalable solutions as your business grows",
               "Technical support"
             ]}
-            image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            image={serviceHostingImg}
             reversed
           />
           
@@ -146,7 +151,7 @@ const Services = () => {
               "User experience testing",
               "Automated and manual testing approaches"
             ]}
-            image="https://images.unsplash.com/photo-1573164574511-73c773193279?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            image={serviceTestingImg}
           />
 
           <ServiceSection 
@@ -161,7 +166,7 @@ const Services = () => {
               "Banner ads and digital graphics",
               "Brand style guides"
             ]}
-            image="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            image={serviceGraphicDesignImg}
             reversed
           />
 
