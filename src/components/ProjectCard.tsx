@@ -31,7 +31,7 @@ const ProjectCard = ({
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
         />
-        <Badge className="absolute top-3 right-3 bg-mtechBlue-700">{category}</Badge>
+        <Badge className="absolute top-3 right-3 bg-mtechBlue-800">{category}</Badge>
       </div>
       <CardHeader>
         <CardTitle className="text-xl text-mtechNavy">{title}</CardTitle>
