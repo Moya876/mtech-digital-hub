@@ -157,7 +157,7 @@ We empower businesses through innovative and evolving digital solutions. By harn
 
       {/* CTA */}
       <ScrollReveal>
-        <section className="py-16 bg-gradient-to-r from-mtechBlue-600 to-mtechBlue-800 text-white">
+        <section className="py-16 bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white">
           <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Want to Work with Us?
