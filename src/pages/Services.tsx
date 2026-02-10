@@ -51,7 +51,7 @@ const ServiceSection = ({
           ))}
         </ul>
         
-        <Button className="bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
+        <Button className="bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
           <Link to="/contact">
             Get Started
           </Link>
@@ -280,7 +280,7 @@ const Services = () => {
                     <span className="text-mtechGray-700">Bug tracking</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
+                <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
                     Contact Us
                   </Link>
@@ -289,8 +289,8 @@ const Services = () => {
             </div>
 
             {/* Web Development Plan - Moved here from last position */}
-            <div className="border-2 border-mtechBlue-500 rounded-xl shadow-lg overflow-hidden relative">
-              <div className="absolute top-0 right-0 bg-mtechBlue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+            <div className="border-2 border-mtechBlue-800 rounded-xl shadow-lg overflow-hidden relative">
+              <div className="absolute top-0 right-0 bg-mtechBlue-800 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                 POPULAR
               </div>
               <div className="p-6 border-b border-mtechGray-100">
@@ -320,7 +320,7 @@ const Services = () => {
                     <span className="text-mtechGray-700">Basic SEO setup</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
+                <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
                     Get Started
                   </Link>
@@ -357,7 +357,7 @@ const Services = () => {
                     <span className="text-mtechGray-700">Tech support</span>
                   </li>
                 </ul>
-                <Button className="w-full bg-mtechBlue-600 hover:bg-mtechOrange" asChild>
+                <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
                   <Link to="/contact">
                     Get Started
                   </Link>
@@ -369,7 +369,7 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-mtechBlue-600 to-mtechBlue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?

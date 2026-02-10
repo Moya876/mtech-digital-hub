@@ -124,7 +124,7 @@ const Blog = () => {
                   key={category}
                   variant={selectedCategory === category ? "default" : "outline"}
                   className={selectedCategory === category 
-                    ? "bg-mtechBlue-600 hover:bg-mtechBlue-700" 
+                    ? "bg-mtechBlue-800 hover:bg-mtechBlue-900" 
                     : "border-mtechGray-300 text-mtechGray-700"
                   }
                   onClick={() => setSelectedCategory(category)}
