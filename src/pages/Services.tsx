@@ -339,7 +339,7 @@ const Services = () => {
                 <h3 className="text-lg font-semibold text-mtechGray-900">Graphic Design</h3>
                 <div className="mt-4 flex items-baseline">
                   <span className="text-3xl font-bold text-mtechGray-900">USD $30</span>
-                  <span className="ml-1 text-mtechGray-500">/ starting price</span>
+                  <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Creative designs for social media & marketing</p>
               </div>
@@ -367,6 +367,7 @@ const Services = () => {
                     Contact Us
                   </Link>
                 </Button>
+                <p className="text-xs text-mtechGray-500 text-center mt-2">Logo and branding services are available as separate packages.</p>
               </div>
             </div>
 
