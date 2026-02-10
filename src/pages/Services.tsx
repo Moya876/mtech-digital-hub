@@ -236,7 +236,7 @@ const Services = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-mtechGray-900">Ongoing Support</h3>
               <p className="text-mtechGray-700">
-                Our relationship doesn't end at delivery—we provide continuous support.
+                Our relationship doesn't end at delivery, we provide continuous support.
               </p>
             </div>
           </div>
