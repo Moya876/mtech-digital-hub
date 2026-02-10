@@ -176,7 +176,7 @@ const Services = () => {
               "Consistent brand aesthetic across posts",
               "Content calendars and scheduling support"
             ]}
-            image="https://images.unsplash.com/photo-1563986768609-322da13575f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            image="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
           />
         </div>
       </section>
