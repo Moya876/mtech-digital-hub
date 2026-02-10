@@ -121,6 +121,10 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-mtechGray-200 mt-12 pt-6 text-center text-mtechGray-600">
           <p>&copy; {currentYear} M Tech Corp. All rights reserved.</p>
+          <div className="mt-3 flex justify-center space-x-6 text-sm">
+            <Link to="/privacy-policy" className="hover:text-mtechOrange transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-mtechOrange transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

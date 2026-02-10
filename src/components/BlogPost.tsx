@@ -36,6 +36,7 @@ const BlogPost = ({
           src={image}
           alt={title}
           className="h-56 w-full object-cover hover:opacity-90 transition-opacity"
+          loading="lazy"
         />
       </Link>
       <div className="p-6 flex-grow flex flex-col">

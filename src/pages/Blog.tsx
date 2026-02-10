@@ -4,6 +4,12 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import BlogPost from "@/components/BlogPost";
+import blogHostingImg from "@/assets/blog-hosting.jpg";
+import blogWebdevImg from "@/assets/blog-webdev.jpg";
+import blogTestingImg from "@/assets/blog-testing.jpg";
+import blogMarketingImg from "@/assets/blog-marketing.jpg";
+import blogSecurityImg from "@/assets/blog-security.jpg";
+import blogResponsiveImg from "@/assets/blog-responsive.jpg";
 
 const blogPosts = [
   {
@@ -12,7 +18,7 @@ const blogPosts = [
     excerpt: "Finding the perfect web hosting solution for your business can be challenging. In this article, we break down the key factors to consider.",
     date: "June 15, 2023",
     author: "Michael Johnson",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: blogHostingImg,
     readTime: "5 min",
     category: "Web Hosting"
   },
@@ -22,7 +28,7 @@ const blogPosts = [
     excerpt: "In today's digital landscape, your website is your business's digital storefront. Learn which features are must-haves for success.",
     date: "July 23, 2023",
     author: "Lisa Brown",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: blogWebdevImg,
     readTime: "8 min",
     category: "Web Development"
   },
@@ -32,7 +38,7 @@ const blogPosts = [
     excerpt: "Discover why software testing is a critical component of the development process and how it can save you time and money.",
     date: "August 10, 2023",
     author: "David Thompson",
-    image: "https://images.unsplash.com/photo-1573164574511-73c773193279?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: blogTestingImg,
     readTime: "6 min",
     category: "Software Testing"
   },
@@ -42,7 +48,7 @@ const blogPosts = [
     excerpt: "Stay ahead of the competition with these updated SEO strategies to improve your website's visibility and attract more visitors.",
     date: "September 5, 2023",
     author: "Sarah Williams",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: blogMarketingImg,
     readTime: "7 min",
     category: "Digital Marketing"
   },
@@ -52,7 +58,7 @@ const blogPosts = [
     excerpt: "Learn about the common security threats facing websites today and how to implement effective protection measures.",
     date: "October 12, 2023",
     author: "Daniel Roberts",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: blogSecurityImg,
     readTime: "10 min",
     category: "Security"
   },
@@ -62,7 +68,7 @@ const blogPosts = [
     excerpt: "In an era of diverse screen sizes, responsive design is essential. Explore why it matters and how to implement it effectively.",
     date: "November 20, 2023",
     author: "Michelle Carter",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: blogResponsiveImg,
     readTime: "5 min",
     category: "Web Development"
   }

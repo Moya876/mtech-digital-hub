@@ -29,7 +29,8 @@ const ProjectCard = ({
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
+          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          loading="lazy"
         />
         <Badge className="absolute top-3 right-3 bg-mtechBlue-800">{category}</Badge>
       </div>
