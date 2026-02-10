@@ -137,8 +137,8 @@ We empower businesses through innovative and evolving digital solutions. By harn
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: Target, title: "Strategic Vision", text: "Every project is guided by a clear strategy rooted in understanding our clients' goals, ensuring technology serves as a catalyst for growth." },
-              { icon: Award, title: "Technical Excellence", text: "Our team brings deep expertise in web development, quality assurance, and digital design — delivering solutions built to perform and scale." },
-              { icon: Users, title: "Partnership Approach", text: "We don't just build — we partner with you. From concept to launch and beyond, we're invested in your long-term digital success." },
+              { icon: Award, title: "Technical Excellence", text: "Our team brings deep expertise in web development, quality assurance, and digital design, delivering solutions built to perform and scale." },
+              { icon: Users, title: "Partnership Approach", text: "We don't just build, we partner with you. From concept to launch and beyond, we're invested in your long-term digital success." },
             ].map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white rounded-xl overflow-hidden shadow-sm p-8 text-center">
