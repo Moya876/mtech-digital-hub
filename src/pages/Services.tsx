@@ -2,6 +2,7 @@
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, LineChart, Palette, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import socialMediaImg from "@/assets/social-media-content.jpg";
 
 const ServiceSection = ({ 
   title, 
@@ -176,7 +177,7 @@ const Services = () => {
               "Consistent brand aesthetic across posts",
               "Content calendars and scheduling support"
             ]}
-            image="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            image={socialMediaImg}
           />
         </div>
       </section>
