@@ -50,7 +50,7 @@ const BlogPost = ({
           </div>
         </div>
         <Link to={`/blog/${id}`} className="block mb-3">
-          <h3 className="text-xl font-bold text-mtechGray-900 hover:text-mtechBlue-600">
+          <h3 className="text-xl font-bold text-mtechGray-900 hover:text-mtechBlue-800">
             {title}
           </h3>
         </Link>
@@ -59,7 +59,7 @@ const BlogPost = ({
           <span className="text-sm text-mtechGray-500">{readTime} read</span>
           <Link
             to={`/blog/${id}`}
-            className="text-mtechBlue-600 hover:text-mtechBlue-800 font-medium text-sm"
+            className="text-mtechBlue-800 hover:text-mtechBlue-950 font-medium text-sm"
           >
             Read more →
           </Link>

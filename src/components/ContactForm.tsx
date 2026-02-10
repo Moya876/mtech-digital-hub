@@ -193,7 +193,7 @@ const ContactForm = () => {
 
       <Button 
         type="submit" 
-        className="w-full bg-mtechBlue-600 hover:bg-mtechOrange"
+        className="w-full bg-mtechBlue-800 hover:bg-mtechOrange"
         disabled={isSubmitting}
         data-action="submit-contact-form"
       >
