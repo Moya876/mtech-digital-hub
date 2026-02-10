@@ -24,7 +24,7 @@ const ProjectCard = ({
   category
 }: ProjectCardProps) => {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="relative aspect-video overflow-hidden">
         <img 
           src={image} 
