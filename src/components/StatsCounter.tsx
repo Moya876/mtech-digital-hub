@@ -52,7 +52,7 @@
          {icon}
        </div>
         <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
-          {value > 0 ? <>{count}{suffix}</> : "✓"}
+          {value > 0 && <>{count}{suffix}</>}
         </div>
        <div className="text-mtechGray-600 font-medium text-center">{label}</div>
      </motion.div>
