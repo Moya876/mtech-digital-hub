@@ -1,6 +1,6 @@
  import { useEffect, useState, useRef } from "react";
  import { motion, useInView } from "framer-motion";
- import { Briefcase, Calendar, Users, Award } from "lucide-react";
+ import { Briefcase, Calendar, Users, Shield } from "lucide-react";
  
  interface StatItemProps {
    value: number;
@@ -52,7 +52,7 @@
          {icon}
        </div>
         <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
-          {value > 0 ? <>{count}{suffix}</> : "✓"}
+          {value > 0 ? <>{count}{suffix}</> : <Shield className="h-10 w-10" />}
         </div>
        <div className="text-mtechGray-600 font-medium text-center">{label}</div>
      </motion.div>
@@ -61,19 +61,19 @@
  
  const StatsCounter = () => {
    const stats = [
-      { value: 20, suffix: "+", label: "Projects Delivered", icon: <Briefcase className="h-7 w-7" />, delay: 0 },
-      { value: 4, suffix: "+", label: "Years of Experience", icon: <Calendar className="h-7 w-7" />, delay: 100 },
-      { value: 10, suffix: "+", label: "Businesses Served", icon: <Users className="h-7 w-7" />, delay: 200 },
-      { value: 0, suffix: "", label: "Client-Focused Approach", icon: <Award className="h-7 w-7" />, delay: 300 },
+       { value: 20, suffix: "+", label: "Successful Projects", icon: <Briefcase className="h-7 w-7" />, delay: 0 },
+       { value: 4, suffix: "+", label: "Years of Experience", icon: <Calendar className="h-7 w-7" />, delay: 100 },
+       { value: 10, suffix: "+", label: "Businesses Served", icon: <Users className="h-7 w-7" />, delay: 200 },
+       { value: 0, suffix: "", label: "Trusted by Clients", icon: <Shield className="h-7 w-7" />, delay: 300 },
    ];
  
    return (
      <section className="py-16 bg-gradient-to-b from-white to-mtechGray-50">
        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-4">
-              Our Track Record
-            </h2>
+             <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-4">
+               Proven Results
+             </h2>
             <p className="text-xl text-mtechGray-600 max-w-2xl mx-auto">
               Consistent delivery. Reliable systems. Real impact.
             </p>
