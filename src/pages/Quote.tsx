@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { Check, ArrowLeft, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -99,7 +100,17 @@ const Quote = () => {
   };
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Get a Quote | MTech Corp - Free Project Estimate</title>
+        <meta name="description" content="Request a free quote from MTech Corp for web development, software testing, graphic design, or hosting services. We respond within 24 hours." />
+        <link rel="canonical" href="https://mtechcorpja.com/quote" />
+        <meta property="og:title" content="Get a Quote - MTech Corp" />
+        <meta property="og:description" content="Request a free project estimate for web development, testing, or digital services from MTech Corp." />
+        <meta property="og:url" content="https://mtechcorpja.com/quote" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -302,7 +313,8 @@ const Quote = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

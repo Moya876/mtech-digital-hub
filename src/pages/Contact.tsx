@@ -1,10 +1,21 @@
 
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Contact MTech Corp | Get in Touch Today</title>
+        <meta name="description" content="Contact MTech Corp for web development, software testing, and digital solutions. Based in Ocho Rios, Jamaica. Call +1-876-833-1524." />
+        <link rel="canonical" href="https://mtechcorpja.com/contact" />
+        <meta property="og:title" content="Contact MTech Corp - Get in Touch" />
+        <meta property="og:description" content="Reach out to MTech Corp for custom web development and digital solutions. We respond within 24 hours." />
+        <meta property="og:url" content="https://mtechcorpja.com/contact" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -113,7 +124,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
