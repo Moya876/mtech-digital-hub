@@ -51,9 +51,9 @@
        <div className="w-14 h-14 flex items-center justify-center bg-mtechOrange/10 text-mtechOrange rounded-full mb-4">
          {icon}
        </div>
-       <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
-         {count}{suffix}
-       </div>
+        <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
+          {value > 0 ? <>{count}{suffix}</> : "✓"}
+        </div>
        <div className="text-mtechGray-600 font-medium text-center">{label}</div>
      </motion.div>
    );
@@ -61,22 +61,22 @@
  
  const StatsCounter = () => {
    const stats = [
-     { value: 20, suffix: "+", label: "Projects Completed", icon: <Briefcase className="h-7 w-7" />, delay: 0 },
-     { value: 4, suffix: "+", label: "Years Experience", icon: <Calendar className="h-7 w-7" />, delay: 100 },
-     { value: 10, suffix: "+", label: "Happy Clients", icon: <Users className="h-7 w-7" />, delay: 200 },
-     { value: 100, suffix: "%", label: "Client Satisfaction", icon: <Award className="h-7 w-7" />, delay: 300 },
+      { value: 20, suffix: "+", label: "Projects Delivered", icon: <Briefcase className="h-7 w-7" />, delay: 0 },
+      { value: 4, suffix: "+", label: "Years of Experience", icon: <Calendar className="h-7 w-7" />, delay: 100 },
+      { value: 10, suffix: "+", label: "Businesses Served", icon: <Users className="h-7 w-7" />, delay: 200 },
+      { value: 0, suffix: "", label: "Client-Focused Approach", icon: <Award className="h-7 w-7" />, delay: 300 },
    ];
  
    return (
      <section className="py-16 bg-gradient-to-b from-white to-mtechGray-50">
        <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
          <div className="text-center mb-12">
-           <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-4">
-             Our Track Record
-           </h2>
-           <p className="text-xl text-mtechGray-600 max-w-2xl mx-auto">
-             Numbers that reflect our commitment to excellence and client success.
-           </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-mtechNavy mb-4">
+              Consistent Delivery. Reliable Systems. Real Impact.
+            </h2>
+            <p className="text-xl text-mtechGray-600 max-w-2xl mx-auto">
+              Numbers that reflect our commitment to excellence and client success.
+            </p>
          </div>
          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
            {stats.map((stat) => (
