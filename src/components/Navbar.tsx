@@ -16,12 +16,12 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const navLinks = [
+  const navLinks: { name: string; path: string; external?: boolean }[] = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "Blog", path: "https://blog.mtechcorpja.com", external: true },
+    // { name: "Blog", path: "https://blog.mtechcorpja.com", external: true },
     { name: "Contact", path: "/contact" },
   ];
 
