@@ -52,9 +52,9 @@
          {icon}
        </div>
         <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
-          {value > 0 && <>{count}{suffix}</>}
-        </div>
-       <div className="text-mtechGray-600 font-medium text-center">{label}</div>
+          {value > 0 ? <>{count}{suffix}</> : <span className="text-2xl md:text-3xl font-semibold">{label}</span>}
+         </div>
+        {value > 0 && <div className="text-mtechGray-600 font-medium text-center">{label}</div>}
      </motion.div>
    );
  };
