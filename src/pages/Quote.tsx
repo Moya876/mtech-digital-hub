@@ -222,6 +222,8 @@ const Quote = () => {
                             <option value="web-development">Web Development</option>
                             <option value="web-hosting">Web Hosting</option>
                             <option value="software-testing">Software Testing</option>
+                            <option value="graphic-design">Graphic Design</option>
+                            <option value="social-media">Social Media Content</option>
                             <option value="other">Other (Specify in Message)</option>
                           </select>
                         </FormControl>
