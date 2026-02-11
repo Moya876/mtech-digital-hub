@@ -1,5 +1,6 @@
 
 import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, LineChart, Palette, Instagram } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import socialMediaImg from "@/assets/social-media-content.jpg";
@@ -68,7 +69,17 @@ const ServiceSection = ({
 
 const Services = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Services | MTech Corp - Web Dev, Hosting & Design</title>
+        <meta name="description" content="Explore MTech Corp's services: web development, web hosting, software testing, graphic design, and social media content management in Jamaica." />
+        <link rel="canonical" href="https://mtechcorpja.com/services" />
+        <meta property="og:title" content="MTech Corp Services - Web Development, Hosting & More" />
+        <meta property="og:description" content="Custom web development, reliable hosting, software testing, graphic design, and social media services for businesses." />
+        <meta property="og:url" content="https://mtechcorpja.com/services" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-20">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
@@ -427,7 +438,8 @@ const Services = () => {
           </Button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

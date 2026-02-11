@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import teamImg from "@/assets/team-collaboration.jpg";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
@@ -13,8 +14,18 @@ import { Monitor, Server, FileSearch, ArrowRight } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Hero />
+    <>
+      <Helmet>
+        <title>MTech Corp - Web Development & Software Testing in Jamaica</title>
+        <meta name="description" content="MTech Corp offers custom web development, software testing, web hosting, graphic design & social media services for businesses in Jamaica and worldwide." />
+        <link rel="canonical" href="https://mtechcorpja.com/" />
+        <meta property="og:title" content="MTech Corp - Web Development & Software Testing" />
+        <meta property="og:description" content="Custom web development, software testing, and digital solutions for businesses in Jamaica and beyond." />
+        <meta property="og:url" content="https://mtechcorpja.com/" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div className="flex flex-col min-h-screen">
+        <Hero />
 
       {/* Trusted By Section */}
       <TrustedBy />
@@ -171,7 +182,8 @@ M Tech Corp, founded in Jamaica in 2021, provides cutting-edge technology soluti
           </ScrollReveal>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

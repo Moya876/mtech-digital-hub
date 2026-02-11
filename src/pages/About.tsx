@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Target, Award, Users, Clipboard, Phone, Mail } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const About = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>About MTech Corp | Our Mission & Team in Jamaica</title>
+        <meta name="description" content="Learn about MTech Corp's mission, vision, and team. We're passionate tech professionals helping businesses succeed in the digital landscape." />
+        <link rel="canonical" href="https://mtechcorpja.com/about" />
+        <meta property="og:title" content="About MTech Corp - Our Mission & Team" />
+        <meta property="og:description" content="Learn about MTech Corp's mission, vision, and dedicated team of tech professionals in Jamaica." />
+        <meta property="og:url" content="https://mtechcorpja.com/about" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-20">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -180,7 +191,8 @@ We empower businesses through innovative and evolving digital solutions. By harn
           </div>
         </section>
       </ScrollReveal>
-    </div>
+      </div>
+    </>
   );
 };
 

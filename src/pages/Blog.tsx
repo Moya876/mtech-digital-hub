@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -97,7 +98,17 @@ const Blog = () => {
   });
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Blog | MTech Corp - Tech Tips & Industry Insights</title>
+        <meta name="description" content="Read MTech Corp's blog for web development tips, hosting guides, software testing insights, and digital marketing strategies." />
+        <link rel="canonical" href="https://mtechcorpja.com/blog" />
+        <meta property="og:title" content="MTech Corp Blog - Tech Tips & Insights" />
+        <meta property="og:description" content="Stay updated with the latest in web development, hosting, and software testing from MTech Corp." />
+        <meta property="og:url" content="https://mtechcorpja.com/blog" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -193,7 +204,8 @@ const Blog = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
