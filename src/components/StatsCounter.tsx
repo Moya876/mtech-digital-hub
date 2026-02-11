@@ -52,9 +52,9 @@
          {icon}
        </div>
         <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
-          {value > 0 ? <>{count}{suffix}</> : <span className="text-2xl md:text-3xl font-semibold">{label}</span>}
-         </div>
-        {value > 0 && <div className="text-mtechGray-600 font-medium text-center">{label}</div>}
+          {value > 0 && <>{count}{suffix}</>}
+        </div>
+       <div className="text-mtechGray-600 font-medium text-center">{label}</div>
      </motion.div>
    );
  };
@@ -64,7 +64,7 @@
        { value: 20, suffix: "+", label: "Successful Projects", icon: <Briefcase className="h-7 w-7" />, delay: 0 },
        { value: 4, suffix: "+", label: "Years of Experience", icon: <Calendar className="h-7 w-7" />, delay: 100 },
        { value: 10, suffix: "+", label: "Businesses Served", icon: <Users className="h-7 w-7" />, delay: 200 },
-       { value: 0, suffix: "", label: "Trusted by Clients", icon: <Shield className="h-7 w-7" />, delay: 300 },
+       { value: 0, suffix: "", label: "Trusted by Clients", icon: <Shield className="h-7 w-7" strokeWidth={2.5} />, delay: 300 },
    ];
  
    return (
