@@ -3,6 +3,15 @@ import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    id: 14,
+    title: "M2S Develops",
+    description: "A construction company website showcasing residential, commercial, and partnership projects in Jamaica with a modern design, service highlights, and project portfolio.",
+    image: "/lovable-uploads/m2s-develops.png",
+    projectUrl: "https://m2sdevelops.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
     id: 13,
     title: "Kemmax Sales & Distribution",
     description: "A B2B supplies distribution platform for electrical, plumbing, and food & beverage industries with Supabase-powered inventory management system.",
