@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Client {
   name: string;
@@ -19,17 +20,61 @@ const clients: Client[] = [
 ];
 
 const TrustedBy = () => {
-  // Duplicate logos for seamless infinite scroll
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
   const duplicatedClients = [...clients, ...clients];
 
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 250;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section className="py-12 bg-mtechGray-50 border-y border-mtechGray-200 overflow-hidden">
+    <section
+      className="py-12 bg-mtechGray-50 border-y border-mtechGray-200 overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <p className="text-center text-sm font-medium text-mtechGray-500 uppercase tracking-wider mb-8">
           Trusted By Leading Businesses
         </p>
-        <div className="relative group/marquee">
-          <div className="flex animate-marquee whitespace-nowrap group-hover/marquee:[animation-play-state:paused]">
+        <div className="relative">
+          {/* Left Arrow */}
+          <button
+            onClick={() => scroll("left")}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 shadow-md rounded-full p-2 text-mtechNavy hover:bg-mtechOrange hover:text-white transition-all duration-300 ${
+              isHovered ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => scroll("right")}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 shadow-md rounded-full p-2 text-mtechNavy hover:bg-mtechOrange hover:text-white transition-all duration-300 ${
+              isHovered ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          <div
+            ref={scrollRef}
+            className={`flex whitespace-nowrap ${
+              isHovered ? "" : "animate-marquee"
+            }`}
+            style={isHovered ? { overflowX: "auto", scrollbarWidth: "none" } : {}}
+          >
             {duplicatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
