@@ -3,6 +3,15 @@ import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    id: 16,
+    title: "AutoLuv Service Center",
+    description: "A professional auto service center website for Ocho Rios, Jamaica featuring alignment, tyre services, and frontend repair with online booking and service showcase.",
+    image: "/lovable-uploads/autoluv-sc.png",
+    projectUrl: "https://autoluvsc.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
     id: 15,
     title: "Initium Business Solutions",
     description: "A professional consulting and strategic advisory website offering business transformation services, growth optimization, and industry-leading expertise with a modern corporate design.",
