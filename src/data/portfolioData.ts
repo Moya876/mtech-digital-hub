@@ -3,6 +3,15 @@ import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    id: 15,
+    title: "Initium Business Solutions",
+    description: "A professional consulting and strategic advisory website offering business transformation services, growth optimization, and industry-leading expertise with a modern corporate design.",
+    image: "/lovable-uploads/initium-business.png",
+    projectUrl: "https://initiumbusiness.com/",
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
     id: 14,
     title: "M2S Develops",
     description: "A construction company website showcasing residential, commercial, and partnership projects in Jamaica with a modern design, service highlights, and project portfolio.",
