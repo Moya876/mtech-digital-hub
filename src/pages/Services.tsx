@@ -312,7 +312,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900"> USD $350</span>
+                  <span className="text-3xl font-bold text-mtechGray-900"> USD $300</span>
                   <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
