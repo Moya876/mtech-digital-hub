@@ -17,6 +17,7 @@ const clients: Client[] = [
   { name: "Kemmax Sales", logo: "/lovable-uploads/kemmax-sales.jpeg" },
   { name: "IBS", logo: "/lovable-uploads/ibs-logo.png" },
   { name: "AutoLuv Service Center", logo: "/lovable-uploads/autoluv-logo.png" },
+  { name: "S. Bernard", logo: "/lovable-uploads/s-bernard-logo.jpg" },
 ];
 
 const TrustedBy = () => {
