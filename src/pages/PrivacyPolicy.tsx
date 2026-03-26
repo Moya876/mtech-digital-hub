@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
         <link rel="canonical" href="https://mtechcorpja.com/privacy-policy" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
-    <div>
+    
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>

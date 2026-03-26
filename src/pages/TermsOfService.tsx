@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const TermsOfService = () => {
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Terms of Service | MTech Corp</title>
+        <meta name="description" content="Read the terms and conditions for using MTech Corp's web development, software testing, and digital services." />
+        <link rel="canonical" href="https://mtechcorpja.com/terms-of-service" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Terms of Service</h1>
