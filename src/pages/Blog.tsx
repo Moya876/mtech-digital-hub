@@ -5,6 +5,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import BlogPost from "@/components/BlogPost";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import blogHostingImg from "@/assets/blog-hosting.jpg";
 import blogWebdevImg from "@/assets/blog-webdev.jpg";
 import blogTestingImg from "@/assets/blog-testing.jpg";
