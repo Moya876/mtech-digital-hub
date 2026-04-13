@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Check, ArrowLeft, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -110,6 +111,10 @@ const Quote = () => {
         <meta property="og:url" content="https://mtechcorpja.com/quote" />
         <meta property="og:type" content="website" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://mtechcorpja.com/" },
+        { name: "Get a Quote", url: "https://mtechcorpja.com/quote" },
+      ]} />
       <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
