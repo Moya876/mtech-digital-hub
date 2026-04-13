@@ -7,6 +7,7 @@ import PortfolioSearch from "@/components/portfolio/PortfolioSearch";
 import PortfolioGrid from "@/components/portfolio/PortfolioGrid";
 import PortfolioPagination from "@/components/portfolio/PortfolioPagination";
 import PortfolioCallToAction from "@/components/portfolio/PortfolioCallToAction";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const Portfolio = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -76,6 +77,10 @@ const Portfolio = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mtechcorp.com/portfolio" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://mtechcorpja.com/" },
+        { name: "Portfolio", url: "https://mtechcorpja.com/portfolio" },
+      ]} />
       
       <div>
         <PortfolioHero />

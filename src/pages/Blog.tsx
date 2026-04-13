@@ -5,6 +5,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import BlogPost from "@/components/BlogPost";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import blogHostingImg from "@/assets/blog-hosting.jpg";
 import blogWebdevImg from "@/assets/blog-webdev.jpg";
 import blogTestingImg from "@/assets/blog-testing.jpg";
@@ -97,6 +98,21 @@ const Blog = () => {
     return matchesSearch && matchesCategory;
   });
 
+  const articleSchema = filteredPosts.map(post => ({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { "@type": "Person", name: post.author },
+    publisher: {
+      "@type": "Organization",
+      name: "MTech Corp",
+      url: "https://mtechcorpja.com",
+    },
+    mainEntityOfPage: `https://mtechcorpja.com/blog/${post.id}`,
+  }));
+
   return (
     <>
       <Helmet>
@@ -107,7 +123,12 @@ const Blog = () => {
         <meta property="og:description" content="Stay updated with the latest in web development, hosting, and software testing from MTech Corp." />
         <meta property="og:url" content="https://mtechcorpja.com/blog" />
         <meta property="og:type" content="website" />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://mtechcorpja.com/" },
+        { name: "Blog", url: "https://mtechcorpja.com/blog" },
+      ]} />
       <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">

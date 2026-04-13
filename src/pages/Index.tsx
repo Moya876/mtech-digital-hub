@@ -94,6 +94,7 @@ const Index = () => {
                 src={teamImg}
                 alt="M Tech Corp Team"
                 className="rounded-lg shadow-lg object-cover w-full h-auto"
+                loading="lazy"
               />
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>

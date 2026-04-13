@@ -3,6 +3,7 @@ import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Li
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import socialMediaImg from "@/assets/social-media-content.jpg";
 import serviceWebDevImg from "@/assets/service-web-dev.jpg";
 import serviceHostingImg from "@/assets/service-hosting.jpg";
@@ -28,40 +29,33 @@ const ServiceSection = ({
 }) => {
   return (
     <div id={id} className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'md:flex-row-reverse' : ''} pt-16`}>
-      <div className={`order-2 ${reversed ? 'md:order-1' : 'md:order-2'}`}>
-        <img
-          src={image}
-          alt={title}
-           className="rounded-lg shadow-lg h-auto w-full object-cover"
-           loading="lazy"
-        />
-      </div>
-      <div className={`order-1 ${reversed ? 'md:order-2' : 'md:order-1'}`}>
+      <div className={reversed ? 'md:order-2' : ''}>
         <div className="flex items-center mb-4">
-          <div className="h-12 w-12 bg-mtechOrange/10 text-mtechOrange rounded-full flex items-center justify-center mr-4">
-            {icon}
-          </div>
-          <h3 className="text-2xl md:text-3xl font-bold text-mtechGray-900">{title}</h3>
+          {icon}
+          <h2 className="text-3xl font-bold text-mtechGray-900 ml-3">{title}</h2>
         </div>
-        
-        <p className="text-mtechGray-700 mb-6">
-          {description}
-        </p>
-        
+        <p className="text-mtechGray-600 text-lg mb-6">{description}</p>
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
-              <CheckCircle className="h-5 w-5 text-mtechOrange mr-2 mt-1 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-mtechGreen mt-0.5 mr-2 flex-shrink-0" />
               <span className="text-mtechGray-700">{feature}</span>
             </li>
           ))}
         </ul>
-        
-        <Button className="bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
-          <Link to="/contact">
-            Get Started
-          </Link>
-        </Button>
+        <Link to="/quote">
+          <Button className="bg-mtechBlue-800 hover:bg-mtechBlue-900">
+            Get a Free Quote
+          </Button>
+        </Link>
+      </div>
+      <div className={reversed ? 'md:order-1' : ''}>
+        <img 
+          src={image} 
+          alt={title} 
+          className="rounded-xl shadow-lg w-full h-auto"
+          loading="lazy"
+        />
       </div>
     </div>
   );
@@ -79,6 +73,10 @@ const Services = () => {
         <meta property="og:url" content="https://mtechcorpja.com/services" />
         <meta property="og:type" content="website" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://mtechcorpja.com/" },
+        { name: "Services", url: "https://mtechcorpja.com/services" },
+      ]} />
       <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-20">
