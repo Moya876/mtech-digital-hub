@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Target, Award, Users, Clipboard, Phone, Mail } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const About = () => {
   return (
@@ -16,6 +17,10 @@ const About = () => {
         <meta property="og:url" content="https://mtechcorpja.com/about" />
         <meta property="og:type" content="website" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://mtechcorpja.com/" },
+        { name: "About", url: "https://mtechcorpja.com/about" },
+      ]} />
       <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-20">

@@ -2,6 +2,7 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import ContactForm from "@/components/ContactForm";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const Contact = () => {
   return (
@@ -15,6 +16,10 @@ const Contact = () => {
         <meta property="og:url" content="https://mtechcorpja.com/contact" />
         <meta property="og:type" content="website" />
       </Helmet>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://mtechcorpja.com/" },
+        { name: "Contact", url: "https://mtechcorpja.com/contact" },
+      ]} />
       <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
