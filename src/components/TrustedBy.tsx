@@ -86,6 +86,7 @@ const TrustedBy = () => {
                     src={client.logo}
                     alt={`${client.name} logo`}
                     className="h-12 md:h-14 w-20 md:w-28 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                    loading="lazy"
                   />
                 ) : (
                   <span className="text-lg md:text-xl font-semibold text-mtechGray-400 group-hover:text-mtechNavy transition-colors duration-300">
