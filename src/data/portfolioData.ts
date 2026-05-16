@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 17,
     title: "Sayeed Bernard, Attorney-at-Law",
-    description: "An elegant coming soon landing page for a Jamaican attorney, featuring a refined gold and navy palette, brand typography, and a clear call to action for prospective clients.",
+    description: "Professional website for Sayeed Bernard, Attorney-at-Law, offering trusted, strategic, and results-driven legal representation. Features include practice area listings, individual and business legal services, testimonials, resources, and online consultation booking.",
     image: "/lovable-uploads/sayeed-bernard.png",
     projectUrl: "https://sayeedbernard.com",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
