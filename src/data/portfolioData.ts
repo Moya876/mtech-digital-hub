@@ -3,6 +3,24 @@ import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    id: 18,
+    title: "Reps N Results",
+    description: "A beginner friendly fitness web app with a calorie and protein calculator, weekly gym plans, and a plain language gym terminology guide, wrapped in a modern dark themed responsive UI.",
+    image: "/lovable-uploads/reps-and-results.png",
+    projectUrl: "https://reps.mtechcorpja.com",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
+    id: 17,
+    title: "Sayeed Bernard, Attorney-at-Law",
+    description: "An elegant coming soon landing page for a Jamaican attorney, featuring a refined gold and navy palette, brand typography, and a clear call to action for prospective clients.",
+    image: "/lovable-uploads/sayeed-bernard.png",
+    projectUrl: "https://sayeedbernard.com",
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
     id: 16,
     title: "AutoLuv Service Center",
     description: "A professional auto service center website for Ocho Rios, Jamaica featuring alignment, tyre services, and frontend repair with online booking and service showcase.",
