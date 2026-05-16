@@ -66,16 +66,17 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Our Portfolio | MTech Digital - Web Development & Testing Projects</title>
-        <meta name="description" content="Explore MTech Digital's portfolio of web development and software testing projects. Custom solutions for businesses of all sizes." />
+        <title>Portfolio | MTech Corp - Web Development & Testing</title>
+        <meta name="description" content="Explore MTech Corp's portfolio of web development and software testing projects. Custom solutions for businesses of all sizes." />
         <meta name="keywords" content="portfolio, web projects, software testing, case studies, Jamaica, development portfolio" />
+        <link rel="canonical" href="https://mtechcorpja.com/portfolio" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-        <meta property="og:title" content="MTech Digital Portfolio - Web Development & Testing Projects" />
+        <meta property="og:title" content="Portfolio | MTech Corp - Web Development & Testing" />
         <meta property="og:description" content="Discover our featured web development and software testing projects. See how we've helped businesses transform their digital presence." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mtechcorp.com/portfolio" />
+        <meta property="og:url" content="https://mtechcorpja.com/portfolio" />
       </Helmet>
       <BreadcrumbSchema items={[
         { name: "Home", url: "https://mtechcorpja.com/" },
