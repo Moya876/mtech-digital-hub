@@ -1,0 +1,19 @@
+# MTech Corp
+
+> Jamaica-based web development, software testing, and digital services company. We build custom websites, web apps, and provide QA testing for businesses of all sizes.
+
+MTech Corp delivers web development, software testing, hosting, and digital marketing services. Contact: info@mtechcorpja.com, 876-833-1524.
+
+## Pages
+
+- [Home](/): Overview of MTech Corp services and featured work.
+- [About](/about): Our story, team, and approach.
+- [Services](/services): Web development, software testing, hosting, and digital marketing.
+- [Portfolio](/portfolio): Featured client projects and case studies.
+- [Contact](/contact): Get in touch with our team.
+- [Quote](/quote): Request a project quote.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy): Data protection and privacy practices.
+- [Terms of Service](/terms-of-service): Terms and conditions.
