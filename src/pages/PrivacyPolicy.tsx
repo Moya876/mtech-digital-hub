@@ -9,6 +9,10 @@ const PrivacyPolicy = () => {
         <meta name="description" content="Learn how MTech Corp collects, uses, and protects your personal information. Read our privacy policy for details on data handling practices." />
         <link rel="canonical" href="https://mtechcorpja.com/privacy-policy" />
         <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content="Privacy Policy | MTech Corp" />
+        <meta property="og:description" content="Learn how MTech Corp collects, uses, and protects your personal information." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mtechcorpja.com/privacy-policy" />
       </Helmet>
     
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
