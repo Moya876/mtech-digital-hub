@@ -9,6 +9,10 @@ const TermsOfService = () => {
         <meta name="description" content="Read the terms and conditions for using MTech Corp's web development, software testing, and digital services." />
         <link rel="canonical" href="https://mtechcorpja.com/terms-of-service" />
         <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content="Terms of Service | MTech Corp" />
+        <meta property="og:description" content="Read the terms and conditions for using MTech Corp's services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mtechcorpja.com/terms-of-service" />
       </Helmet>
       <section className="bg-gradient-to-r from-mtechBlue-800 to-mtechBlue-950 text-white py-16">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto text-center">

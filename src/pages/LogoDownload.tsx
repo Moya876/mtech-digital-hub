@@ -28,8 +28,14 @@ const LogoDownload = () => {
   return (
     <>
       <Helmet>
-        <title>Logo Downloads - M Tech Corp</title>
-        <meta name="description" content="Download M Tech Corp logos in various formats and sizes for your projects and marketing materials." />
+        <title>Logo Downloads | MTech Corp</title>
+        <meta name="description" content="Download MTech Corp logos in various formats and sizes for your projects and marketing materials." />
+        <link rel="canonical" href="https://mtechcorpja.com/logo-download" />
+        <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content="Logo Downloads | MTech Corp" />
+        <meta property="og:description" content="Download MTech Corp logos in various formats and sizes." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mtechcorpja.com/logo-download" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 py-12">
