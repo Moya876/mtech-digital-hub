@@ -148,10 +148,10 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Moya Russell Portfolio",
+    title: "Vanessa Russell's Portfolio",
     description: "A professional portfolio website showcasing web development projects, skills, and services with a clean, modern design.",
     image: "/lovable-uploads/3f601281-4f55-443e-acfc-c4c7e94c7a19.png",
-    projectUrl: "https://moyarussell.com/",
+    projectUrl: "https://vanessa.mtechcorpja.com/",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Responsive Design"],
     category: "Web Development"
   }
