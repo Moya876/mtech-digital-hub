@@ -24,7 +24,7 @@ const ProjectCard = ({
   category
 }: ProjectCardProps) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+    <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="relative aspect-video overflow-hidden">
         <img 
           src={image} 
@@ -34,12 +34,12 @@ const ProjectCard = ({
         />
         <Badge className="absolute top-3 right-3 bg-mtechBlue-800">{category}</Badge>
       </div>
-      <CardHeader>
-        <CardTitle className="text-xl text-mtechNavy">{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+      <CardHeader className="p-5 sm:p-6">
+        <CardTitle className="text-lg sm:text-xl text-mtechNavy">{title}</CardTitle>
+        <CardDescription className="text-sm sm:text-base">{description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2 mb-4">
+      <CardContent className="p-5 sm:p-6 pt-0">
+        <div className="flex flex-wrap gap-2 mb-1">
           {technologies.map((tech, index) => (
             <Badge key={index} variant="outline" className="bg-mtechGray-50">
               {tech}
