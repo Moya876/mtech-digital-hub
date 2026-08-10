@@ -58,9 +58,9 @@ const ProjectCard = ({
           </div>
         )}
       </CardContent>
-      <CardFooter className="flex justify-end">
+      <CardFooter className="flex justify-center sm:justify-end p-5 sm:p-6 pt-0">
         {projectUrl && (
-          <Button variant="outline" className="gap-2" asChild>
+          <Button variant="outline" className="gap-2 w-full sm:w-auto" asChild>
             <a href={projectUrl} target="_blank" rel="noopener noreferrer">
               Visit Site <ExternalLink size={16} />
             </a>
