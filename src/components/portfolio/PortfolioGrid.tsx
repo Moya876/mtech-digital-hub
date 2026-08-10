@@ -8,10 +8,10 @@ type PortfolioGridProps = {
 
 const PortfolioGrid = ({ projects }: PortfolioGridProps) => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 sm:py-16 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         {projects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {projects.map((project) => (
               <ProjectCard 
                 key={project.id}
