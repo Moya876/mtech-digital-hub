@@ -41,7 +41,7 @@ const ProjectCard = ({
       <CardContent className="p-5 sm:p-6 pt-0">
         <div className="flex flex-wrap gap-2 mb-1">
           {technologies.map((tech, index) => (
-            <Badge key={index} variant="outline" className="bg-mtechGray-50">
+            <Badge key={index} variant="outline" className="bg-mtechGray-50 text-xs">
               {tech}
             </Badge>
           ))}
