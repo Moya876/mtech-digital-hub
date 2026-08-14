@@ -1,0 +1,89 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProjectCard mobile layout > markup snapshot stays stable (catches spacing/padding drift) 1`] = `
+<div
+  class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+>
+  <div
+    class="relative aspect-video overflow-hidden"
+  >
+    <img
+      alt="Vanessa Russell's Portfolio"
+      class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+      loading="lazy"
+      src="/lovable-uploads/vanessa.png"
+    />
+    <div
+      class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent text-primary-foreground hover:bg-primary/80 absolute top-3 right-3 bg-mtechBlue-800"
+    >
+      Web Development
+    </div>
+  </div>
+  <div
+    class="flex flex-col space-y-1.5 p-5 sm:p-6"
+  >
+    <h3
+      class="font-semibold tracking-tight text-lg sm:text-xl text-mtechNavy"
+    >
+      Vanessa Russell's Portfolio
+    </h3>
+    <p
+      class="text-muted-foreground text-sm sm:text-base"
+    >
+      Personal portfolio website.
+    </p>
+  </div>
+  <div
+    class="p-5 sm:p-6 pt-0"
+  >
+    <div
+      class="flex flex-wrap gap-2 mb-1"
+    >
+      <div
+        class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground bg-mtechGray-50 text-xs"
+      >
+        React
+      </div>
+      <div
+        class="inline-flex items-center rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground bg-mtechGray-50 text-xs"
+      >
+        Tailwind
+      </div>
+    </div>
+  </div>
+  <div
+    class="items-center flex justify-center sm:justify-end p-5 sm:p-6 pt-0"
+  >
+    <a
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.97] border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-2 w-full sm:w-auto"
+      href="https://vanessa.mtechcorpja.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Visit Site 
+      <svg
+        class="lucide lucide-external-link"
+        fill="none"
+        height="16"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 3h6v6"
+        />
+        <path
+          d="M10 14 21 3"
+        />
+        <path
+          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+        />
+      </svg>
+    </a>
+  </div>
+</div>
+`;
