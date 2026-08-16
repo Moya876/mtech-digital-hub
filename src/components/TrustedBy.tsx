@@ -18,6 +18,8 @@ const clients: Client[] = [
   { name: "IBS", logo: "/lovable-uploads/ibs-logo.png" },
   { name: "AutoLuv Service Center", logo: "/lovable-uploads/autoluv-logo.png" },
   { name: "S. Bernard", logo: "/lovable-uploads/s-bernard-logo.jpg" },
+  { name: "Data & Cybersecurity Limited", logo: "/lovable-uploads/data-cybersecurity.jpg" },
+  { name: "Moppy's Convenience Store & Liquor Depot", logo: "/lovable-uploads/moppys.png" },
 ];
 
 const TrustedBy = () => {
