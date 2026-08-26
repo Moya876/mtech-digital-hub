@@ -26,6 +26,8 @@ const EMAILJS_USER_ID = "ug9V9cuZF2sIN3Otp"; // Your EmailJS user ID
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { execute: executeRecaptcha, ready: recaptchaReady } = useRecaptcha();
+
   
   const {
     register,
