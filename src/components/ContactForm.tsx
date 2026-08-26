@@ -72,7 +72,7 @@ const ContactForm = () => {
       if (token) {
         const { data: verification, error: verifyError } = await supabase.functions.invoke(
           "verify-recaptcha",
-          { body: { token } }
+          { body: { token, name: data.name, email: data.email, page: window.location.pathname } }
         );
         if (verifyError || !verification?.success) {
           toast({
