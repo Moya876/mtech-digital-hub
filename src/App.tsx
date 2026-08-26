@@ -14,6 +14,8 @@ import Quote from "./pages/Quote";
 import LogoDownload from "./pages/LogoDownload";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Auth from "./pages/Auth";
+import SpamLog from "./pages/SpamLog";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
