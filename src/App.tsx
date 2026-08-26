@@ -45,6 +45,8 @@ const App = () => (
                 <Route path="/logo-download" element={<LogoDownload />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/auth" element={<Auth />} />
+                <Route path="/admin/spam-log" element={<SpamLog />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
