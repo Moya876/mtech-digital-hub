@@ -66,7 +66,26 @@ const ContactForm = () => {
         console.log("Suspiciously fast submission detected - potential bot");
         throw new Error("Submission rejected");
       }
-      
+
+      // reCAPTCHA v3 verification (server-side score check)
+      const token = await executeRecaptcha("contact_form");
+      if (token) {
+        const { data: verification, error: verifyError } = await supabase.functions.invoke(
+          "verify-recaptcha",
+          { body: { token } }
+        );
+        if (verifyError || !verification?.success) {
+          toast({
+            title: "Verification failed",
+            description: "We couldn't verify that you're human. Please try again.",
+            variant: "destructive",
+          });
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
+
       // Ensure all template parameter keys exactly match what's in the EmailJS template
       const templateParams = {
         from_name: data.name,
