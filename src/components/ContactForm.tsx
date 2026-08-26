@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useRecaptcha } from "@/hooks/useRecaptcha";
+import { supabase } from "@/integrations/supabase/client";
 import emailjs from 'emailjs-com';
 
 interface ContactFormValues {
@@ -24,6 +26,8 @@ const EMAILJS_USER_ID = "ug9V9cuZF2sIN3Otp"; // Your EmailJS user ID
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { execute: executeRecaptcha, ready: recaptchaReady } = useRecaptcha();
+
   
   const {
     register,
@@ -62,7 +66,26 @@ const ContactForm = () => {
         console.log("Suspiciously fast submission detected - potential bot");
         throw new Error("Submission rejected");
       }
-      
+
+      // reCAPTCHA v3 verification (server-side score check)
+      const token = await executeRecaptcha("contact_form");
+      if (token) {
+        const { data: verification, error: verifyError } = await supabase.functions.invoke(
+          "verify-recaptcha",
+          { body: { token } }
+        );
+        if (verifyError || !verification?.success) {
+          toast({
+            title: "Verification failed",
+            description: "We couldn't verify that you're human. Please try again.",
+            variant: "destructive",
+          });
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
+
       // Ensure all template parameter keys exactly match what's in the EmailJS template
       const templateParams = {
         from_name: data.name,
@@ -206,6 +229,15 @@ const ContactForm = () => {
           "Send Message"
         )}
       </Button>
+
+      {recaptchaReady && (
+        <p className="text-xs text-mtechGray-500">
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Privacy Policy</a>{" "}
+          and{" "}
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Terms of Service</a> apply.
+        </p>
+      )}
     </form>
   );
 };
