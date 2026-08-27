@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShieldAlert, RefreshCw } from "lucide-react";
@@ -32,7 +33,12 @@ const SpamLog = () => {
       .select("*")
       .order("created_at", { ascending: false })
       .limit(200);
-    if (loadError) setError(loadError.message);
+    if (loadError) {
+      setError(loadError.message);
+      toast.error("Failed to load blocked submissions", {
+        description: loadError.message,
+      });
+    }
     setRows((data as BlockedRow[]) ?? []);
     setLoading(false);
   };
@@ -48,7 +54,12 @@ const SpamLog = () => {
         .from("user_roles")
         .select("role")
         .eq("user_id", sessionData.session.user.id);
-      if (rolesError) setError(rolesError.message);
+      if (rolesError) {
+        setError(rolesError.message);
+        toast.error("Failed to verify admin access", {
+          description: rolesError.message,
+        });
+      }
       const admin = (roles ?? []).some((r: { role: string }) => r.role === "admin");
       setIsAdmin(admin);
       setChecking(false);
@@ -92,9 +103,12 @@ const SpamLog = () => {
         </div>
 
         {error && (
-          <p className="mb-4 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
-            Could not load data: {error}
-          </p>
+          <div className="mb-4 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive flex flex-wrap items-center justify-between gap-3">
+            <span>Could not load data: {error}</span>
+            <Button variant="destructive" size="sm" onClick={load} disabled={loading}>
+              <RefreshCw className={`h-4 w-4 mr-2 ${loading ? "animate-spin" : ""}`} /> Retry
+            </Button>
+          </div>
         )}
 
         {!isAdmin ? (
