@@ -1,6 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
 import SpamLog from "@/pages/SpamLog";
+
 
 const {
   mockNavigate,
