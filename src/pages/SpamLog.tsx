@@ -65,10 +65,10 @@ const SpamLog = () => {
       setIsAdmin(admin);
       setChecking(false);
       if (admin) load();
-
     };
     init();
   }, [navigate]);
+
 
   const signOut = async () => {
     await supabase.auth.signOut();
