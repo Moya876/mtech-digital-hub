@@ -113,8 +113,8 @@ const SpamLog = () => {
           </div>
         )}
 
-
         {!isAdmin ? (
+
           <p className="text-mtechGray-700">
             Your account does not have administrator access to this log.
           </p>
