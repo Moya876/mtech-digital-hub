@@ -91,6 +91,12 @@ const SpamLog = () => {
           </div>
         </div>
 
+        {error && (
+          <p className="mb-4 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
+            Could not load data: {error}
+          </p>
+        )}
+
         {!isAdmin ? (
           <p className="text-mtechGray-700">
             Your account does not have administrator access to this log.
