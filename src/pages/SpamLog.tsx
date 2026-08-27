@@ -5,9 +5,9 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShieldAlert, RefreshCw } from "lucide-react";
+
 interface BlockedRow {
   id: string;
-
   created_at: string;
   reason: string;
   score: number | null;
@@ -45,7 +45,6 @@ const SpamLog = () => {
 
   useEffect(() => {
     const init = async () => {
-
       const { data: sessionData } = await supabase.auth.getSession();
       if (!sessionData.session) {
         navigate("/auth", { replace: true });
@@ -70,7 +69,6 @@ const SpamLog = () => {
   }, [navigate]);
 
   const signOut = async () => {
-
     await supabase.auth.signOut();
     navigate("/auth", { replace: true });
   };
@@ -114,7 +112,6 @@ const SpamLog = () => {
         )}
 
         {!isAdmin ? (
-
           <p className="text-mtechGray-700">
             Your account does not have administrator access to this log.
           </p>
