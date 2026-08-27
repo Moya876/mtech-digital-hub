@@ -34,10 +34,16 @@ const SpamLog = () => {
       .select("*")
       .order("created_at", { ascending: false })
       .limit(200);
-    if (loadError) setError(loadError.message);
+    if (loadError) {
+      setError(loadError.message);
+      toast.error("Failed to load blocked submissions", {
+        description: loadError.message,
+      });
+    }
     setRows((data as BlockedRow[]) ?? []);
     setLoading(false);
   };
+
 
   useEffect(() => {
     const init = async () => {
