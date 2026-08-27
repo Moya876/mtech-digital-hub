@@ -69,8 +69,8 @@ const SpamLog = () => {
     init();
   }, [navigate]);
 
-
   const signOut = async () => {
+
     await supabase.auth.signOut();
     navigate("/auth", { replace: true });
   };
