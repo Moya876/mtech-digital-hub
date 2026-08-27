@@ -44,8 +44,8 @@ const SpamLog = () => {
   };
 
   useEffect(() => {
-
     const init = async () => {
+
       const { data: sessionData } = await supabase.auth.getSession();
       if (!sessionData.session) {
         navigate("/auth", { replace: true });
