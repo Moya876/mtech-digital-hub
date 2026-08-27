@@ -3,8 +3,8 @@ import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
 import SpamLog from "@/pages/SpamLog";
 
-
 const {
+
   mockNavigate,
   mockLimit,
   mockOrder,
