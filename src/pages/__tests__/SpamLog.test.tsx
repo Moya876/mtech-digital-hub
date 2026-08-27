@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import SpamLog from "@/pages/SpamLog";
 
 const mockNavigate = vi.fn();
@@ -14,11 +13,19 @@ vi.mock("sonner", () => ({
   toast: { error: mockToastError },
 }));
 
-const mockSelect = vi.fn();
-const mockEq = vi.fn();
-const mockOrder = vi.fn();
 const mockLimit = vi.fn();
-const mockFrom = vi.fn(() => ({ select: mockSelect }));
+const mockOrder = vi.fn(() => ({ limit: mockLimit }));
+const mockSelect = vi.fn(() => ({ order: mockOrder }));
+
+const mockEq = vi.fn();
+const mockRoleSelect = vi.fn(() => ({ eq: mockEq }));
+
+const mockFrom = vi.fn((table: string) => {
+  if (table === "user_roles") {
+    return { select: mockRoleSelect };
+  }
+  return { select: mockSelect };
+});
 
 vi.mock("@/integrations/supabase/client", () => ({
   supabase: {
@@ -33,11 +40,8 @@ vi.mock("@/integrations/supabase/client", () => ({
 describe("SpamLog error handling", () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    mockSelect.mockReturnValue({
-      order: mockOrder.mockReturnValue({
-        limit: mockLimit.mockResolvedValue({ data: [], error: null }),
-      }),
-    });
+    mockLimit.mockResolvedValue({ data: [], error: null });
+    mockEq.mockResolvedValue({ data: [{ role: "admin" }], error: null });
   });
 
   it("shows a toast and a retry button when the blocked submissions query fails", async () => {
@@ -46,20 +50,9 @@ describe("SpamLog error handling", () => {
       data: { session: { user: { id: "admin-user" } } },
     });
 
-    mockSelect.mockReturnValue({
-      order: mockOrder.mockReturnValue({
-        limit: mockLimit.mockRejectedValueOnce(new Error("network error")),
-      }),
-    });
-
-    // Rejected promise isn't the normal return shape, so simulate the actual error object
-    mockSelect.mockReturnValue({
-      order: mockOrder.mockReturnValue({
-        limit: mockLimit.mockResolvedValueOnce({
-          data: null,
-          error: { message: "permission denied for function has_role" },
-        }),
-      }),
+    mockLimit.mockResolvedValueOnce({
+      data: null,
+      error: { message: "permission denied for function has_role" },
     });
 
     render(<SpamLog />);
@@ -78,7 +71,7 @@ describe("SpamLog error handling", () => {
     expect(retry).toBeInTheDocument();
 
     // Clicking retry should call load again
-    await userEvent.click(retry);
+    fireEvent.click(retry);
     await waitFor(() => {
       expect(mockLimit).toHaveBeenCalledTimes(2);
     });
@@ -90,18 +83,9 @@ describe("SpamLog error handling", () => {
       data: { session: { user: { id: "admin-user" } } },
     });
 
-    mockFrom.mockImplementation((table: string) => {
-      if (table === "user_roles") {
-        return {
-          select: vi.fn().mockReturnValue({
-            eq: vi.fn().mockResolvedValue({
-              data: null,
-              error: { message: "permission denied for table user_roles" },
-            }),
-          }),
-        };
-      }
-      return { select: mockSelect };
+    mockEq.mockResolvedValue({
+      data: null,
+      error: { message: "permission denied for table user_roles" },
     });
 
     render(<SpamLog />);
