@@ -56,11 +56,17 @@ const SpamLog = () => {
         .from("user_roles")
         .select("role")
         .eq("user_id", sessionData.session.user.id);
-      if (rolesError) setError(rolesError.message);
+      if (rolesError) {
+        setError(rolesError.message);
+        toast.error("Failed to verify admin access", {
+          description: rolesError.message,
+        });
+      }
       const admin = (roles ?? []).some((r: { role: string }) => r.role === "admin");
       setIsAdmin(admin);
       setChecking(false);
       if (admin) load();
+
     };
     init();
   }, [navigate]);
