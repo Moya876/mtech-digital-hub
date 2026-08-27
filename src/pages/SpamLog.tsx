@@ -5,9 +5,8 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShieldAlert, RefreshCw } from "lucide-react";
-
-
 interface BlockedRow {
+
   id: string;
   created_at: string;
   reason: string;
