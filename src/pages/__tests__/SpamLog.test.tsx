@@ -55,7 +55,11 @@ vi.mock("@/integrations/supabase/client", () => ({
   },
 }));
 
+const renderWithHelmet = (ui: React.ReactElement) =>
+  render(<HelmetProvider>{ui}</HelmetProvider>);
+
 describe("SpamLog error handling", () => {
+
   beforeEach(() => {
     vi.clearAllMocks();
     mockLimit.mockResolvedValue({ data: [], error: null });
