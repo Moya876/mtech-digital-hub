@@ -119,9 +119,10 @@ describe("SpamLog error handling", () => {
       error: { message: "permission denied for table user_roles" },
     });
 
-    render(<SpamLog />);
+    renderWithHelmet(<SpamLog />);
 
     await waitFor(() => {
+
       expect(toast.error).toHaveBeenCalledWith(
         "Failed to verify admin access",
         expect.objectContaining({
