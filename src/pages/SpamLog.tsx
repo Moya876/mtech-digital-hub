@@ -22,14 +22,17 @@ const SpamLog = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [rows, setRows] = useState<BlockedRow[]>([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const load = async () => {
     setLoading(true);
-    const { data } = await supabase
+    setError(null);
+    const { data, error: loadError } = await supabase
       .from("blocked_submissions")
       .select("*")
       .order("created_at", { ascending: false })
       .limit(200);
+    if (loadError) setError(loadError.message);
     setRows((data as BlockedRow[]) ?? []);
     setLoading(false);
   };
@@ -41,10 +44,11 @@ const SpamLog = () => {
         navigate("/auth", { replace: true });
         return;
       }
-      const { data: roles } = await supabase
+      const { data: roles, error: rolesError } = await supabase
         .from("user_roles")
         .select("role")
         .eq("user_id", sessionData.session.user.id);
+      if (rolesError) setError(rolesError.message);
       const admin = (roles ?? []).some((r: { role: string }) => r.role === "admin");
       setIsAdmin(admin);
       setChecking(false);
@@ -86,6 +90,12 @@ const SpamLog = () => {
             <Button variant="ghost" onClick={signOut}>Sign out</Button>
           </div>
         </div>
+
+        {error && (
+          <p className="mb-4 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
+            Could not load data: {error}
+          </p>
+        )}
 
         {!isAdmin ? (
           <p className="text-mtechGray-700">
