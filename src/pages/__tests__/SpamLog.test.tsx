@@ -81,9 +81,10 @@ describe("SpamLog error handling", () => {
       error: { message: "permission denied for function has_role" },
     });
 
-    render(<SpamLog />);
+    renderWithHelmet(<SpamLog />);
 
     await waitFor(() => {
+
       expect(toast.error).toHaveBeenCalledWith(
         "Failed to load blocked submissions",
         expect.objectContaining({
