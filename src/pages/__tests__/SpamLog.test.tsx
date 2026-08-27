@@ -3,14 +3,13 @@ import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import SpamLog from "@/pages/SpamLog";
 
 const mockNavigate = vi.fn();
-const mockToastError = vi.fn();
 
 vi.mock("react-router-dom", () => ({
   useNavigate: () => mockNavigate,
 }));
 
 vi.mock("sonner", () => ({
-  toast: { error: mockToastError },
+  toast: { error: vi.fn() },
 }));
 
 const mockLimit = vi.fn();
@@ -46,6 +45,7 @@ describe("SpamLog error handling", () => {
 
   it("shows a toast and a retry button when the blocked submissions query fails", async () => {
     const { supabase } = await import("@/integrations/supabase/client");
+    const { toast } = await import("sonner");
     (supabase.auth.getSession as any).mockResolvedValue({
       data: { session: { user: { id: "admin-user" } } },
     });
@@ -58,7 +58,7 @@ describe("SpamLog error handling", () => {
     render(<SpamLog />);
 
     await waitFor(() => {
-      expect(mockToastError).toHaveBeenCalledWith(
+      expect(toast.error).toHaveBeenCalledWith(
         "Failed to load blocked submissions",
         expect.objectContaining({
           description: "permission denied for function has_role",
@@ -79,6 +79,7 @@ describe("SpamLog error handling", () => {
 
   it("shows a toast when admin role verification fails", async () => {
     const { supabase } = await import("@/integrations/supabase/client");
+    const { toast } = await import("sonner");
     (supabase.auth.getSession as any).mockResolvedValue({
       data: { session: { user: { id: "admin-user" } } },
     });
@@ -91,7 +92,7 @@ describe("SpamLog error handling", () => {
     render(<SpamLog />);
 
     await waitFor(() => {
-      expect(mockToastError).toHaveBeenCalledWith(
+      expect(toast.error).toHaveBeenCalledWith(
         "Failed to verify admin access",
         expect.objectContaining({
           description: "permission denied for table user_roles",
