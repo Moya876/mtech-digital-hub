@@ -36,6 +36,36 @@ const quoteSchema = z.object({
 
 type QuoteFormValues = z.infer<typeof quoteSchema>;
 
+const PROJECT_TYPE_LABELS: Record<string, string> = {
+  "web-development": "Web Development",
+  "web-hosting": "Web Hosting",
+  "software-testing": "Software Testing",
+  "graphic-design": "Graphic Design",
+  "social-media": "Social Media Content",
+  other: "Other",
+};
+
+export const buildQuoteEmailParams = (data: QuoteFormValues) => {
+  const company = data.company?.trim() || "Not provided";
+  const projectType = PROJECT_TYPE_LABELS[data.projectType] ?? data.projectType;
+
+  return {
+    // Keep both sets of names so the existing EmailJS template and any
+    // future template revisions receive the same complete submission.
+    name: data.name,
+    from_name: data.name,
+    email: data.email,
+    reply_to: data.email,
+    phone: data.phone,
+    phone_number: data.phone,
+    company,
+    company_name: company,
+    project_type: projectType,
+    message: data.message,
+    time: new Date().toLocaleString(),
+  };
+};
+
 const Quote = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -57,16 +87,7 @@ const Quote = () => {
     setIsSubmitting(true);
     
     try {
-      // Updated to ensure parameter names match exactly what's in the template
-      const templateParams = {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        company: data.company || 'Not provided',
-        project_type: data.projectType,
-        message: data.message,
-        time: new Date().toLocaleString()
-      };
+      const templateParams = buildQuoteEmailParams(data);
       
       console.log("Sending quote request via email:", templateParams);
       
