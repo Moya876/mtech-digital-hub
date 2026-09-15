@@ -1,28 +1,17 @@
-## Add two new portfolio projects
+# Fix blank details in quote request emails
 
-Add Reps & Results (reps.mtechcorpja.com) and Sayeed Bernard (sayeedbernard.com) as new entries in the Web Development portfolio.
+## Goal
+Make every quote email show the sender's name, email address, phone number, company, project type, message, and submission time clearly.
 
-### Changes
+## Changes
+- Update the quote form's outgoing email data to include the field names expected by the existing email template, while retaining the current names for compatibility.
+- Send the selected project type as a readable label such as “Web Development” instead of `web-development`.
+- Keep optional companies explicit as “Not provided” rather than leaving a blank value.
+- Add a focused regression test that submits a quote and confirms all expected email fields receive the entered values.
 
-1. **Capture screenshots** of both live sites and save locally as:
-   - `public/lovable-uploads/reps-and-results.png`
-   - `public/lovable-uploads/sayeed-bernard.png`
+## Technical details
+The current quote form sends `name`, `email`, and `phone`, while the email shown uses template placeholders that are not receiving those values. The submission will provide compatible aliases including `from_name`, `reply_to`, `phone_number`, and `company_name`, alongside the existing fields, so the current EmailJS template can populate every line without requiring a separate dashboard edit.
 
-2. **Edit `src/data/portfolioData.ts`** — prepend two new entries with the next ids (17 and 18) so they appear first on the Portfolio page:
-
-   - **id 18 — Reps & Results**
-     - URL: `https://reps.mtechcorpja.com`
-     - Category: Web Development
-     - Tech: HTML, CSS, JavaScript, Responsive Design
-     - Description: short blurb based on the site content (sales reps / results tracking platform).
-   - **id 17 — Sayeed Bernard**
-     - URL: `https://sayeedbernard.com`
-     - Category: Web Development
-     - Tech: HTML, CSS, JavaScript, Responsive Design
-     - Description: short blurb based on the site (personal/professional portfolio).
-
-### Notes
-
-- Final descriptions and tech tags will be tuned after visiting each site so they accurately reflect what's there (e.g. WordPress vs custom build).
-- No component or route changes needed: the Portfolio grid auto-renders from this data array, and the homepage Featured Projects already pulls the top entries.
-- Sitemap and SEO files are unaffected (project detail pages aren't routed individually).
+## Verification
+- Run the quote form test and existing test suite.
+- Confirm a sample submission passes complete, readable values to the email service.
