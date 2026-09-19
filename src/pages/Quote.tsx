@@ -31,6 +31,9 @@ const quoteSchema = z.object({
   phone: z.string().min(7, "Please enter a valid phone number"),
   company: z.string().optional(),
   projectType: z.string().min(1, "Please select a project type"),
+  budget: z.string().optional(),
+  timeline: z.string().optional(),
+  referral: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -45,9 +48,38 @@ const PROJECT_TYPE_LABELS: Record<string, string> = {
   other: "Other",
 };
 
+const BUDGET_LABELS: Record<string, string> = {
+  "under-50k": "Under JMD $50,000",
+  "50k-150k": "JMD $50,000 - $150,000",
+  "150k-500k": "JMD $150,000 - $500,000",
+  "over-500k": "Over JMD $500,000",
+  unsure: "Not sure yet",
+};
+
+const TIMELINE_LABELS: Record<string, string> = {
+  asap: "As soon as possible",
+  "1-3-months": "Within 1-3 months",
+  "3-6-months": "Within 3-6 months",
+  flexible: "Flexible / just exploring",
+};
+
+const REFERRAL_LABELS: Record<string, string> = {
+  google: "Google search",
+  social: "Social media",
+  referral: "Referral from a client or friend",
+  "returning-client": "Returning client",
+  other: "Other",
+};
+
+const labelled = (map: Record<string, string>, value?: string) =>
+  value ? map[value] ?? value : "Not provided";
+
 export const buildQuoteEmailParams = (data: QuoteFormValues) => {
   const company = data.company?.trim() || "Not provided";
   const projectType = PROJECT_TYPE_LABELS[data.projectType] ?? data.projectType;
+  const budget = labelled(BUDGET_LABELS, data.budget);
+  const timeline = labelled(TIMELINE_LABELS, data.timeline);
+  const referral = labelled(REFERRAL_LABELS, data.referral);
 
   return {
     // Keep both sets of names so the existing EmailJS template and any
