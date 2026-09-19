@@ -93,6 +93,12 @@ export const buildQuoteEmailParams = (data: QuoteFormValues) => {
     company,
     company_name: company,
     project_type: projectType,
+    budget,
+    budget_range: budget,
+    timeline,
+    project_timeline: timeline,
+    referral,
+    referral_source: referral,
     message: data.message,
     time: new Date().toLocaleString(),
   };
@@ -111,6 +117,9 @@ const Quote = () => {
       phone: "",
       company: "",
       projectType: "",
+      budget: "",
+      timeline: "",
+      referral: "",
       message: "",
     },
   });
