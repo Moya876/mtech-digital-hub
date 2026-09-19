@@ -433,6 +433,8 @@ const Quote = () => {
                   </div>
                 </form>
               </Form>
+                </>
+              )}
             </div>
           </div>
         </div>
