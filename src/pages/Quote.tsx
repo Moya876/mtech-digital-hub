@@ -199,17 +199,51 @@ const Quote = () => {
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-xl border border-mtechGray-100 shadow-sm p-8">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="h-12 w-12 rounded-full bg-mtechOrange/10 flex items-center justify-center text-mtechOrange">
-                  <MessageSquare size={24} />
+              {submittedName ? (
+                <div className="text-center py-8">
+                  <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100">
+                    <CheckCircle2 className="h-10 w-10 text-green-600" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-mtechGray-900 mb-3">
+                    Thank you{submittedName ? `, ${submittedName}` : ""}!
+                  </h2>
+                  <p className="text-lg text-mtechGray-700 mb-2">
+                    Your quote request has been sent successfully.
+                  </p>
+                  <p className="text-mtechGray-600 mb-8">
+                    We've received your project details and will get back to you within 24 hours with a response.
+                  </p>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <Button
+                      asChild
+                      className="bg-mtechOrange hover:bg-mtechOrange-dark w-full sm:w-auto"
+                    >
+                      <Link to="/services">
+                        Explore Our Services
+                      </Link>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full sm:w-auto"
+                      onClick={() => setSubmittedName(null)}
+                    >
+                      Send Another Request
+                    </Button>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-2xl font-bold text-mtechGray-900">Request a Quote</h2>
-                  <p className="text-mtechGray-600">We'll get back to you within 24 hours</p>
+              ) : (
+                <>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="h-12 w-12 rounded-full bg-mtechOrange/10 flex items-center justify-center text-mtechOrange">
+                    <MessageSquare size={24} />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-mtechGray-900">Request a Quote</h2>
+                    <p className="text-mtechGray-600">We'll get back to you within 24 hours</p>
+                  </div>
                 </div>
-              </div>
-              
-              <Form {...form}>
+
+                <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
