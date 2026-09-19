@@ -1,9 +1,9 @@
 
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import { Check, ArrowLeft, MessageSquare } from "lucide-react";
+import { Check, ArrowLeft, MessageSquare, CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -108,6 +108,7 @@ const Quote = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedName, setSubmittedName] = useState<string | null>(null);
 
   const form = useForm<QuoteFormValues>({
     resolver: zodResolver(quoteSchema),
@@ -126,12 +127,12 @@ const Quote = () => {
 
   const onSubmit = async (data: QuoteFormValues) => {
     setIsSubmitting(true);
-    
+
     try {
       const templateParams = buildQuoteEmailParams(data);
-      
+
       console.log("Sending quote request via email:", templateParams);
-      
+
       // Send email using EmailJS
       const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -139,19 +140,15 @@ const Quote = () => {
         templateParams,
         EMAILJS_USER_ID
       );
-      
+
       console.log("Quote request email sent successfully:", response);
-      
-      toast({
-        title: "Quote Request Submitted",
-        description: "Thank you! We'll get back to you within 24 hours.",
-        duration: 5000,
-      });
-      
+
+      setSubmittedName(data.name.trim().split(/\s+/)[0] || data.name);
       form.reset();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
       console.error("Error sending quote request:", error);
-      
+
       toast({
         title: "Error",
         description: "There was a problem sending your quote request. Please try again later.",
