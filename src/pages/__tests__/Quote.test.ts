@@ -12,6 +12,9 @@ describe("quote email formatting", () => {
       phone: "876-555-0199",
       company: "Richel Legal",
       projectType: "web-development",
+      budget: "150k-500k",
+      timeline: "1-3-months",
+      referral: "google",
       message: "I need a professional website for a law firm.",
     });
 
@@ -25,6 +28,12 @@ describe("quote email formatting", () => {
       company: "Richel Legal",
       company_name: "Richel Legal",
       project_type: "Web Development",
+      budget: "JMD $150,000 - $500,000",
+      budget_range: "JMD $150,000 - $500,000",
+      timeline: "Within 1-3 months",
+      project_timeline: "Within 1-3 months",
+      referral: "Google search",
+      referral_source: "Google search",
       message: "I need a professional website for a law firm.",
     });
     expect(params.time).toBeTruthy();
@@ -39,11 +48,17 @@ describe("quote email formatting", () => {
       phone: "876-555-0199",
       company: "   ",
       projectType: "other",
+      budget: "",
+      timeline: "",
+      referral: "",
       message: "I need help planning another type of project.",
     });
 
     expect(params.company).toBe("Not provided");
     expect(params.company_name).toBe("Not provided");
     expect(params.project_type).toBe("Other");
+    expect(params.budget).toBe("Not provided");
+    expect(params.timeline).toBe("Not provided");
+    expect(params.referral).toBe("Not provided");
   });
 });
