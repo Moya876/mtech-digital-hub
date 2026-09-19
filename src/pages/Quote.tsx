@@ -201,8 +201,8 @@ const Quote = () => {
             <div className="bg-white rounded-xl border border-mtechGray-100 shadow-sm p-8">
               {submittedName ? (
                 <div className="text-center py-8">
-                  <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100">
-                    <CheckCircle2 className="h-10 w-10 text-green-600" />
+                  <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                    <CheckCircle2 className="h-10 w-10 text-primary" />
                   </div>
                   <h2 className="text-3xl font-bold text-mtechGray-900 mb-3">
                     Thank you{submittedName ? `, ${submittedName}` : ""}!
