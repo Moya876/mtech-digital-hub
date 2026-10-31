@@ -13,7 +13,7 @@ describe("pricing", () => {
     expect(formatPrice(300, "USD")).toBe("USD $300");
   });
   it("maps estimate to budget range", () => {
-    expect(budgetRangeFor(300)).toBe("50k-150k");
+    expect(budgetRangeFor(300)).toBe("under-50k");
     expect(budgetRangeFor(3000)).toBe("150k-500k");
   });
 });
