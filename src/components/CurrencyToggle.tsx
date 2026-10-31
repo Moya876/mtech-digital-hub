@@ -10,7 +10,7 @@ const CurrencyToggle = ({ value, onChange }: { value: Currency; onChange: (c: Cu
         aria-pressed={value === c}
         onClick={() => onChange(c)}
         className={cn(
-          "px-4 py-1 text-sm font-semibold rounded-full transition-colors",
+          "px-4 py-1 text-sm font-semibold rounded-full",
           value === c ? "bg-mtechNavy text-primary-foreground" : "text-mtechGray-600 hover:text-mtechOrange",
         )}
       >
