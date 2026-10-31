@@ -19,6 +19,8 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import CostEstimator from "@/components/CostEstimator";
+import { budgetRangeFor } from "@/lib/pricing";
 import emailjs from 'emailjs-com';
 
 const EMAILJS_SERVICE_ID = "service_7bdry77"; // Your EmailJS service ID
@@ -242,6 +244,15 @@ const Quote = () => {
                     <p className="text-mtechGray-600">We'll get back to you within 24 hours</p>
                   </div>
                 </div>
+
+                <CostEstimator
+                  onUseEstimate={({ usd, text }) => {
+                    form.setValue("projectType", "web-development", { shouldValidate: true });
+                    form.setValue("budget", budgetRangeFor(usd));
+                    const current = form.getValues("message");
+                    form.setValue("message", current ? `${current}\n\n${text}` : text, { shouldValidate: true });
+                  }}
+                />
 
                 <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

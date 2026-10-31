@@ -3,6 +3,9 @@ import { CheckCircle, Monitor, Server, FileSearch, TrendingUp, Shield, Clock, Li
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import CurrencyToggle from "@/components/CurrencyToggle";
+import { Currency, formatPrice } from "@/lib/pricing";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import socialMediaImg from "@/assets/social-media-content.jpg";
 import serviceWebDevImg from "@/assets/service-web-dev.jpg";
@@ -62,6 +65,7 @@ const ServiceSection = ({
 };
 
 const Services = () => {
+  const [currency, setCurrency] = useState<Currency>("USD");
   return (
     <>
       <Helmet>
@@ -262,6 +266,9 @@ const Services = () => {
             <p className="text-xl text-mtechGray-600 max-w-3xl mx-auto">
               Choose the perfect plan for your business needs.
             </p>
+            <div className="mt-6 flex justify-center">
+              <CurrencyToggle value={currency} onChange={setCurrency} />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -270,7 +277,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Software Testing</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">USD $15</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">{formatPrice(15, currency)}</span>
                   <span className="ml-1 text-mtechGray-500">/ hour</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Professional QA services</p>
@@ -310,7 +317,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Web Development</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900"> USD $300</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">{formatPrice(300, currency)}</span>
                   <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Perfect for small businesses</p>
@@ -347,7 +354,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Graphic Design</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900">USD $30</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">{formatPrice(30, currency)}</span>
                   <span className="ml-1 text-mtechGray-500">/ starter</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500">Creative designs for social media & marketing</p>
@@ -385,7 +392,7 @@ const Services = () => {
               <div className="p-6 border-b border-mtechGray-100">
                 <h3 className="text-lg font-semibold text-mtechGray-900">Web Hosting</h3>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-mtechGray-900"> USD $6</span>
+                  <span className="text-3xl font-bold text-mtechGray-900">{formatPrice(6, currency)}</span>
                   <span className="ml-1 text-mtechGray-500">/ month</span>
                 </div>
                 <p className="mt-2 text-sm text-mtechGray-500"></p>
