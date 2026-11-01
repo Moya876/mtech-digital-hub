@@ -52,7 +52,7 @@ export const projects: Project[] = [
     title: "AutoLuv Service Center",
     description: "A professional auto service center website for Ocho Rios, Jamaica featuring alignment, tyre services, and frontend repair with online booking and service showcase.",
     image: "/lovable-uploads/autoluv-sc.jpg",
-    projectUrl: "https://autoluv.lovable.app",
+    projectUrl: "https://autoluv.mtechcorpja.com",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     category: "Web Development"
   },
