@@ -3,6 +3,33 @@ import { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    id: 21,
+    title: "Data & Cybersecurity Limited",
+    description: "A corporate advisory website for a Jamaican cybersecurity and data protection firm, covering cybersecurity advisory, data protection and privacy, AI governance, data analytics, and digital transformation, with urgent incident-response and digital-risk reporting paths, service pages, and an FAQ.",
+    image: "/lovable-uploads/data-and-cybersecurity.jpg",
+    projectUrl: "https://dataandcyber.com/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
+    id: 20,
+    title: "Moppy's Convenience Store & Liquor Depot",
+    description: "A coming soon landing page for a wholesale and retail convenience store and liquor depot in Ocho Rios, featuring friendly mascot branding, daily deals highlights, and click to call, email, and visit us contact details.",
+    image: "/lovable-uploads/moppys-enterprise.jpg",
+    projectUrl: "https://moppysenterprise.com/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
+    id: 19,
+    title: "Reps N Results Calorie Calculator",
+    description: "A standalone calorie and macro calculator that estimates daily calorie and macronutrient targets from age, weight, height, sex, and activity level, with metric and imperial unit switching in a clean dark themed interface.",
+    image: "/lovable-uploads/reps-calorie-calculator.jpg",
+    projectUrl: "https://calorie-calculator.mtechcorpja.com/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    category: "Web Development"
+  },
+  {
     id: 18,
     title: "Reps N Results",
     description: "A beginner friendly fitness web app with a calorie and protein calculator, weekly gym plans, and a plain language gym terminology guide, wrapped in a modern dark themed responsive UI.",
