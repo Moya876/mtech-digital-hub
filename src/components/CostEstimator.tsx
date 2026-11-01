@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Calculator } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -15,28 +15,38 @@ import {
 
 interface Props {
   onUseEstimate: (summary: { usd: number; text: string }) => void;
+  onChange?: (text: string) => void;
 }
 
-const CostEstimator = ({ onUseEstimate }: Props) => {
+const CostEstimator = ({ onUseEstimate, onChange }: Props) => {
   const [pages, setPages] = useState(4);
   const [addons, setAddons] = useState<AddonId[]>([]);
   const [hosting, setHosting] = useState(true);
   const [currency, setCurrency] = useState<Currency>("USD");
+  const [touched, setTouched] = useState(false);
 
   const total = estimateWebsiteUSD(pages, addons);
-  const toggle = (id: AddonId) =>
+  const toggle = (id: AddonId) => {
+    setTouched(true);
     setAddons((prev) => (prev.includes(id) ? prev.filter((a) => a !== id) : [...prev, id]));
+  };
+
+  const chosen = ESTIMATOR_ADDONS.filter((a) => addons.includes(a.id)).map((a) => a.label);
+  const text = [
+    `Estimator: ${pages}-page website`,
+    chosen.length ? `Extras: ${chosen.join(", ")}` : null,
+    hosting ? `Hosting: ${formatPrice(HOSTING_MONTHLY_USD, "USD")} (${formatPrice(HOSTING_MONTHLY_USD, "JMD")})/month` : null,
+    `Estimated total: about ${formatPrice(total, "USD")} (${formatPrice(total, "JMD")})`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  useEffect(() => {
+    if (touched) onChange?.(text);
+  }, [touched, text, onChange]);
 
   const useEstimate = () => {
-    const chosen = ESTIMATOR_ADDONS.filter((a) => addons.includes(a.id)).map((a) => a.label);
-    const text = [
-      `Estimator: ${pages}-page website`,
-      chosen.length ? `Extras: ${chosen.join(", ")}` : null,
-      hosting ? `Hosting: ${formatPrice(HOSTING_MONTHLY_USD, currency)}/month` : null,
-      `Estimated total: about ${formatPrice(total, currency)}`,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    setTouched(true);
     onUseEstimate({ usd: total, text });
   };
 
