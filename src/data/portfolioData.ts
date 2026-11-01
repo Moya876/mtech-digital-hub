@@ -42,7 +42,7 @@ export const projects: Project[] = [
     id: 17,
     title: "Sayeed Bernard, Attorney-at-Law",
     description: "Professional website for Sayeed Bernard, Attorney-at-Law, offering trusted, strategic, and results-driven legal representation. Features include practice area listings, individual and business legal services, testimonials, resources, and online consultation booking.",
-    image: "/lovable-uploads/sayeed-bernard.png",
+    image: "/lovable-uploads/sayeed-bernard.jpg",
     projectUrl: "https://sayeedbernard.com",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     category: "Web Development"
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     id: 16,
     title: "AutoLuv Service Center",
     description: "A professional auto service center website for Ocho Rios, Jamaica featuring alignment, tyre services, and frontend repair with online booking and service showcase.",
-    image: "/lovable-uploads/autoluv-sc.png",
+    image: "/lovable-uploads/autoluv-sc.jpg",
     projectUrl: "https://autoluv.lovable.app",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     category: "Web Development"
