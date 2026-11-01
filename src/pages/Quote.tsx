@@ -76,7 +76,7 @@ const REFERRAL_LABELS: Record<string, string> = {
 const labelled = (map: Record<string, string>, value?: string) =>
   value ? map[value] ?? value : "Not provided";
 
-export const buildQuoteEmailParams = (data: QuoteFormValues) => {
+export const buildQuoteEmailParams = (data: QuoteFormValues, estimate?: string | null) => {
   const company = data.company?.trim() || "Not provided";
   const projectType = PROJECT_TYPE_LABELS[data.projectType] ?? data.projectType;
   const budget = labelled(BUDGET_LABELS, data.budget);
@@ -101,6 +101,7 @@ export const buildQuoteEmailParams = (data: QuoteFormValues) => {
     project_timeline: timeline,
     referral,
     referral_source: referral,
+    quote_estimate: estimate?.trim() || "Estimator not used",
     message: data.message,
     time: new Date().toLocaleString(),
   };
@@ -111,6 +112,7 @@ const Quote = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedName, setSubmittedName] = useState<string | null>(null);
+  const [estimate, setEstimate] = useState<string | null>(null);
 
   const form = useForm<QuoteFormValues>({
     resolver: zodResolver(quoteSchema),
@@ -131,7 +133,7 @@ const Quote = () => {
     setIsSubmitting(true);
 
     try {
-      const templateParams = buildQuoteEmailParams(data);
+      const templateParams = buildQuoteEmailParams(data, estimate);
 
       console.log("Sending quote request via email:", templateParams);
 
@@ -246,6 +248,7 @@ const Quote = () => {
                 </div>
 
                 <CostEstimator
+                  onChange={setEstimate}
                   onUseEstimate={({ usd, text }) => {
                     form.setValue("projectType", "web-development", { shouldValidate: true });
                     form.setValue("budget", budgetRangeFor(usd));

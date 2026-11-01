@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Calculator } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -15,28 +15,38 @@ import {
 
 interface Props {
   onUseEstimate: (summary: { usd: number; text: string }) => void;
+  onChange?: (text: string) => void;
 }
 
-const CostEstimator = ({ onUseEstimate }: Props) => {
+const CostEstimator = ({ onUseEstimate, onChange }: Props) => {
   const [pages, setPages] = useState(4);
   const [addons, setAddons] = useState<AddonId[]>([]);
   const [hosting, setHosting] = useState(true);
   const [currency, setCurrency] = useState<Currency>("USD");
+  const [touched, setTouched] = useState(false);
 
   const total = estimateWebsiteUSD(pages, addons);
-  const toggle = (id: AddonId) =>
+  const toggle = (id: AddonId) => {
+    setTouched(true);
     setAddons((prev) => (prev.includes(id) ? prev.filter((a) => a !== id) : [...prev, id]));
+  };
+
+  const chosen = ESTIMATOR_ADDONS.filter((a) => addons.includes(a.id)).map((a) => a.label);
+  const text = [
+    `Estimator: ${pages}-page website`,
+    chosen.length ? `Extras: ${chosen.join(", ")}` : null,
+    hosting ? `Hosting: ${formatPrice(HOSTING_MONTHLY_USD, "USD")} (${formatPrice(HOSTING_MONTHLY_USD, "JMD")})/month` : null,
+    `Estimated total: about ${formatPrice(total, "USD")} (${formatPrice(total, "JMD")})`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  useEffect(() => {
+    if (touched) onChange?.(text);
+  }, [touched, text, onChange]);
 
   const useEstimate = () => {
-    const chosen = ESTIMATOR_ADDONS.filter((a) => addons.includes(a.id)).map((a) => a.label);
-    const text = [
-      `Estimator: ${pages}-page website`,
-      chosen.length ? `Extras: ${chosen.join(", ")}` : null,
-      hosting ? `Hosting: ${formatPrice(HOSTING_MONTHLY_USD, currency)}/month` : null,
-      `Estimated total: about ${formatPrice(total, currency)}`,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    setTouched(true);
     onUseEstimate({ usd: total, text });
   };
 
@@ -53,7 +63,7 @@ const CostEstimator = ({ onUseEstimate }: Props) => {
       <label className="block text-sm font-medium text-mtechGray-700 mb-3">
         Number of pages: <span className="font-bold text-mtechNavy">{pages}</span>
       </label>
-      <Slider min={1} max={20} step={1} value={[pages]} onValueChange={(v) => setPages(v[0])} aria-label="Number of pages" />
+      <Slider min={1} max={20} step={1} value={[pages]} onValueChange={(v) => { setTouched(true); setPages(v[0]); }} aria-label="Number of pages" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
         {ESTIMATOR_ADDONS.map((a) => (
@@ -63,7 +73,7 @@ const CostEstimator = ({ onUseEstimate }: Props) => {
           </label>
         ))}
         <label className="flex items-center gap-2 text-sm text-mtechGray-700 cursor-pointer">
-          <Checkbox checked={hosting} onCheckedChange={(c) => setHosting(!!c)} />
+          <Checkbox checked={hosting} onCheckedChange={(c) => { setTouched(true); setHosting(!!c); }} />
           Hosting ({formatPrice(HOSTING_MONTHLY_USD, currency)}/month)
         </label>
       </div>
