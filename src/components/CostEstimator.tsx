@@ -63,7 +63,7 @@ const CostEstimator = ({ onUseEstimate, onChange }: Props) => {
       <label className="block text-sm font-medium text-mtechGray-700 mb-3">
         Number of pages: <span className="font-bold text-mtechNavy">{pages}</span>
       </label>
-      <Slider min={1} max={20} step={1} value={[pages]} onValueChange={(v) => setPages(v[0])} aria-label="Number of pages" />
+      <Slider min={1} max={20} step={1} value={[pages]} onValueChange={(v) => { setTouched(true); setPages(v[0]); }} aria-label="Number of pages" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
         {ESTIMATOR_ADDONS.map((a) => (
@@ -73,7 +73,7 @@ const CostEstimator = ({ onUseEstimate, onChange }: Props) => {
           </label>
         ))}
         <label className="flex items-center gap-2 text-sm text-mtechGray-700 cursor-pointer">
-          <Checkbox checked={hosting} onCheckedChange={(c) => setHosting(!!c)} />
+          <Checkbox checked={hosting} onCheckedChange={(c) => { setTouched(true); setHosting(!!c); }} />
           Hosting ({formatPrice(HOSTING_MONTHLY_USD, currency)}/month)
         </label>
       </div>
