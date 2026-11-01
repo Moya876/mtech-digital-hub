@@ -19,7 +19,7 @@ const projects: Project[] = [
     id: 2,
     title: "Sayeed Bernard",
     description: "Attorney-at-Law website.",
-    image: "/lovable-uploads/sayeed-bernard.png",
+    image: "/lovable-uploads/sayeed-bernard.jpg",
     projectUrl: "https://sayeedbernard.com/",
     technologies: ["WordPress", "PHP"],
     category: "Web Development",
