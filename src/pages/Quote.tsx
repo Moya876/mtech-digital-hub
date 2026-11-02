@@ -149,6 +149,9 @@ const Quote = () => {
 
       setSubmittedName(data.name.trim().split(/\s+/)[0] || data.name);
       form.reset();
+      // The estimator remounts at its defaults on the success screen, so drop
+      // the previous submission's estimate instead of resending it.
+      setEstimate(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
       console.error("Error sending quote request:", error);
@@ -229,7 +232,10 @@ const Quote = () => {
                     <Button
                       variant="outline"
                       className="w-full sm:w-auto"
-                      onClick={() => setSubmittedName(null)}
+                      onClick={() => {
+                        setEstimate(null);
+                        setSubmittedName(null);
+                      }}
                     >
                       Send Another Request
                     </Button>
