@@ -70,10 +70,10 @@ const Services = () => {
     <>
       <Helmet>
         <title>Services | MTech Corp - Web Dev, Hosting & Design</title>
-        <meta name="description" content="Explore MTech Corp's services: web development, web hosting, software testing, graphic design, and social media content management in Jamaica." />
+        <meta name="description" content="Explore MTech Corp's web development, hosting, testing, design, social media and tech support services in Jamaica." />
         <link rel="canonical" href="https://mtechcorpja.com/services" />
         <meta property="og:title" content="MTech Corp Services - Web Development, Hosting & More" />
-        <meta property="og:description" content="Custom web development, reliable hosting, software testing, graphic design, and social media services for businesses." />
+        <meta property="og:description" content="Web development, hosting, software testing, design, social media and hands-on tech support in Jamaica." />
         <meta property="og:url" content="https://mtechcorpja.com/services" />
         <meta property="og:type" content="website" />
       </Helmet>
@@ -201,6 +201,16 @@ const Services = () => {
       </section>
 
       {/* Why Choose Us */}
+      <section className="bg-muted py-12">
+        <div className="container mx-auto flex flex-col gap-6 px-5 sm:px-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-3xl font-bold text-foreground">Hands-on Tech Support</h2>
+            <p className="mt-3 max-w-2xl text-lg text-muted-foreground">RAM and SSD upgrades, laptop battery replacement, printer setup, email setup, and software installation.</p>
+          </div>
+          <Button asChild variant="support" size="lg" className="shrink-0"><Link to="/tech-support">View Tech Support Services</Link></Button>
+        </div>
+      </section>
+
       <section className="py-20 bg-mtechGray-50">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="text-center mb-16">
