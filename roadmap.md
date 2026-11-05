@@ -4,5 +4,5 @@
 - [x] Check pricing rules and mobile/desktop booking flow.
 
 # Portfolio screenshots
-- [ ] Capture fresh M2S Development and Kemmax Sales website screenshots.
-- [ ] Replace and verify both portfolio thumbnails.
+- [x] Capture fresh M2S Development and Kemmax Sales website screenshots.
+- [x] Replace and verify both portfolio thumbnails.
