@@ -20,6 +20,12 @@ export default {
 		},
 		extend: {
 			colors: {
+				support: {
+					brand: 'hsl(var(--support-brand))',
+					foreground: 'hsl(var(--support-brand-foreground))',
+					action: 'hsl(var(--support-action))',
+					'action-foreground': 'hsl(var(--support-action-foreground))',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
