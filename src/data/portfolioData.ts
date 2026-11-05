@@ -69,7 +69,7 @@ export const projects: Project[] = [
     id: 14,
     title: "M2S Development",
     description: "A construction company website showcasing residential, commercial, and partnership projects in Jamaica with a modern design, service highlights, and project portfolio.",
-    image: "/lovable-uploads/m2s-develops.png",
+    image: "/lovable-uploads/m2s-development.jpg",
     projectUrl: "https://m2sdevelops.com/",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     category: "Web Development"

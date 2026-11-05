@@ -10,7 +10,7 @@
      id: 13,
      title: "Kemmax Sales & Distribution",
      description: "A B2B supplies distribution platform with Supabase-powered inventory management.",
-     image: "/lovable-uploads/kemmax-website.png",
+     image: "/lovable-uploads/kemmax-sales.jpg",
      projectUrl: "https://kemmaxsales.com/",
      technologies: ["PHP", "Supabase", "Responsive Design"],
    },
