@@ -50,7 +50,7 @@ export default function TechSupport() {
       <section className="bg-background py-12 md:py-16">
         <div className="container mx-auto px-5 sm:px-8">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-            <div><p className="text-sm font-semibold uppercase tracking-widest text-support-action">Practical help. Clear rates.</p><h2 className="mt-2 text-3xl font-bold text-foreground">Our tech support services</h2></div>
+            <div className="min-w-0"><p className="text-sm font-semibold uppercase tracking-widest text-support-action">Practical help. Clear rates.</p><h2 className="mt-2 max-w-xs text-2xl font-bold text-foreground sm:max-w-none md:text-3xl">Our tech support services</h2></div>
             <div role="group" aria-label="Tech support currency" className="flex w-fit gap-1 rounded-md border border-border p-1">
               {(["JMD", "USD"] as Currency[]).map(value => <Button key={value} size="sm" variant={currency === value ? "default" : "ghost"} aria-pressed={currency === value} onClick={() => setCurrency(value)} className={currency === value ? "bg-support-brand text-support-foreground hover:bg-support-brand/90" : ""}>{value}</Button>)}
             </div>
