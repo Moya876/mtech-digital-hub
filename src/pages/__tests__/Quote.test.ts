@@ -62,3 +62,9 @@ describe("quote email formatting", () => {
     expect(params.referral).toBe("Not provided");
   });
 });
+describe("tech support quote option", () => {
+  it("preselects tech support from the link", async () => {
+    const { projectTypeFromService } = await import("@/pages/Quote");
+    expect(projectTypeFromService("tech-support")).toBe("tech-support");
+  });
+});

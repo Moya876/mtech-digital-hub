@@ -19,6 +19,7 @@ const Navbar = () => {
   const navLinks: { name: string; path: string; external?: boolean }[] = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
+    { name: "Tech Support", path: "/tech-support" },
     { name: "About", path: "/about" },
     { name: "Portfolio", path: "/portfolio" },
     // { name: "Blog", path: "https://blog.mtechcorpja.com", external: true },
