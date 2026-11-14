@@ -6,3 +6,9 @@
 # Portfolio screenshots
 - [x] Capture fresh M2S Development and Kemmax Sales website screenshots.
 - [x] Replace and verify both portfolio thumbnails.
+
+# Homepage and quote quick wins
+- [x] Replace the blank client statistic with 5★ Rated Support.
+- [x] Improve hero headline contrast.
+- [x] Link all service pricing cards to a prefilled quote form.
+- [x] Verify the homepage and all four quote links on desktop and mobile.

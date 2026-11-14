@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Check, ArrowLeft, MessageSquare, CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -49,6 +49,9 @@ const PROJECT_TYPE_LABELS: Record<string, string> = {
   "social-media": "Social Media Content",
   other: "Other",
 };
+
+export const projectTypeFromService = (service: string | null) =>
+  service && Object.prototype.hasOwnProperty.call(PROJECT_TYPE_LABELS, service) ? service : "";
 
 const BUDGET_LABELS: Record<string, string> = {
   "under-50k": "Under JMD $50,000",
@@ -109,6 +112,7 @@ export const buildQuoteEmailParams = (data: QuoteFormValues, estimate?: string |
 
 const Quote = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedName, setSubmittedName] = useState<string | null>(null);
@@ -121,7 +125,7 @@ const Quote = () => {
       email: "",
       phone: "",
       company: "",
-      projectType: "",
+      projectType: projectTypeFromService(searchParams.get("service")),
       budget: "",
       timeline: "",
       referral: "",

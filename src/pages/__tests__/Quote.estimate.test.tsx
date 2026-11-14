@@ -3,9 +3,10 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
 import Quote from "@/pages/Quote";
 
-const { mockSend, mockNavigate } = vi.hoisted(() => ({
+const { mockSend, mockNavigate, mockState } = vi.hoisted(() => ({
   mockSend: vi.fn(),
   mockNavigate: vi.fn(),
+  mockState: { service: null as string | null },
 }));
 
 vi.mock("emailjs-com", () => ({
@@ -14,6 +15,7 @@ vi.mock("emailjs-com", () => ({
 
 vi.mock("react-router-dom", () => ({
   useNavigate: () => mockNavigate,
+  useSearchParams: () => [new URLSearchParams(mockState.service ? { service: mockState.service } : {})],
   Link: ({ to, children }: { to: string; children: React.ReactNode }) => (
     <a href={to}>{children}</a>
   ),
@@ -42,6 +44,7 @@ const renderQuote = () => render(<HelmetProvider><Quote /></HelmetProvider>);
 describe("quote estimate is not reused across submissions", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    mockState.service = null;
     mockSend.mockResolvedValue({ status: 200 });
     window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
   });
@@ -87,5 +90,26 @@ describe("quote estimate is not reused across submissions", () => {
     await waitFor(() => expect(mockSend).toHaveBeenCalledTimes(2));
     const retried = mockSend.mock.calls[1][2] as Record<string, string>;
     expect(retried.quote_estimate).toContain("Estimator:");
+  });
+});
+
+describe("quote service preselection", () => {
+  beforeEach(() => {
+    mockState.service = null;
+  });
+
+  it.each(["software-testing", "web-development", "graphic-design", "web-hosting"])(
+    "preselects the %s pricing plan",
+    (service) => {
+      mockState.service = service;
+      renderQuote();
+      expect(screen.getByLabelText(/project type/i)).toHaveValue(service);
+    },
+  );
+
+  it("leaves the project type unselected for an unknown service", () => {
+    mockState.service = "unknown-service";
+    renderQuote();
+    expect(screen.getByLabelText(/project type/i)).toHaveValue("");
   });
 });

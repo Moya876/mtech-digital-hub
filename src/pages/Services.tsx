@@ -312,7 +312,7 @@ const Services = () => {
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
-                  <Link to="/contact">
+                  <Link to="/quote?service=software-testing">
                     Contact Us
                   </Link>
                 </Button>
@@ -352,7 +352,7 @@ const Services = () => {
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
-                  <Link to="/contact">
+                  <Link to="/quote?service=web-development">
                     Get Started
                   </Link>
                 </Button>
@@ -389,7 +389,7 @@ const Services = () => {
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
-                  <Link to="/contact">
+                  <Link to="/quote?service=graphic-design">
                     Contact Us
                   </Link>
                 </Button>
@@ -427,7 +427,7 @@ const Services = () => {
                   </li>
                 </ul>
                 <Button className="w-full bg-mtechBlue-800 hover:bg-mtechOrange" asChild>
-                  <Link to="/contact">
+                  <Link to="/quote?service=web-hosting">
                     Get Started
                   </Link>
                 </Button>
