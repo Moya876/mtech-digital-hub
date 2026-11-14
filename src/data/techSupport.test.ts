@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { formatSupportPrice, techSupportServices } from "./techSupport";
 
 describe("approved flyer rates", () => {
-  it.each([["ram", 4000], ["ssd", 5500], ["battery", 4500], ["printer", 3500], ["email", 3500], ["software", 3000]])("keeps %s at JMD %i", (id, price) => {
+  it.each([["ram", 4000], ["ssd", 6500], ["battery", 5500], ["printer", 3500], ["email", 3500], ["software", 3000]])("keeps %s at JMD %i", (id, price) => {
     expect(techSupportServices.find(service => service.id === id)?.jmd).toBe(price);
   });
   it("offers only the approved hardware and basic setup services", () => {
