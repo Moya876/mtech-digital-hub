@@ -10,7 +10,7 @@ import Testimonial from "@/components/Testimonial";
 import FAQ from "@/components/FAQ";
  import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { Monitor, Server, FileSearch, ArrowRight } from "lucide-react";
+import { Monitor, Server, FileSearch, ArrowRight, Wrench, MessageCircle } from "lucide-react";
 
 const Index = () => {
   return (
@@ -71,6 +71,29 @@ const Index = () => {
               />
             </ScrollReveal>
           </div>
+
+          <ScrollReveal delay={0.35} className="mt-12">
+            <div className="rounded-2xl bg-mtechNavy text-primary-foreground p-6 sm:p-8 md:p-10 flex flex-col lg:flex-row lg:items-center gap-6 shadow-lg">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-mtechOrange">
+                <Wrench className="h-7 w-7" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-semibold uppercase tracking-wide text-mtechOrange mb-1">New: Hands-on Tech Support</p>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">Computer Upgrades & Setup</h3>
+                <p className="opacity-90">RAM and SSD upgrades, battery replacement, printer, email and software setup. Rates from JMD $3,000.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button className="bg-mtechOrange hover:bg-mtechOrange-dark" asChild>
+                  <Link to="/tech-support">See Rates <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+                <Button variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10" asChild>
+                  <a href="https://wa.me/18768331524?text=Hi%2C%20I%27d%20like%20to%20book%20tech%20support" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" /> Book on WhatsApp
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </ScrollReveal>
 
           <ScrollReveal delay={0.4} className="text-center mt-12">
             <Button variant="outline" className="border-mtechOrange text-mtechOrange hover:bg-mtechOrange/10" asChild>
