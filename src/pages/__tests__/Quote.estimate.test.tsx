@@ -3,10 +3,10 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
 import Quote from "@/pages/Quote";
 
-const { mockSend, mockNavigate, mockService } = vi.hoisted(() => ({
+const { mockSend, mockNavigate, mockState } = vi.hoisted(() => ({
   mockSend: vi.fn(),
   mockNavigate: vi.fn(),
-  mockService: null as string | null,
+  mockState: { service: null as string | null },
 }));
 
 vi.mock("emailjs-com", () => ({
@@ -15,7 +15,7 @@ vi.mock("emailjs-com", () => ({
 
 vi.mock("react-router-dom", () => ({
   useNavigate: () => mockNavigate,
-  useSearchParams: () => [new URLSearchParams(mockService ? { service: mockService } : {})],
+  useSearchParams: () => [new URLSearchParams(mockState.service ? { service: mockState.service } : {})],
   Link: ({ to, children }: { to: string; children: React.ReactNode }) => (
     <a href={to}>{children}</a>
   ),
@@ -44,7 +44,7 @@ const renderQuote = () => render(<HelmetProvider><Quote /></HelmetProvider>);
 describe("quote estimate is not reused across submissions", () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    mockService = null;
+    mockState.service = null;
     mockSend.mockResolvedValue({ status: 200 });
     window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
   });
@@ -95,20 +95,20 @@ describe("quote estimate is not reused across submissions", () => {
 
 describe("quote service preselection", () => {
   beforeEach(() => {
-    mockService = null;
+    mockState.service = null;
   });
 
   it.each(["software-testing", "web-development", "graphic-design", "web-hosting"])(
     "preselects the %s pricing plan",
     (service) => {
-      mockService = service;
+      mockState.service = service;
       renderQuote();
       expect(screen.getByLabelText(/project type/i)).toHaveValue(service);
     },
   );
 
   it("leaves the project type unselected for an unknown service", () => {
-    mockService = "unknown-service";
+    mockState.service = "unknown-service";
     renderQuote();
     expect(screen.getByLabelText(/project type/i)).toHaveValue("");
   });
