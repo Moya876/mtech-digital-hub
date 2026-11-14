@@ -26,13 +26,13 @@ const Hero = () => {
                   Get a Free Quote <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button variant="outline" className="bg-transparent border-support-brand-foreground text-support-brand-foreground hover:bg-support-brand-foreground/10 hover:text-support-brand-foreground px-6 py-6 text-lg" asChild>
+              <Button variant="outline" className="bg-transparent border-support-foreground text-support-foreground hover:bg-support-foreground/10 hover:text-support-foreground px-6 py-6 text-lg" asChild>
                 <a href="https://wa.me/18768331524?text=Hi%20MTech%20Corp%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">
                   <MessageSquare aria-hidden="true" /> WhatsApp Us
                 </a>
               </Button>
             </div>
-            <p className="mt-4 text-sm text-support-brand-foreground/90 animate-fade-in animation-delay-200">
+            <p className="mt-4 text-sm text-support-foreground/90 animate-fade-in animation-delay-200">
               Free project estimate · 5★ Rated Support
             </p>
           </div>
