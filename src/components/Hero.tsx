@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroTechImg from "@/assets/hero-tech.jpg";
@@ -21,17 +21,20 @@ const Hero = () => {
               Professional web development, reliable hosting services, and comprehensive software testing solutions to help your business thrive online.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in animation-delay-200">
-              <Button className="bg-mtechOrange hover:bg-mtechOrange-dark text-white px-8 py-6 text-lg" asChild>
-                <Link to="/services">
-                  Our Services <ArrowRight className="ml-2" size={18} />
+              <Button variant="support" className="px-6 py-6 text-lg" asChild>
+                <Link to="/quote">
+                  Get a Free Quote <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-mtechOrange hover:border-mtechOrange px-8 py-6 text-lg" asChild>
-                <Link to="/contact">
-                  Contact Us
-                </Link>
+              <Button variant="outline" className="bg-transparent border-support-brand-foreground text-support-brand-foreground hover:bg-support-brand-foreground/10 hover:text-support-brand-foreground px-6 py-6 text-lg" asChild>
+                <a href="https://wa.me/18768331524?text=Hi%20MTech%20Corp%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">
+                  <MessageSquare aria-hidden="true" /> WhatsApp Us
+                </a>
               </Button>
             </div>
+            <p className="mt-4 text-sm text-support-brand-foreground/90 animate-fade-in animation-delay-200">
+              Free project estimate · 5★ Rated Support
+            </p>
           </div>
           <div className="md:w-1/2 md:pl-10">
             <div className="rounded-lg bg-white/10 backdrop-blur-sm p-2 border border-white/20 shadow-2xl animate-fade-in animation-delay-300">
