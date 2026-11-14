@@ -8,7 +8,7 @@
 - [x] Replace and verify both portfolio thumbnails.
 
 # Homepage and quote quick wins
-- [ ] Replace the blank client statistic with 5★ Rated Support.
-- [ ] Improve hero headline contrast.
-- [ ] Link all service pricing cards to a prefilled quote form.
-- [ ] Verify the homepage and all four quote links on desktop and mobile.
+- [x] Replace the blank client statistic with 5★ Rated Support.
+- [x] Improve hero headline contrast.
+- [x] Link all service pricing cards to a prefilled quote form.
+- [x] Verify the homepage and all four quote links on desktop and mobile.
