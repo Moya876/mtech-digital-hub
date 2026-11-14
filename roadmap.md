@@ -12,3 +12,8 @@
 - [x] Improve hero headline contrast.
 - [x] Link all service pricing cards to a prefilled quote form.
 - [x] Verify the homepage and all four quote links on desktop and mobile.
+
+# Conversion focus
+- [x] Add enquiry-page trust cues and a direct WhatsApp alternative.
+- [x] Refine homepage buttons to lead to a free quote or WhatsApp conversation.
+- [x] Verify both contact paths and enquiry-page layout on desktop and mobile; run quote tests.

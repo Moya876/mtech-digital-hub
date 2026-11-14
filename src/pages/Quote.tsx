@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import { Check, ArrowLeft, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Check, ArrowLeft, MessageSquare, CheckCircle2, Star, Clock3, FileCheck2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -209,7 +209,36 @@ const Quote = () => {
       <section className="py-16 bg-white">
         <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-xl border border-mtechGray-100 shadow-sm p-8">
+            {!submittedName && (
+              <div className="mb-8 text-foreground">
+                <ul aria-label="Project enquiry assurances" className="grid gap-4 border-b border-border pb-6 sm:grid-cols-3">
+                  <li className="flex items-center gap-3">
+                    <FileCheck2 className="h-5 w-5 shrink-0 text-support-action" aria-hidden="true" />
+                    <span className="text-sm font-medium">Free project estimate</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Clock3 className="h-5 w-5 shrink-0 text-support-action" aria-hidden="true" />
+                    <span className="text-sm font-medium">Reply within 24 hours</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Star className="h-5 w-5 shrink-0 text-support-action" aria-hidden="true" />
+                    <span className="text-sm font-medium">5★ Rated Support</span>
+                  </li>
+                </ul>
+                <div className="flex flex-col items-start justify-between gap-4 pt-6 sm:flex-row sm:items-center">
+                  <div>
+                    <h2 className="text-lg font-semibold">Prefer a quick conversation?</h2>
+                    <p className="mt-1 text-sm text-muted-foreground">Tell us about your project on WhatsApp.</p>
+                  </div>
+                  <Button variant="outline" asChild className="w-full shrink-0 sm:w-auto">
+                    <a href="https://wa.me/18768331524?text=Hi%20MTech%20Corp%2C%20I%27d%20like%20a%20quote%20for%20my%20project." target="_blank" rel="noopener noreferrer">
+                      <MessageSquare aria-hidden="true" /> Chat on WhatsApp
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            )}
+            <div className="bg-background rounded-lg border border-border shadow-sm p-4 sm:p-8">
               {submittedName ? (
                 <div className="text-center py-8">
                   <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
