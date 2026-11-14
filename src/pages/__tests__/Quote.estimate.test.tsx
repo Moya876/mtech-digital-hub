@@ -3,9 +3,10 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { HelmetProvider } from "react-helmet-async";
 import Quote from "@/pages/Quote";
 
-const { mockSend, mockNavigate } = vi.hoisted(() => ({
+const { mockSend, mockNavigate, mockService } = vi.hoisted(() => ({
   mockSend: vi.fn(),
   mockNavigate: vi.fn(),
+  mockService: null as string | null,
 }));
 
 vi.mock("emailjs-com", () => ({
@@ -14,6 +15,7 @@ vi.mock("emailjs-com", () => ({
 
 vi.mock("react-router-dom", () => ({
   useNavigate: () => mockNavigate,
+  useSearchParams: () => [new URLSearchParams(mockService ? { service: mockService } : {})],
   Link: ({ to, children }: { to: string; children: React.ReactNode }) => (
     <a href={to}>{children}</a>
   ),
@@ -42,6 +44,7 @@ const renderQuote = () => render(<HelmetProvider><Quote /></HelmetProvider>);
 describe("quote estimate is not reused across submissions", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    mockService = null;
     mockSend.mockResolvedValue({ status: 200 });
     window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
   });
@@ -87,5 +90,26 @@ describe("quote estimate is not reused across submissions", () => {
     await waitFor(() => expect(mockSend).toHaveBeenCalledTimes(2));
     const retried = mockSend.mock.calls[1][2] as Record<string, string>;
     expect(retried.quote_estimate).toContain("Estimator:");
+  });
+});
+
+describe("quote service preselection", () => {
+  beforeEach(() => {
+    mockService = null;
+  });
+
+  it.each(["software-testing", "web-development", "graphic-design", "web-hosting"])(
+    "preselects the %s pricing plan",
+    (service) => {
+      mockService = service;
+      renderQuote();
+      expect(screen.getByLabelText(/project type/i)).toHaveValue(service);
+    },
+  );
+
+  it("leaves the project type unselected for an unknown service", () => {
+    mockService = "unknown-service";
+    renderQuote();
+    expect(screen.getByLabelText(/project type/i)).toHaveValue("");
   });
 });

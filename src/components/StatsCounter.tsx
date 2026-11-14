@@ -1,16 +1,17 @@
  import { useEffect, useState, useRef } from "react";
  import { motion, useInView } from "framer-motion";
- import { Briefcase, Calendar, Users, Shield } from "lucide-react";
+ import { Briefcase, Calendar, Users, Star } from "lucide-react";
  
  interface StatItemProps {
    value: number;
    suffix: string;
+   displayValue?: string;
    label: string;
    icon: React.ReactNode;
    delay: number;
  }
  
- const StatItem = ({ value, suffix, label, icon, delay }: StatItemProps) => {
+ const StatItem = ({ value, suffix, displayValue, label, icon, delay }: StatItemProps) => {
    const [count, setCount] = useState(0);
    const ref = useRef<HTMLDivElement>(null);
    const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -52,7 +53,7 @@
          {icon}
        </div>
         <div className="text-4xl md:text-5xl font-bold text-mtechNavy mb-2">
-          {value > 0 && <>{count}{suffix}</>}
+          {displayValue ?? (value > 0 ? <>{count}{suffix}</> : null)}
         </div>
        <div className="text-mtechGray-600 font-medium text-center">{label}</div>
      </motion.div>
@@ -64,7 +65,7 @@
        { value: 20, suffix: "+", label: "Successful Projects", icon: <Briefcase className="h-7 w-7" />, delay: 0 },
        { value: 4, suffix: "+", label: "Years of Experience", icon: <Calendar className="h-7 w-7" />, delay: 100 },
        { value: 10, suffix: "+", label: "Businesses Served", icon: <Users className="h-7 w-7" />, delay: 200 },
-       { value: 0, suffix: "", label: "Trusted by Clients", icon: <Shield className="h-7 w-7" strokeWidth={2.5} />, delay: 300 },
+       { value: 5, suffix: "", displayValue: "5★", label: "Rated Support", icon: <Star className="h-7 w-7" strokeWidth={2.5} />, delay: 300 },
    ];
  
    return (
