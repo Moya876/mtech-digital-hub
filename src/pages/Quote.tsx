@@ -47,6 +47,7 @@ const PROJECT_TYPE_LABELS: Record<string, string> = {
   "software-testing": "Software Testing",
   "graphic-design": "Graphic Design",
   "social-media": "Social Media Content",
+  "tech-support": "Tech Support & Hardware",
   other: "Other",
 };
 
@@ -375,6 +376,7 @@ const Quote = () => {
                             <option value="software-testing">Software Testing</option>
                             <option value="graphic-design">Graphic Design</option>
                             <option value="social-media">Social Media Content</option>
+                            <option value="tech-support">Tech Support &amp; Hardware</option>
                             <option value="other">Other (Specify in Message)</option>
                           </select>
                         </FormControl>
